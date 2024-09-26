@@ -8,9 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        japanese: ["var(--font-japanese)"],
+        skyer: ["var(--font-skyer)"],
+        baiJamjuree: ["Bai Jamjuree"],
+      },
+      keyframes: {
+        colorsAnimated: {
+          "0%": { backgroundPosition: "0%" },
+          "100%": { backgroundPosition: "100%" },
+        },
+      },
+
+      animation: {
+        colorsAnimated: "colorsAnimated 2s infinite alternate-reverse",
       },
     },
   },
