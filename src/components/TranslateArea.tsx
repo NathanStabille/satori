@@ -10,17 +10,22 @@ import './TranslateArea.css'
 
 
 
+interface ITranslateAreaProps {
 
+  typeArea: string,
+  value: string,
+  setValue: (value: string) => void
+}
 
-export const TranslateArea = () => {
-  const [isDisable, setIsDisable] = useState(false);
-  const [value, setValue] = useState('<h1 style="color: #fff">hello world</h1>')
+export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) => {
+
   const [wasCopied, setWasCopied] = useState(false)
+  const [isDisable, setIsDisable] = useState(false)
 
 
-  const onChange = useCallback((val: string) => {
-    setValue(val);
-  }, [])
+  const onChange = useCallback((value: string) => {
+    setValue(value);
+  }, [setValue])
 
 
   const handleCopy = () => {
@@ -42,7 +47,7 @@ export const TranslateArea = () => {
       <div className="flex justify-between items-center p-2">
         <LanguageSwicth />
         <div className="flex justify-center items-center gap-3">
-          <div className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]">{`header </>`}</div>
+          <div className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]">{`${typeArea} </>`}</div>
           <button onClick={() => { handleCopy() }} className=" transition-all flex gap-2 justify-center items-center
                                border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] 
                                font-baiJamjuree outline-none text-[16px] py-1 px-2 font-medium text-[#A1A1A1]

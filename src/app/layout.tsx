@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { TranslateAreaProvider } from '@/context/TranslateAreaContext'
 
 const japaneseSans = localFont({
   src: "../../public/fonts/japanese3017.otf",
@@ -25,8 +26,10 @@ export default function RootLayout({
     <html lang="pt-br">
       <body
         className={`${japaneseSans.variable} ${skyerSans.variable} antialiased`}
-      >
-        {children}
+        >
+        <TranslateAreaProvider>
+          {children}
+        </TranslateAreaProvider>
       </body>
     </html>
   );
