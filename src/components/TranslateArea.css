@@ -1,10 +1,10 @@
 /* Ajuste do contêiner principal do editor */
 .cm-editor {
   border-radius: 20px;
-  /* Adiciona cantos arredondados */
   background-color: transparent;
   outline: none !important;
   border: none;
+  color:#c3d9ee
 }
 
 /* Estiliza o conteúdo do editor (área de texto) */
@@ -19,12 +19,12 @@
   background-color: transparent !important;
 }
 
-.cm-activeLine{
-  background-color: #000 !important;
-  border-radius: 0px 5px 5px 0px
+.cm-activeLine {
+  background-color: #0e476d60 !important;
+  border-radius: 5px !important;
+  margin-right: 5px !important;
 }
-.cm-activeLineGutter{
-  background-color: #000 !important;
-  border-radius: 5px 0px 0px 5px
 
+.cm-activeLineGutter {
+  background-color: transparent !important;
 }
