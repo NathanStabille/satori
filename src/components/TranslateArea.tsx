@@ -14,10 +14,11 @@ interface ITranslateAreaProps {
 
   typeArea: string,
   value: string,
-  setValue: (value: string) => void
+  setValue: (value: string) => void,
+  height?: string
 }
 
-export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) => {
+export const TranslateArea = ({typeArea, value, setValue, height}: ITranslateAreaProps) => {
 
   const [wasCopied, setWasCopied] = useState(false)
   const [isDisable, setIsDisable] = useState(false)
@@ -34,7 +35,7 @@ export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) 
       setWasCopied(true)
       setTimeout(()=> {
       setWasCopied(false)
-      }, 3000)
+      }, 2000)
     }).catch((err)=>{
       console.error('Erro ao copiar o texto: ', err);
     })
@@ -43,11 +44,11 @@ export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) 
 
 
   return (
-    <div className="h-full w-full bg-[#DBDBDB] rounded-3xl flex flex-col p-1 ">
+    <div className={`${height} w-full bg-[#DBDBDB] rounded-3xl flex-col p-1 `}>
       <div className="flex justify-between items-center p-2">
         <LanguageSwicth />
         <div className="flex justify-center items-center gap-3">
-          <div className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]">{`${typeArea} </>`}</div>
+          <h1 className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]">{`${typeArea} </>`}</h1>
           <button onClick={() => { handleCopy() }} className=" transition-all flex gap-2 justify-center items-center
                                border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] 
                                font-baiJamjuree outline-none text-[16px] py-1 px-2 font-medium text-[#A1A1A1]
@@ -66,7 +67,7 @@ export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) 
         </div>
       </div>
 
-      <CodeMirror className={`h-full ${isDisable ? 'bg-[#1a1b26]' : 'bg-transparent'} rounded-t-lg rounded-b-3xl py-1 transition-all`} value={value} height="100%" extensions={[htmlLanguage]} onChange={onChange} theme={tokyoNight} editable={isDisable} />
+      <CodeMirror className={`h-full  ${isDisable ? 'bg-[#1a1b26]' : 'bg-transparent'} rounded-t-lg rounded-b-3xl py-1 transition-all overflow-auto`} value={value} height="100%" extensions={[htmlLanguage]} onChange={onChange} theme={tokyoNight} editable={isDisable} />
     </div >
   )
 }
