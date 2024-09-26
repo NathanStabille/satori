@@ -1,0 +1,30 @@
+/* Ajuste do contêiner principal do editor */
+.cm-editor {
+  border-radius: 20px;
+  /* Adiciona cantos arredondados */
+  background-color: transparent;
+  outline: none !important;
+  border: none;
+}
+
+/* Estiliza o conteúdo do editor (área de texto) */
+.cm-content {
+  border-radius: 15px;
+  background-color: transparent;
+
+}
+
+.cm-gutters {
+  border-radius: 25px !important;
+  background-color: transparent !important;
+}
+
+.cm-activeLine{
+  background-color: #000 !important;
+  border-radius: 0px 5px 5px 0px
+}
+.cm-activeLineGutter{
+  background-color: #000 !important;
+  border-radius: 5px 0px 0px 5px
+
+}

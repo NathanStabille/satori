@@ -12,6 +12,7 @@ const config: Config = {
         japanese: ["var(--font-japanese)"],
         skyer: ["var(--font-skyer)"],
         baiJamjuree: ["Bai Jamjuree"],
+        jetBrains: ["JetBrains Mono"]
       },
       keyframes: {
         colorsAnimated: {
