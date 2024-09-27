@@ -15,10 +15,9 @@ interface ITranslateAreaProps {
   typeArea: string,
   value: string,
   setValue: (value: string) => void,
-  height?: string
 }
 
-export const TranslateArea = ({typeArea, value, setValue, height}: ITranslateAreaProps) => {
+export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) => {
 
   const [wasCopied, setWasCopied] = useState(false)
   const [isDisable, setIsDisable] = useState(false)
@@ -44,7 +43,7 @@ export const TranslateArea = ({typeArea, value, setValue, height}: ITranslateAre
 
 
   return (
-    <div className={`${height} w-full bg-[#DBDBDB] rounded-3xl flex-col p-1 `}>
+    <div className={`h-full w-full bg-[#DBDBDB] rounded-3xl flex-col p-1 `}>
       <div className="flex justify-between items-center p-2">
         <LanguageSwicth />
         <div className="flex justify-center items-center gap-3">
@@ -67,7 +66,7 @@ export const TranslateArea = ({typeArea, value, setValue, height}: ITranslateAre
         </div>
       </div>
 
-      <CodeMirror className={`h-full  ${isDisable ? 'bg-[#1a1b26]' : 'bg-transparent'} rounded-t-lg rounded-b-3xl py-1 transition-all overflow-auto`} value={value} height="100%" extensions={[htmlLanguage]} onChange={onChange} theme={tokyoNight} editable={isDisable} />
+      <CodeMirror className={` ${isDisable ? 'bg-[#1a1b26]' : 'bg-transparent'} rounded-t-lg rounded-b-3xl py-1 transition-all overflow-auto`} value={value} extensions={[htmlLanguage]} onChange={onChange} theme={tokyoNight} editable={isDisable} />
     </div >
   )
 }

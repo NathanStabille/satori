@@ -12,12 +12,11 @@ export default function Satori() {
 
   return (
     <div className="h-full w-full p-5 bg-[#212124] grid grid-cols-2 justify-center items-center gap-5 ">
-      <div className="h-full w-full flex flex-col gap-5 ">
-        <TranslateArea height={'h-[25%]'} typeArea={'header'} value={headerAreaValue} setValue={setHeaderAreaValue} />
-        <TranslateArea height={'h-[50%]'} typeArea={'body'} value={bodyAreaValue} setValue={setBodyAreaValue} />
-        <TranslateArea height={'h-[25%]'} typeArea={'footer'} value={footerAreaValue} setValue={setFooterAreaValue} />
+      <div className="h-full w-full grid grid-cols-1 gap-5 ">
+        <TranslateArea  typeArea={'header'} value={headerAreaValue} setValue={setHeaderAreaValue} />
+        <TranslateArea  typeArea={'body'} value={bodyAreaValue} setValue={setBodyAreaValue} />
+        <TranslateArea  typeArea={'footer'} value={footerAreaValue} setValue={setFooterAreaValue} />
       </div>
-
       <div className="h-full w-full flex flex-col justify-start items-start gap-3">
         <div className="h-full w-full p-3 bg-[#DBDBDB] rounded-3xl flex flex-col justify-start items-start">
           <h1 className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]"> {'Preview </>'} </h1>

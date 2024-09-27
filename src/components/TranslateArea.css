@@ -4,7 +4,11 @@
   background-color: transparent;
   outline: none !important;
   border: none;
-  color:#c3d9ee
+  color:#c3d9ee;
+  height: 100%;
+}
+.cm-theme{
+  height:  calc(80vh / 3);
 }
 
 /* Estiliza o conteúdo do editor (área de texto) */

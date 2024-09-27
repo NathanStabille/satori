@@ -14,8 +14,8 @@ export default function Home() {
           <Image src={TextLogo} alt="logo" className="w-[80vw] max-w-[1300px]" />
           <Image src={Logo} alt="logo" className="w-[12vw] max-w-[240px]" />
 
-          <Link href='/satori'>
-            <button className="text-3xl font-skyer text-white border-purple-50 border-2 px-10 py-1 pb-2 rounded-full font-semibold mt-5 hover:bg-[#FF5B53] hover:transition duration-200 hover:border-transparent hover:text-[#0D0D13]"> Go to Satori</button>
+          <Link href='/html-translate'>
+            <button className="text-3xl font-skyer text-white border-purple-50 border-2 px-10 py-1 pb-2 rounded-full font-semibold mt-5 hover:bg-[#FF5B53] hover:transition duration-200 hover:border-transparent hover:text-[#0D0D13]"> Go to Translate</button>
           </Link>
         </div>
 
