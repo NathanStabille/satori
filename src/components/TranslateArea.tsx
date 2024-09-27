@@ -1,6 +1,6 @@
 'use client'
 import { PencilSquareIcon } from "@heroicons/react/24/solid"
-import { ClipboardDocumentListIcon, CheckIcon  } from "@heroicons/react/24/outline"
+import { ClipboardDocumentListIcon, CheckIcon } from "@heroicons/react/24/outline"
 import { LanguageSwicth } from "./LanguageSwitch"
 import CodeMirror from "@uiw/react-codemirror"
 import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
@@ -17,7 +17,7 @@ interface ITranslateAreaProps {
   setValue: (value: string) => void,
 }
 
-export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) => {
+export const TranslateArea = ({ typeArea, value, setValue }: ITranslateAreaProps) => {
 
   const [wasCopied, setWasCopied] = useState(false)
   const [isDisable, setIsDisable] = useState(false)
@@ -32,10 +32,10 @@ export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) 
 
     navigator.clipboard.writeText(value).then(() => {
       setWasCopied(true)
-      setTimeout(()=> {
-      setWasCopied(false)
+      setTimeout(() => {
+        setWasCopied(false)
       }, 2000)
-    }).catch((err)=>{
+    }).catch((err) => {
       console.error('Erro ao copiar o texto: ', err);
     })
   }
@@ -43,8 +43,8 @@ export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) 
 
 
   return (
-    <div className={`h-full w-full bg-[#DBDBDB] rounded-3xl flex-col p-1 `}>
-      <div className="flex justify-between items-center p-2">
+    <div className={`h-full w-full ${isDisable ? 'bg-[#1a1b26]' : 'bg-[#e8e9ed]'} rounded-3xl flex-col transition-all `}>
+      <div className=" bg-[#e8e9ed] flex justify-between items-center p-3 rounded-3xl">
         <LanguageSwicth />
         <div className="flex justify-center items-center gap-3">
           <h1 className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]">{`${typeArea} </>`}</h1>
@@ -53,8 +53,8 @@ export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) 
                                font-baiJamjuree outline-none text-[16px] py-1 px-2 font-medium text-[#A1A1A1]
                                hover:bg-[#A1A1A1] hover:text-[#D4D4D4] active:bg-[#c4c3c3]"
           >
-            {`${wasCopied? 'copied!' : 'copy code'}` }
-            {wasCopied? <CheckIcon className="w-[23px]" /> : <ClipboardDocumentListIcon className="w-[23px]" />}
+            {`${wasCopied ? 'copied!' : 'copy code'}`}
+            {wasCopied ? <CheckIcon className="w-[23px]" /> : <ClipboardDocumentListIcon className="w-[23px]" />}
           </button>
           <button onClick={() => { setIsDisable(!isDisable) }} className=" transition-all flex gap-2 justify-center items-center
                                border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] 
@@ -65,8 +65,7 @@ export const TranslateArea = ({typeArea, value, setValue}: ITranslateAreaProps) 
           </button>
         </div>
       </div>
-
-      <CodeMirror className={` ${isDisable ? 'bg-[#1a1b26]' : 'bg-transparent'} rounded-t-lg rounded-b-3xl py-1 transition-all overflow-auto`} value={value} extensions={[htmlLanguage]} onChange={onChange} theme={tokyoNight} editable={isDisable} />
+      <CodeMirror className={`bg-transparent rounded-t-lg transition-all overflow-auto p-1`} value={value} extensions={[htmlLanguage]} onChange={onChange} theme={tokyoNight} editable={isDisable} />
     </div >
   )
 }

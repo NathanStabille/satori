@@ -8,13 +8,14 @@
   height: 100%;
 }
 .cm-theme{
-  height:  calc(80vh / 3);
+  height:  calc(80vh / 3)!important;
+  border-radius: 30px;
 }
 
 /* Estiliza o conteúdo do editor (área de texto) */
 .cm-content {
-  border-radius: 15px;
-  background-color: transparent;
+  border-radius: 15px !important;
+  background-color: transparent !important;
 
 }
 
@@ -31,4 +32,8 @@
 
 .cm-activeLineGutter {
   background-color: transparent !important;
+}
+.cm-scroller{
+  background-color: transparent !important;
+  
 }

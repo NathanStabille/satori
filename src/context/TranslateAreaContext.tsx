@@ -38,6 +38,27 @@ export const TranslateAreaProvider = ({ children }: ITranslateProviderProps) => 
       box-sizing: border-box !important;
     }
 
+    ::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 10px !important;
+    background-color: transparent !important;
+
+    }
+
+    ::-webkit-scrollbar-thumb {
+    border-radius: 10px !important;
+    background: #888 !important;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555 !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    }
+    ::-webkit-scrollbar-corner {
+    display: none;
+    }
 
     @media (max-width: 450px) {
 
