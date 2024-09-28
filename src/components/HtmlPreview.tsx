@@ -44,7 +44,7 @@ export const HtmlPreview = () => {
 
   return (
     <div className="h-full w-full flex justify-center items-center rounded">
-      <iframe srcDoc={mainHtml} className="h-full w-full border-none scrollCustom" sandbox="allow-scripts allow-same-origin" title="HTML Preview" />
+      <iframe srcDoc={mainHtml} className="h-full w-full border-none" sandbox="allow-scripts allow-same-origin" title="HTML Preview" />
 
     </div>
   )

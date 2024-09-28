@@ -1,7 +1,7 @@
 'use client'
 import { PencilSquareIcon } from "@heroicons/react/24/solid"
 import { ClipboardDocumentListIcon, CheckIcon } from "@heroicons/react/24/outline"
-import { LanguageSwicth } from "./LanguageSwitch"
+import { LanguageSwitch } from "./LanguageSwitch"
 import CodeMirror from "@uiw/react-codemirror"
 import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
 import { htmlLanguage } from "@codemirror/lang-html"
@@ -21,7 +21,6 @@ export const TranslateArea = ({ typeArea, value, setValue }: ITranslateAreaProps
 
   const [wasCopied, setWasCopied] = useState(false)
   const [isDisable, setIsDisable] = useState(false)
-  const [selectedLanguage, setSelectedLanguage] = useState('pt');
 
 
 
@@ -46,16 +45,10 @@ export const TranslateArea = ({ typeArea, value, setValue }: ITranslateAreaProps
 
   return (
     <div className={`h-full w-full ${isDisable ? 'bg-[#1a1b26]' : 'bg-[#e8e9ed]'} rounded-3xl flex-col transition-all select-none`}>
-      <div className=" bg-[#e8e9ed] flex justify-between items-center p-3 rounded-3xl">
+      <div className=" bg-[#e8e9ed] flex justify-between items-center p-3 rounded-2xl">
 
-        <div className="flex justify-center items-center border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#A1A1A1] bg-[33px]">
-          <LanguageSwicth language="pt" selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
-          <LanguageSwicth language="en" selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
-          <LanguageSwicth language="es" selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
-
-        </div>
-
-
+          <LanguageSwitch />
+       
         <div className="flex justify-center items-center gap-3">
           <h1 className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]">{`${typeArea} </>`}</h1>
           <button onClick={() => { handleCopy() }} className=" transition-all flex gap-2 justify-center items-center
