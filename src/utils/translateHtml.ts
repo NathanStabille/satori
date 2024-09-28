@@ -1,66 +1,38 @@
-import cheerio from 'cheerio';
 import axios from 'axios';
 
-// Sua chave de autenticação da API do DeepL
-const authKey = 'YOUR_AUTH_KEY';  // Substitua pela sua chave da API do DeepL
+const authKey = process.env.DEEPL_API_KEY
 
-// HTML de exemplo
-const htmlContent = `
-<!-- Comentário que não deve ser traduzido -->
-<html>
-<head><title>Minha Página</title></head>
-<body>
-    <h1>Bem-vindo ao nosso site</h1>
-    <p>Esta é uma página de exemplo</p>
-</body>
-</html>
+const htmlContent = `<!-- Comentário que não deve ser traduzido -->
+       <!-- Título  -->
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 87%; margin: 0 auto;">
+                <tr>
+                  <td>
+                    <h1
+                      style="color: #FFF; font-size: 36px; font-family: Gabarito; font-style: normal;font-weight: bold;  display: block; margin: 30px 0 40px 0; max-width: 520px; line-height: 40px;"
+                      class="title-body">¡Desafía a los mejores en Drops & Wins de Dupoc!</h1>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Título  -->
 `;
 
-// Função para traduzir o texto usando a API do DeepL
-const translateText = async (text: string): Promise<string> => {
-  try {
-    const response = await axios.post(
-      'https://api-free.deepl.com/v2/translate',
-      new URLSearchParams({
-        auth_key: authKey,
-        text: text,
-        target_lang: 'EN-US',
-      })
-    );
-    return response.data.translations[0].text;
-  } catch (error) {
-    console.error('Erro ao traduzir o texto:', error);
-    return text;  // Retorna o texto original em caso de erro
+axios.post('https://api-free.deepl.com/v2/translate', {
+  text:  [`${htmlContent}`],
+  target_lang: "PT",
+  tag_handling: "html"
+}, {
+  headers: {
+    'Authorization': `DeepL-Auth-Key ${authKey}`,
+    'Content-Type': 'application/json'
   }
-};
+}).then((doc)=>{
 
-// Função principal para processar e traduzir o HTML
-const processHtml = async (html: string): Promise<string> => {
-  const $ = cheerio.load(html);
-
-  // Itera por todos os textos, excluindo comentários
-  const textNodes = $('*')
-    .contents()
-    .filter(function () {
-      return this.type === 'text' && this.nodeType !== 8;  // NodeType 8 é para comentários
-    });
-
-  // Traduz cada texto de forma assíncrona
-  for (const node of textNodes) {
-    const text = $(node).text();
-    const translatedText = await translateText(text);
-    $(node).replaceWith(translatedText);
-  }
-
-  // Retorna o HTML processado sem tags extras
-  return $('body').html() || '';
-};
-
-// Execução da função para processar o HTML
-processHtml(htmlContent)
-  .then((translatedHtml) => {
-    console.log('HTML traduzido:', translatedHtml);
-  })
-  .catch((error) => {
-    console.error('Erro ao processar o HTML:', error);
-  });
+  const result = doc.data.translations[0].text
+  console.log(result)
+}).catch((err)=> {
+  console.log(err)
+});

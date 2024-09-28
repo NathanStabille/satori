@@ -21,6 +21,8 @@ export const TranslateArea = ({ typeArea, value, setValue }: ITranslateAreaProps
 
   const [wasCopied, setWasCopied] = useState(false)
   const [isDisable, setIsDisable] = useState(false)
+  const [selectedLanguage, setSelectedLanguage] = useState('pt');
+
 
 
   const onChange = useCallback((value: string) => {
@@ -43,9 +45,17 @@ export const TranslateArea = ({ typeArea, value, setValue }: ITranslateAreaProps
 
 
   return (
-    <div className={`h-full w-full ${isDisable ? 'bg-[#1a1b26]' : 'bg-[#e8e9ed]'} rounded-3xl flex-col transition-all `}>
+    <div className={`h-full w-full ${isDisable ? 'bg-[#1a1b26]' : 'bg-[#e8e9ed]'} rounded-3xl flex-col transition-all select-none`}>
       <div className=" bg-[#e8e9ed] flex justify-between items-center p-3 rounded-3xl">
-        <LanguageSwicth />
+
+        <div className="flex justify-center items-center border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#A1A1A1] bg-[33px]">
+          <LanguageSwicth language="pt" selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+          <LanguageSwicth language="en" selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+          <LanguageSwicth language="es" selectedLanguage={selectedLanguage} setSelectedLanguage={setSelectedLanguage} />
+
+        </div>
+
+
         <div className="flex justify-center items-center gap-3">
           <h1 className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]">{`${typeArea} </>`}</h1>
           <button onClick={() => { handleCopy() }} className=" transition-all flex gap-2 justify-center items-center
