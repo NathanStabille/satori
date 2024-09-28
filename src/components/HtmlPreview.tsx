@@ -1,12 +1,10 @@
-'use client'
-import { useTranslateArea } from "@/context/TranslateAreaContext"
-
+"use client";
+import { useTranslateArea } from "@/context/TranslateAreaContext";
 
 export const HtmlPreview = () => {
-
-  const { headerAreaValue } = useTranslateArea()
-  const { bodyAreaValue } = useTranslateArea()
-  const { footerAreaValue } = useTranslateArea()
+  const { headerAreaValue } = useTranslateArea();
+  const { bodyAreaValue } = useTranslateArea();
+  const { footerAreaValue } = useTranslateArea();
 
   const mainHtml = `
     <!DOCTYPE html>
@@ -38,14 +36,16 @@ export const HtmlPreview = () => {
   <!--- Fim Tabela Principal  --->
 </body>
 
-</html>`
-
-
+</html>`;
 
   return (
-    <div className="h-full w-full flex justify-center items-center rounded">
-      <iframe srcDoc={mainHtml} className="h-full w-full border-none" sandbox="allow-scripts allow-same-origin" title="HTML Preview" />
-
+    <div className="flex h-full w-full items-center justify-center rounded">
+      <iframe
+        srcDoc={mainHtml}
+        className="h-full w-full border-none"
+        sandbox="allow-scripts allow-same-origin"
+        title="HTML Preview"
+      />
     </div>
-  )
-}
+  );
+};

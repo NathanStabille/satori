@@ -1,74 +1,98 @@
-'use client'
-import { PencilSquareIcon } from "@heroicons/react/24/solid"
-import { ClipboardDocumentListIcon, CheckIcon } from "@heroicons/react/24/outline"
-import { LanguageSwitch } from "./LanguageSwitch"
-import CodeMirror from "@uiw/react-codemirror"
-import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
-import { htmlLanguage } from "@codemirror/lang-html"
-import { useCallback, useState } from "react"
-import './TranslateArea.css'
-
-
+import { PencilSquareIcon } from "@heroicons/react/24/solid";
+import {
+  ClipboardDocumentListIcon,
+  CheckIcon,
+} from "@heroicons/react/24/outline";
+import { OptionSwitch } from "./OptionSwitch";
+import CodeMirror from "@uiw/react-codemirror";
+import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
+import { htmlLanguage } from "@codemirror/lang-html";
+import { useCallback, useState } from "react";
+import "./TranslateArea.css";
+import { Options } from "@/types/optionsType";
 
 interface ITranslateAreaProps {
-
-  typeArea: string,
-  value: string,
-  setValue: (value: string) => void,
+  typeArea: string;
+  value: string;
+  setValue: (value: string) => void;
 }
 
-export const TranslateArea = ({ typeArea, value, setValue }: ITranslateAreaProps) => {
+const options: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
-  const [wasCopied, setWasCopied] = useState(false)
-  const [isDisable, setIsDisable] = useState(false)
+export const TranslateArea = ({
+  typeArea,
+  value,
+  setValue,
+}: ITranslateAreaProps) => {
+  const [wasCopied, setWasCopied] = useState(false);
+  const [isDisable, setIsDisable] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(options[0].id);
 
-
-
-  const onChange = useCallback((value: string) => {
-    setValue(value);
-  }, [setValue])
-
+  const onChange = useCallback(
+    (value: string) => {
+      setValue(value);
+    },
+    [setValue],
+  );
 
   const handleCopy = () => {
-
-    navigator.clipboard.writeText(value).then(() => {
-      setWasCopied(true)
-      setTimeout(() => {
-        setWasCopied(false)
-      }, 2000)
-    }).catch((err) => {
-      console.error('Erro ao copiar o texto: ', err);
-    })
-  }
-
-
+    navigator.clipboard
+      .writeText(value)
+      .then(() => {
+        setWasCopied(true);
+        setTimeout(() => {
+          setWasCopied(false);
+        }, 2000);
+      })
+      .catch((err) => {
+        console.error("Erro ao copiar o texto: ", err);
+      });
+  };
 
   return (
-    <div className={`h-full w-full ${isDisable ? 'bg-[#1a1b26]' : 'bg-[#e8e9ed]'} rounded-3xl flex-col transition-all select-none`}>
-      <div className=" bg-[#e8e9ed] flex justify-between items-center p-3 rounded-2xl">
+    <div
+      className={`h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-[#e8e9ed]"} select-none flex-col rounded-3xl transition-all`}
+    >
+      <div className="flex items-center justify-between rounded-2xl bg-[#e8e9ed] p-3">
+        <OptionSwitch
+          option={selectedLanguage}
+          setOption={setSelectedLanguage}
+          options={options}
+        />
 
-          <LanguageSwitch />
-       
-        <div className="flex justify-center items-center gap-3">
-          <h1 className=" border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] font-baiJamjuree text-[16px] py-1 px-2 font-medium text-[#A1A1A1]">{`${typeArea} </>`}</h1>
-          <button onClick={() => { handleCopy() }} className=" transition-all flex gap-2 justify-center items-center
-                               border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] 
-                               font-baiJamjuree outline-none text-[16px] py-1 px-2 font-medium text-[#A1A1A1]
-                               hover:bg-[#A1A1A1] hover:text-[#D4D4D4] active:bg-[#c4c3c3]"
+        <div className="flex items-center justify-center gap-3">
+          <h1 className="rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1]">{`${typeArea} </>`}</h1>
+          <button
+            onClick={() => {
+              handleCopy();
+            }}
+            className="flex items-center justify-center gap-2 rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1] outline-none transition-all hover:bg-[#A1A1A1] hover:text-[#D4D4D4] active:bg-[#c4c3c3]"
           >
-            {`${wasCopied ? 'copied!' : 'copy code'}`}
-            {wasCopied ? <CheckIcon className="w-[23px]" /> : <ClipboardDocumentListIcon className="w-[23px]" />}
+            {`${wasCopied ? "copied!" : "copy code"}`}
+            {wasCopied ? (
+              <CheckIcon className="w-[23px]" />
+            ) : (
+              <ClipboardDocumentListIcon className="w-[23px]" />
+            )}
           </button>
-          <button onClick={() => { setIsDisable(!isDisable) }} className=" transition-all flex gap-2 justify-center items-center
-                               border-[#AFAFAF] border-[1px] rounded-lg p-[5px] bg-[#CCCCCC] 
-                               font-baiJamjuree outline-none text-[16px] py-1 px-2 font-medium text-[#A1A1A1]
-                               hover:bg-[#A1A1A1] hover:text-[#D4D4D4] active:bg-[#c4c3c3]"
+          <button
+            onClick={() => {
+              setIsDisable(!isDisable);
+            }}
+            className="flex items-center justify-center gap-2 rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1] outline-none transition-all hover:bg-[#A1A1A1] hover:text-[#D4D4D4] active:bg-[#c4c3c3]"
           >
             edit <PencilSquareIcon className="w-[23px]" />
           </button>
         </div>
       </div>
-      <CodeMirror className={`bg-transparent rounded-t-lg transition-all overflow-auto p-1`} value={value} extensions={[htmlLanguage]} onChange={onChange} theme={tokyoNight} editable={isDisable} />
-    </div >
-  )
-}
+      <CodeMirror
+        className={`overflow-auto rounded-t-lg bg-transparent p-1 transition-all`}
+        value={value}
+        extensions={[htmlLanguage]}
+        onChange={onChange}
+        theme={tokyoNight}
+        editable={isDisable}
+      />
+    </div>
+  );
+};

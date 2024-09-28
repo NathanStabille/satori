@@ -1,8 +1,8 @@
-'use client'
-import { createContext, ReactNode, useContext, useState } from 'react'
+"use client";
+import { createContext, ReactNode, useContext, useState } from "react";
 
 interface ITranslateProviderProps {
-  children: ReactNode,
+  children: ReactNode;
 }
 interface ITranslateAreaContextType {
   headerAreaValue: string;
@@ -13,19 +13,19 @@ interface ITranslateAreaContextType {
   setFooterAreaValue: (value: string) => void;
 }
 const TranslateAreaContext = createContext<ITranslateAreaContextType>({
-  headerAreaValue: '',
-  setHeaderAreaValue: () => { },
-  bodyAreaValue: '',
-  setBodyAreaValue: () => { },
-  footerAreaValue: '',
-  setFooterAreaValue: () => { },
+  headerAreaValue: "",
+  setHeaderAreaValue: () => {},
+  bodyAreaValue: "",
+  setBodyAreaValue: () => {},
+  footerAreaValue: "",
+  setFooterAreaValue: () => {},
+});
 
-})
-
-export const TranslateAreaProvider = ({ children }: ITranslateProviderProps) => {
-
-
-  const [headerAreaValue, setHeaderAreaValue] = useState(`<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+export const TranslateAreaProvider = ({
+  children,
+}: ITranslateProviderProps) => {
+  const [headerAreaValue, setHeaderAreaValue] =
+    useState(`<meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -145,8 +145,9 @@ export const TranslateAreaProvider = ({ children }: ITranslateProviderProps) => 
         font-size: 40px !important;
       }
     }
-  </style>`)
-  const [bodyAreaValue, setBodyAreaValue] = useState(`<tr style="background-color: #FFF;">
+  </style>`);
+  const [bodyAreaValue, setBodyAreaValue] =
+    useState(`<tr style="background-color: #FFF;">
       <td style="display: block; width: 90%; margin: 0 auto;">
         <p style="color: #838383; font-size: 12px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 20px 0; text-align: center;"
           class="text-body-secundary">Se não quiser mais receber nossas comunicações, <a href="{UnsubscribeLink}"
@@ -269,7 +270,7 @@ export const TranslateAreaProvider = ({ children }: ITranslateProviderProps) => 
           <!-- CTA  -->
         </table>
       </td>
-    </tr>`)
+    </tr>`);
   const [footerAreaValue, setFooterAreaValue] = useState(`<tr>
       <td>
         <table cellpadding="0" cellspacing="0" style="width: 87%; margin: 0 auto;" class="footer-container">
@@ -372,19 +373,21 @@ export const TranslateAreaProvider = ({ children }: ITranslateProviderProps) => 
           <!-- Info Footer  -->
         </table>
       </td>
-    </tr>`)
-
+    </tr>`);
 
   return (
-    <TranslateAreaContext.Provider value={{
-      headerAreaValue, setHeaderAreaValue,
-      bodyAreaValue, setBodyAreaValue,
-      footerAreaValue, setFooterAreaValue
-    }}>
+    <TranslateAreaContext.Provider
+      value={{
+        headerAreaValue,
+        setHeaderAreaValue,
+        bodyAreaValue,
+        setBodyAreaValue,
+        footerAreaValue,
+        setFooterAreaValue,
+      }}
+    >
       {children}
     </TranslateAreaContext.Provider>
-  )
-
-}
-export const useTranslateArea = () => useContext(TranslateAreaContext)
-
+  );
+};
+export const useTranslateArea = () => useContext(TranslateAreaContext);

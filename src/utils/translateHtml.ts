@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const authKey = process.env.DEEPL_API_KEY
+const authKey = process.env.DEEPL_API_KEY;
 
 const htmlContent = `<!-- Comentário que não deve ser traduzido -->
        <!-- Título  -->
@@ -20,19 +20,25 @@ const htmlContent = `<!-- Comentário que não deve ser traduzido -->
           <!-- Título  -->
 `;
 
-axios.post('https://api-free.deepl.com/v2/translate', {
-  text:  [`${htmlContent}`],
-  target_lang: "PT",
-  tag_handling: "html"
-}, {
-  headers: {
-    'Authorization': `DeepL-Auth-Key ${authKey}`,
-    'Content-Type': 'application/json'
-  }
-}).then((doc)=>{
-
-  const result = doc.data.translations[0].text
-  console.log(result)
-}).catch((err)=> {
-  console.log(err)
-});
+axios
+  .post(
+    "https://api-free.deepl.com/v2/translate",
+    {
+      text: [`${htmlContent}`],
+      target_lang: "PT",
+      tag_handling: "html",
+    },
+    {
+      headers: {
+        Authorization: `DeepL-Auth-Key ${authKey}`,
+        "Content-Type": "application/json",
+      },
+    },
+  )
+  .then((doc) => {
+    const result = doc.data.translations[0].text;
+    console.log(result);
+  })
+  .catch((err) => {
+    console.log(err);
+  });

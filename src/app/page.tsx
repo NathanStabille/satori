@@ -1,28 +1,30 @@
 import Image from "next/image";
-import TextLogo from '../../public/images/empthy-text-jp.svg'
-import Logo from '../../public/images/logo.svg'
+import TextLogo from "../../public/images/empthy-text-jp.svg";
+import Logo from "../../public/images/logo.svg";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={`h-screen w-screen bg-[#0D0D13] bg-[url('../../public/images/bg.svg')] bg-cover bg-no-repeat flex justify-center items-center p-10`}>
-
-      <div className=" flex justify-center items-center gap-5">
-
-
-        <div className="w-full flex justify-center flex-col items-center">
-          <Image src={TextLogo} alt="logo" className="w-[80vw] max-w-[1300px]" />
+    <div
+      className={`flex h-screen w-screen items-center justify-center bg-[#0D0D13] bg-[url('../../public/images/bg.svg')] bg-cover bg-no-repeat p-10`}
+    >
+      <div className="flex items-center justify-center gap-5">
+        <div className="flex w-full flex-col items-center justify-center">
+          <Image
+            src={TextLogo}
+            alt="logo"
+            className="w-[80vw] max-w-[1300px]"
+          />
           <Image src={Logo} alt="logo" className="w-[12vw] max-w-[240px]" />
 
-          <Link href='/html-translate'>
-            <button className="text-3xl font-skyer text-white border-purple-50 border-2 px-10 py-1 pb-2 rounded-full font-semibold mt-5 hover:bg-[#FF5B53] hover:transition duration-200 hover:border-transparent hover:text-[#0D0D13]"> Go to Translate</button>
+          <Link href="/html-translate">
+            <button className="mt-5 rounded-full border-2 border-purple-50 px-10 py-1 pb-2 font-skyer text-3xl font-semibold text-white duration-200 hover:border-transparent hover:bg-[#FF5B53] hover:text-[#0D0D13] hover:transition">
+              {" "}
+              Go to Translate
+            </button>
           </Link>
         </div>
-
-
-
       </div>
-
     </div>
   );
 }
