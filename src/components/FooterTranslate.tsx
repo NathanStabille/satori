@@ -13,29 +13,6 @@ import {
 import { Options } from "@/types/optionsType";
 import ReactCodeMirror from "@uiw/react-codemirror";
 
-const footerDataMap = {
-  playpix: {
-    player: {
-      pt: footerData.playpix.player.pt,
-      en: footerData.playpix.player.en,
-      es: footerData.playpix.player.es,
-    },
-    affiliate: {
-      pt: footerData.playpix.affiliate.pt,
-    },
-  },
-  dupoc: {
-    player: {
-      pt: footerData.dupoc.player.pt,
-      en: footerData.dupoc.player.en,
-      es: footerData.dupoc.player.es,
-    },
-    affiliate: {
-      pt: footerData.dupoc.affiliate.pt,
-    },
-  },
-};
-
 const options: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
 interface IFooterTranslateProps {
@@ -64,6 +41,11 @@ export const FooterTranslate = ({
       }
     } else {
       setAllOptions(options);
+    }
+  }, [pattern, stylePattern, setFooterAreaValue]);
+
+  useEffect(() => {
+    if (pattern !== "affiliate") {
       if (stylePattern === "playpix") {
         switch (selectedLanguage) {
           case "pt":
@@ -90,7 +72,7 @@ export const FooterTranslate = ({
         }
       }
     }
-  }, [pattern, stylePattern, setFooterAreaValue, selectedLanguage]);
+  }, [selectedLanguage, stylePattern, pattern, setFooterAreaValue]);
 
   const onChange = useCallback(
     (value: string) => {

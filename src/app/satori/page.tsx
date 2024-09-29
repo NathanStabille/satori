@@ -23,22 +23,16 @@ const footerOptions: Options = [
 ];
 
 export default function Satori() {
-
   const [selectStyle, setSelectStyle] = useState(styleOptions[0].id);
   const [footerPattern, setFooterPattern] = useState(footerOptions[0].id);
   const [urlImage, setUrlImage] = useState(
     "https://crmcontent.betconstruct.com/24092616491379102187501150023061900000000000000089176.png",
   );
 
-
-
-    console.log(selectStyle)
-
   return (
     <div className="grid h-full w-full grid-cols-2 items-center justify-center gap-5 overflow-auto bg-[#FFF] p-5">
       {/* CODE MIRROR CONTAINER */}
       <div className="flex h-full w-full flex-col items-start justify-start gap-5">
-
         <HeaderTranslate />
         <FooterTranslate pattern={footerPattern} stylePattern={selectStyle} />
       </div>
@@ -78,7 +72,7 @@ export default function Satori() {
           <h1 className="mb-2 rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1]">
             {"Preview </>"}
           </h1>
-          <HtmlPreview urlImage={urlImage} />
+          <HtmlPreview urlImage={urlImage} selectStyle={selectStyle} />
         </div>
         {/* HTML PREVIEW */}
 

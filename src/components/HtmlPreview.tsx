@@ -1,16 +1,27 @@
 "use client";
 import { useStyleHtml } from "@/context/StyleHtmlConext";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
+import { styleHtmlData } from "@/data/styleHtmlData";
+import { useEffect } from "react";
 
 interface IHtmlPreviewProps {
   urlImage: string;
+  selectStyle: string;
 }
 
-export const HtmlPreview = ({ urlImage }: IHtmlPreviewProps) => {
+export const HtmlPreview = ({ urlImage, selectStyle }: IHtmlPreviewProps) => {
   const { headerAreaValue } = useTranslateArea();
   const { bodyAreaValue } = useTranslateArea();
   const { footerAreaValue } = useTranslateArea();
-  const { styleHtml } = useStyleHtml();
+  const { styleHtml, setStyleHtml } = useStyleHtml();
+
+  useEffect(() => {
+    if (selectStyle === "playpix") {
+      setStyleHtml(styleHtmlData.playpix);
+    } else {
+      setStyleHtml(styleHtmlData.dupoc);
+    }
+  });
 
   const mainHtml = `<!DOCTYPE html>
 <html lang="PT-BR">
