@@ -19,7 +19,7 @@ export const OptionSwitch = ({
   };
 
   return (
-    <div className="flex items-center justify-center rounded-lg border-[1px] border-[#AFAFAF] p-[5px]">
+    <div className="flex items-center justify-center rounded-lg p-[5px]">
       {options.map((item, index) => (
         <button
           key={index}
@@ -32,7 +32,7 @@ export const OptionSwitch = ({
             {option === item.id && (
               <motion.div
                 key={`bubble-${index}`}
-                className="absolute inset-0 z-0 rounded bg-[#000000]"
+                className="absolute inset-0 z-0 rounded bg-[#38BDF8]"
                 variants={bubbleVariants}
                 initial="initial"
                 animate="animate"
