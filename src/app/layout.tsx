@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { TranslateAreaProvider } from "@/context/TranslateAreaContext";
+import { StyleHtmlProvider } from "@/context/StyleHtmlConext";
 
 const japaneseSans = localFont({
   src: "../../public/fonts/japanese3017.otf",
@@ -27,7 +28,9 @@ export default function RootLayout({
       <body
         className={`${japaneseSans.variable} ${skyerSans.variable} h-screen w-screen antialiased`}
       >
-        <TranslateAreaProvider>{children}</TranslateAreaProvider>
+        <TranslateAreaProvider>
+          <StyleHtmlProvider>{children}</StyleHtmlProvider>
+        </TranslateAreaProvider>
       </body>
     </html>
   );

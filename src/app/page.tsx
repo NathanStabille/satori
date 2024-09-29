@@ -17,10 +17,9 @@ export default function Home() {
           />
           <Image src={Logo} alt="logo" className="w-[12vw] max-w-[240px]" />
 
-          <Link href="/html-translate">
+          <Link href="/satori">
             <button className="mt-5 rounded-full border-2 border-purple-50 px-10 py-1 pb-2 font-skyer text-3xl font-semibold text-white duration-200 hover:border-transparent hover:bg-[#FF5B53] hover:text-[#0D0D13] hover:transition">
-              {" "}
-              Go to Translate
+              Go to Satori
             </button>
           </Link>
         </div>

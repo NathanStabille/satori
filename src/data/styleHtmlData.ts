@@ -1,4 +1,4 @@
-export const styleData = {
+export const styleHtmlData = {
   playpix: {
     bg_color: "#080D1C",
 

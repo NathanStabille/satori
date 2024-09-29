@@ -7,26 +7,63 @@ import { OptionSwitch } from "./OptionSwitch";
 import CodeMirror from "@uiw/react-codemirror";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
 import { htmlLanguage } from "@codemirror/lang-html";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./TranslateArea.css";
 import { Options } from "@/types/optionsType";
+import { useTranslateArea } from "@/context/TranslateAreaContext";
+import { headerData } from "@/data/headerData";
+import { footerData } from "@/data/footerData";
 
 interface ITranslateAreaProps {
   typeArea: string;
   value: string;
   setValue: (value: string) => void;
+  pattern: string;
+  style?: string;
 }
 
-const options: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
+const allOptions: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
+
+const headerLanguageMap = {
+  pt: headerData.pt,
+  en: headerData.en,
+  es: headerData.es,
+};
+
+const footerDataMap = {
+  playpix: {
+    player: {
+      pt: footerData.playpix.player.pt,
+      en: footerData.playpix.player.en,
+      es: footerData.playpix.player.es,
+    },
+    affiliate: {
+      pt: footerData.playpix.affiliate.pt,
+    },
+  },
+  dupoc: {
+    player: {
+      pt: footerData.dupoc.player.pt,
+      en: footerData.dupoc.player.en,
+      es: footerData.dupoc.player.es,
+    },
+    affiliate: {
+      pt: footerData.dupoc.affiliate.pt,
+    },
+  },
+};
 
 export const TranslateArea = ({
   typeArea,
   value,
   setValue,
+  pattern,
+  style,
 }: ITranslateAreaProps) => {
   const [wasCopied, setWasCopied] = useState(false);
   const [isDisable, setIsDisable] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(options[0].id);
+  const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
+  const { setHeaderAreaValue, setFooterAreaValue } = useTranslateArea();
 
   const onChange = useCallback(
     (value: string) => {
@@ -49,6 +86,37 @@ export const TranslateArea = ({
       });
   };
 
+  useEffect(() => {
+    if (typeArea === "header" && selectedLanguage in headerLanguageMap) {
+      setHeaderAreaValue(
+        headerLanguageMap[selectedLanguage as keyof typeof headerLanguageMap],
+      );
+    }
+  }, [typeArea, selectedLanguage, setHeaderAreaValue]);
+
+  useEffect(() => {
+    if (typeArea === "footer" && style && pattern) {
+      const styleData = footerDataMap[style as keyof typeof footerDataMap];
+
+      // Verifica se pattern é uma chave válida (player ou affiliate)
+      if (pattern in styleData) {
+        const patternData = styleData[pattern as keyof typeof styleData];
+        const languageValue =
+          patternData?.[selectedLanguage as keyof typeof patternData];
+
+        if (languageValue) {
+          setFooterAreaValue(languageValue);
+        } else {
+          console.error(
+            "Valor não encontrado para a combinação de estilo, padrão e idioma",
+          );
+        }
+      } else {
+        console.error(`Padrão inválido: ${pattern}`);
+      }
+    }
+  }, [typeArea, style, pattern, selectedLanguage, setFooterAreaValue]);
+
   return (
     <div
       className={`h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-[#e8e9ed]"} select-none flex-col rounded-3xl transition-all`}
@@ -57,7 +125,7 @@ export const TranslateArea = ({
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
-          options={options}
+          options={allOptions}
         />
 
         <div className="flex items-center justify-center gap-3">
