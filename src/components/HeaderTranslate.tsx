@@ -8,19 +8,11 @@ import CodeMirror from "@uiw/react-codemirror";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { useCallback, useEffect, useState } from "react";
-import "./TranslateArea.css";
+import "./CodeMirror.css";
 import { Options } from "@/types/optionsType";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { headerData } from "@/data/headerData";
-import { footerData } from "@/data/footerData";
-
-interface ITranslateAreaProps {
-  typeArea: string;
-  value: string;
-  setValue: (value: string) => void;
-  pattern: string;
-  style?: string;
-}
+import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 
 const allOptions: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
@@ -30,96 +22,33 @@ const headerLanguageMap = {
   es: headerData.es,
 };
 
-const footerDataMap = {
-  playpix: {
-    player: {
-      pt: footerData.playpix.player.pt,
-      en: footerData.playpix.player.en,
-      es: footerData.playpix.player.es,
-    },
-    affiliate: {
-      pt: footerData.playpix.affiliate.pt,
-    },
-  },
-  dupoc: {
-    player: {
-      pt: footerData.dupoc.player.pt,
-      en: footerData.dupoc.player.en,
-      es: footerData.dupoc.player.es,
-    },
-    affiliate: {
-      pt: footerData.dupoc.affiliate.pt,
-    },
-  },
-};
-
-export const TranslateArea = ({
-  typeArea,
-  value,
-  setValue,
-  pattern,
-  style,
-}: ITranslateAreaProps) => {
-  const [wasCopied, setWasCopied] = useState(false);
+export const HeaderTranslate = () => {
   const [isDisable, setIsDisable] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
-  const { setHeaderAreaValue, setFooterAreaValue } = useTranslateArea();
+
+  const { headerAreaValue, setHeaderAreaValue } = useTranslateArea();
+  const { wasCopied, handleCopy } = useCopyToClipboard(headerAreaValue);
+  
+  
 
   const onChange = useCallback(
     (value: string) => {
-      setValue(value);
+      setHeaderAreaValue(value);
     },
-    [setValue],
+    [setHeaderAreaValue],
   );
 
-  const handleCopy = () => {
-    navigator.clipboard
-      .writeText(value)
-      .then(() => {
-        setWasCopied(true);
-        setTimeout(() => {
-          setWasCopied(false);
-        }, 2000);
-      })
-      .catch((err) => {
-        console.error("Erro ao copiar o texto: ", err);
-      });
-  };
-
   useEffect(() => {
-    if (typeArea === "header" && selectedLanguage in headerLanguageMap) {
+    if (selectedLanguage in headerLanguageMap) {
       setHeaderAreaValue(
         headerLanguageMap[selectedLanguage as keyof typeof headerLanguageMap],
       );
     }
-  }, [typeArea, selectedLanguage, setHeaderAreaValue]);
-
-  useEffect(() => {
-    if (typeArea === "footer" && style && pattern) {
-      const styleData = footerDataMap[style as keyof typeof footerDataMap];
-
-      // Verifica se pattern é uma chave válida (player ou affiliate)
-      if (pattern in styleData) {
-        const patternData = styleData[pattern as keyof typeof styleData];
-        const languageValue =
-          patternData?.[selectedLanguage as keyof typeof patternData];
-
-        if (languageValue) {
-          setFooterAreaValue(languageValue);
-        } else {
-          console.error(
-            "Valor não encontrado para a combinação de estilo, padrão e idioma",
-          );
-        }
-      } else {
-        console.error(`Padrão inválido: ${pattern}`);
-      }
-    }
-  }, [typeArea, style, pattern, selectedLanguage, setFooterAreaValue]);
+  }, [selectedLanguage, setHeaderAreaValue]);
 
   return (
     <div
-      className={`h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-[#e8e9ed]"} select-none flex-col rounded-3xl transition-all`}
+      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-[#e8e9ed]"} select-none flex-col rounded-3xl pb-2 transition-all`}
     >
       <div className="flex items-center justify-between rounded-2xl bg-[#e8e9ed] p-3">
         <OptionSwitch
@@ -129,7 +58,7 @@ export const TranslateArea = ({
         />
 
         <div className="flex items-center justify-center gap-3">
-          <h1 className="rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1]">{`${typeArea} </>`}</h1>
+          <h1 className="rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1]">{`header </>`}</h1>
           <button
             onClick={() => {
               handleCopy();
@@ -155,11 +84,13 @@ export const TranslateArea = ({
       </div>
       <CodeMirror
         className={`overflow-auto rounded-t-lg bg-transparent p-1 transition-all`}
-        value={value}
+        value={headerAreaValue}
         extensions={[htmlLanguage]}
         onChange={onChange}
         theme={tokyoNight}
         editable={isDisable}
+        height="100%"
+        maxHeight="20vh"
       />
     </div>
   );

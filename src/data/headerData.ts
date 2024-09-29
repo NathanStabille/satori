@@ -5,7 +5,8 @@ export const headerData = {
           class="text-body-secundary">Se não quiser mais receber nossas comunicações, <a href="{UnsubscribeLink}"
             style="color: #838383 !important; text-decoration: none !important;">descadastre-se.</a></p>
       </td>
-    </tr>`,
+    </tr>
+    `,
 
   en: `<tr style="background-color: #FFF;">
       <td style="display: block; width: 90%; margin: 0 auto;">

@@ -3,10 +3,10 @@ import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { HtmlPreview } from "@/components/HtmlPreview";
 import { OptionSwitch } from "@/components/OptionSwitch";
 import { ThemeSwitch } from "@/components/ThemeSwitch";
-import { TranslateArea } from "@/components/TranslateArea";
-import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { Options } from "@/types/optionsType";
 import { useState } from "react";
+import { HeaderTranslate } from "@/components/HeaderTranslate";
+import { FooterTranslate } from "@/components/FooterTranslate";
 
 const styleOptions: Options = [
   {
@@ -23,14 +23,6 @@ const footerOptions: Options = [
 ];
 
 export default function Satori() {
-  const {
-    headerAreaValue,
-    setHeaderAreaValue,
-    bodyAreaValue,
-    setBodyAreaValue,
-    footerAreaValue,
-    setFooterAreaValue,
-  } = useTranslateArea();
 
   const [selectStyle, setSelectStyle] = useState(styleOptions[0].id);
   const [footerPattern, setFooterPattern] = useState(footerOptions[0].id);
@@ -46,25 +38,9 @@ export default function Satori() {
     <div className="grid h-full w-full grid-cols-2 items-center justify-center gap-5 overflow-auto bg-[#FFF] p-5">
       {/* CODE MIRROR CONTAINER */}
       <div className="flex h-full w-full flex-col items-start justify-start gap-5">
-        <TranslateArea
-          typeArea={"header"}
-          value={headerAreaValue}
-          setValue={setHeaderAreaValue}
-          pattern={"deafult"}
-        />
-        <TranslateArea
-          typeArea={"body"}
-          value={bodyAreaValue}
-          setValue={setBodyAreaValue}
-          pattern={"deafult"}
-        />
-        <TranslateArea
-          typeArea={"footer"}
-          value={footerAreaValue}
-          setValue={setFooterAreaValue}
-          pattern={footerPattern}
-          style={selectStyle}
-        />
+
+        <HeaderTranslate />
+        <FooterTranslate pattern={footerPattern} stylePattern={selectStyle} />
       </div>
       {/* CODE MIRROR CONTAINER */}
 

@@ -4,11 +4,11 @@
   background-color: transparent;
   outline: none !important;
   border: none;
-  color:#c3d9ee;
-  height: 100%;
+  color: #c3d9ee;
+  /* height: 100%; */
 }
-.cm-theme{
-  height:  calc(80vh / 3)!important;
+.cm-theme {
+  /* height:  calc(80vh / 3)!important; */
   border-radius: 30px;
 }
 
@@ -16,7 +16,6 @@
 .cm-content {
   border-radius: 15px !important;
   background-color: transparent !important;
-
 }
 
 .cm-gutters {
@@ -33,7 +32,6 @@
 .cm-activeLineGutter {
   background-color: transparent !important;
 }
-.cm-scroller{
+.cm-scroller {
   background-color: transparent !important;
-  
 }
