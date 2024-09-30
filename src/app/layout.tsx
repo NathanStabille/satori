@@ -24,9 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className="transition">
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} dark box-border h-screen w-screen antialiased transition-all`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} box-border h-screen w-screen antialiased transition-all`}
       >
         <TranslateAreaProvider>
           <StyleHtmlProvider>{children}</StyleHtmlProvider>

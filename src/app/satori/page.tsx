@@ -2,13 +2,13 @@
 import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { HtmlPreview } from "@/components/HtmlPreview";
 import { OptionSwitch } from "@/components/OptionSwitch";
-import { ThemeSwitch } from "@/components/ThemeSwitch";
 import { Options } from "@/types/optionsType";
 import { useState } from "react";
 import { HeaderTranslate } from "@/components/HeaderTranslate";
 import { FooterTranslate } from "@/components/FooterTranslate";
 import { TagInfo } from "@/components/TagInfo";
 import { BodyTranslate } from "@/components/BodyTranslate";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 const styleOptions: Options = [
   {
@@ -56,7 +56,7 @@ export default function Satori() {
             option={selectStyle}
             setOption={setSelectStyle}
           />
-          <ThemeSwitch />
+          <ThemeSwitcher />
         </div>
         {/* MAIN BAR */}
 
