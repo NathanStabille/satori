@@ -7,22 +7,21 @@
   height: 10px !important;
   border-radius: 10px !important;
   background-color: transparent !important;
-
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 10px !important;
   background-color: transparent !important;
-  margin: 10px ;
+  margin: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px !important;
-  background: #888 !important;
+  background: #8079FB !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555 !important;
+  background: #5B42F3 !important;
   border-radius: 10px !important;
   cursor: pointer !important;
 }

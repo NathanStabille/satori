@@ -9,9 +9,11 @@ import {
   CheckIcon,
   ClipboardDocumentListIcon,
   PencilSquareIcon,
-} from "@heroicons/react/24/solid";
+} from "@heroicons/react/24/outline";
 import { Options } from "@/types/optionsType";
 import ReactCodeMirror from "@uiw/react-codemirror";
+import { TagInfo } from "./TagInfo";
+import { Button } from "./Button";
 
 const options: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
@@ -83,9 +85,9 @@ export const FooterTranslate = ({
 
   return (
     <div
-      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-[#e8e9ed]"} select-none flex-col rounded-3xl pb-2 transition-all`}
+      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-transparent"} select-none flex-col rounded-3xl border border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all`}
     >
-      <div className="flex items-center justify-between rounded-2xl bg-[#e8e9ed] p-3">
+      <div className="flex items-center justify-between rounded-xxl bg-transparent p-3">
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
@@ -93,28 +95,28 @@ export const FooterTranslate = ({
         />
 
         <div className="flex items-center justify-center gap-3">
-          <h1 className="rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1]">{`header </>`}</h1>
-          <button
+          <TagInfo name="footer" />
+          <Button
             onClick={() => {
               handleCopy();
             }}
-            className="flex items-center justify-center gap-2 rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1] outline-none transition-all hover:bg-[#A1A1A1] hover:text-[#D4D4D4] active:bg-[#c4c3c3]"
-          >
-            {`${wasCopied ? "copied!" : "copy code"}`}
-            {wasCopied ? (
-              <CheckIcon className="w-[23px]" />
-            ) : (
-              <ClipboardDocumentListIcon className="w-[23px]" />
-            )}
-          </button>
-          <button
+            label={`${wasCopied ? "copied!" : "copy code"}`}
+            icon={
+              wasCopied ? (
+                <CheckIcon className="w-[23px]" />
+              ) : (
+                <ClipboardDocumentListIcon className="w-[23px]" />
+              )
+            }
+          />
+
+          <Button
             onClick={() => {
               setIsDisable(!isDisable);
             }}
-            className="flex items-center justify-center gap-2 rounded-lg border-[1px] border-[#AFAFAF] bg-[#CCCCCC] p-[5px] px-2 py-1 font-baiJamjuree text-[16px] font-medium text-[#A1A1A1] outline-none transition-all hover:bg-[#A1A1A1] hover:text-[#D4D4D4] active:bg-[#c4c3c3]"
-          >
-            edit <PencilSquareIcon className="w-[23px]" />
-          </button>
+            label="edit"
+            icon={<PencilSquareIcon className="w-[23px]" />}
+          />
         </div>
       </div>
       <ReactCodeMirror

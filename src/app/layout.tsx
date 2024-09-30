@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} h-screen w-screen antialiased`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} h-screen w-screen antialiased transition-all`}
       >
         <TranslateAreaProvider>
           <StyleHtmlProvider>{children}</StyleHtmlProvider>

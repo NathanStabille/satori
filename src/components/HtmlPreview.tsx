@@ -23,6 +23,33 @@ export const HtmlPreview = ({ urlImage, selectStyle }: IHtmlPreviewProps) => {
     }
   });
 
+  const scrollbarStyle = `::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 10px !important;
+  background-color: transparent !important;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px !important;
+  background-color: transparent !important;
+  margin: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  background: #8079FB !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5B42F3 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}`;
+
   const mainHtml = `<!DOCTYPE html>
 <html lang="PT-BR">
 
@@ -39,6 +66,8 @@ export const HtmlPreview = ({ urlImage, selectStyle }: IHtmlPreviewProps) => {
       box-sizing: border-box !important;
     }
 
+
+    ${scrollbarStyle}
 
     @media (max-width: 450px) {
 
