@@ -10,7 +10,7 @@ import {
   ClipboardDocumentListIcon,
 } from "@heroicons/react/24/outline";
 import { Options } from "@/types/optionsType";
-import ReactCodeMirror from "@uiw/react-codemirror";
+import CodeMirror from "@uiw/react-codemirror";
 import { TagInfo } from "./TagInfo";
 import { Button } from "./Button";
 import { PencilSquareIcon } from "@heroicons/react/24/solid";
@@ -85,9 +85,9 @@ export const FooterTranslate = ({
 
   return (
     <div
-      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100"} select-none flex-col rounded-3xl border border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all`}
+      className={`h-full relative w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} select-none flex-col rounded-3xl border-2 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all dark:border-gray-800`}
     >
-      <div className="flex items-center justify-between rounded-xxl bg-transparent p-3">
+      <div className="rounded-xxl flex items-center justify-between bg-transparent p-3">
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
@@ -119,15 +119,14 @@ export const FooterTranslate = ({
           />
         </div>
       </div>
-      <ReactCodeMirror
-        className={`overflow-auto rounded-t-lg bg-transparent p-1 transition-all`}
+      <CodeMirror
+        className={`relative overflow-auto rounded-t-lg bg-transparent p-1 transition-all`}
         value={footerAreaValue}
         extensions={[htmlLanguage]}
         onChange={onChange}
         theme={tokyoNight}
         editable={isDisable}
-        height="100%"
-        maxHeight="25vh"
+        height="24vh"
       />
     </div>
   );

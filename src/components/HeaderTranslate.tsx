@@ -48,9 +48,9 @@ export const HeaderTranslate = () => {
 
   return (
     <div
-      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100-100"} select-none flex-col rounded-3xl border border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all`}
+      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "dark:bg-[#1e1e1e88] bg-slate-100"} select-none flex-col rounded-3xl border-2 border-slate-200 dark:border-gray-800 pb-2 shadow-lg backdrop-blur-md transition-all`}
     >
-      <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3 backdrop-blur-sm">
+      <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3 ">
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
@@ -90,8 +90,7 @@ export const HeaderTranslate = () => {
         onChange={onChange}
         theme={tokyoNight}
         editable={isDisable}
-        height="100%"
-        maxHeight="20vh"
+        height="13vh"
       />
     </div>
   );

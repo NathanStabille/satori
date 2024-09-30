@@ -17,11 +17,11 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px !important;
-  background: #8079FB !important;
+  background: #cccc !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5B42F3 !important;
+  background: #1e1e1e !important;
   border-radius: 10px !important;
   cursor: pointer !important;
 }

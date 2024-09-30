@@ -24,15 +24,17 @@ export const OptionSwitch = ({
         <button
           key={index}
           onClick={() => setOption(item.id)}
-          className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:bg-indigo-500 hover:text-slate-50 ${
-            option === item.id ? "text-slate-50" : "text-[#8079FB]"
+          className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:bg-indigo-500 hover:text-slate-50 dark:hover:bg-[#F03373] dark:active:bg-[#E9004F] ${
+            option === item.id
+              ? "text-slate-50"
+              : "text-[#8079FB] dark:text-[#F03373]"
           }`}
         >
           <AnimatePresence>
             {option === item.id && (
               <motion.div
                 key={`bubble-${index}`}
-                className="absolute inset-0 z-0 rounded bg-[#8079FB]"
+                className="absolute inset-0 z-0 rounded bg-[#8079FB] dark:bg-[#F03373]"
                 variants={bubbleVariants}
                 initial="initial"
                 animate="animate"
