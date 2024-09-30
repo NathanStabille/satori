@@ -13,6 +13,7 @@ import { PencilSquareIcon } from "@heroicons/react/24/solid";
 import ReactCodeMirror from "@uiw/react-codemirror";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
+import { translateHtml } from "@/utils/translateHtml";
 
 const allOptions: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
@@ -22,6 +23,8 @@ export const BodyTranslate = () => {
 
   const { bodyAreaValue, setBodyAreaValue } = useTranslateArea();
   const { wasCopied, handleCopy } = useCopyToClipboard(bodyAreaValue);
+  const [translatedText, setTranslatedText] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const onChange = useCallback(
     (value: string) => {
@@ -30,11 +33,32 @@ export const BodyTranslate = () => {
     [setBodyAreaValue],
   );
 
+  const testeHtml = `<tr style="background-color: #FFF;">
+  <td style="display: block; width: 90%; margin: 0 auto;">
+  <p style="color: #838383; font-size: 12px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 20px 0; text-align: center;"
+  class="text-body-secundary">Se não quiser mais receber nossas comunicações, <a href="{UnsubscribeLink}"
+  style="color: #838383 !important; text-decoration: none !important;">descadastre-se.</a></p>
+  </td>
+  </tr>`;
+
+  const handleTranslate = async () => {
+    setIsLoading(true);
+    const htmlContent = "<p>Hello, world!</p>"; // Exemplo de conteúdo HTML
+    const translated = await translateHtml(htmlContent, "ES"); // Traduz para espanhol
+
+    setIsLoading(false);
+    if (translated) {
+      setTranslatedText(translated);
+    }
+  };
+
+  console.log(translatedText);
+
   return (
     <div
-      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88] "} select-none flex-col rounded-3xl border-2 dark:border-gray-800 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all`}
+      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} select-none flex-col rounded-3xl border-2 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all dark:border-gray-800`}
     >
-      <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3 ">
+      <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
@@ -57,6 +81,8 @@ export const BodyTranslate = () => {
               )
             }
           />
+
+          <Button label="teste" onClick={handleTranslate} />
 
           <Button
             onClick={() => {
