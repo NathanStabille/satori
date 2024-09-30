@@ -8,12 +8,12 @@ import { footerData } from "@/data/footerData";
 import {
   CheckIcon,
   ClipboardDocumentListIcon,
-  PencilSquareIcon,
 } from "@heroicons/react/24/outline";
 import { Options } from "@/types/optionsType";
 import ReactCodeMirror from "@uiw/react-codemirror";
 import { TagInfo } from "./TagInfo";
 import { Button } from "./Button";
+import { PencilSquareIcon } from "@heroicons/react/24/solid";
 
 const options: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
@@ -85,7 +85,7 @@ export const FooterTranslate = ({
 
   return (
     <div
-      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-transparent"} select-none flex-col rounded-3xl border border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all`}
+      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100"} select-none flex-col rounded-3xl border border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all`}
     >
       <div className="flex items-center justify-between rounded-xxl bg-transparent p-3">
         <OptionSwitch

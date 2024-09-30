@@ -1,54 +1,38 @@
-import { PencilSquareIcon } from "@heroicons/react/24/solid";
-import {
-  ClipboardDocumentListIcon,
-  CheckIcon,
-} from "@heroicons/react/24/outline";
+import { useCallback, useState } from "react";
 import { OptionSwitch } from "./OptionSwitch";
-import CodeMirror from "@uiw/react-codemirror";
-import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
-import { htmlLanguage } from "@codemirror/lang-html";
-import { useCallback, useEffect, useState } from "react";
-import "./CodeMirror.css";
-import { Options } from "@/types/optionsType";
-import { useTranslateArea } from "@/context/TranslateAreaContext";
-import { headerData } from "@/data/headerData";
-import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { TagInfo } from "./TagInfo";
+import { useTranslateArea } from "@/context/TranslateAreaContext";
+import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
+import { Options } from "@/types/optionsType";
 import { Button } from "./Button";
+import {
+  CheckIcon,
+  ClipboardDocumentListIcon,
+} from "@heroicons/react/24/outline";
+import { PencilSquareIcon } from "@heroicons/react/24/solid";
+import ReactCodeMirror from "@uiw/react-codemirror";
+import { htmlLanguage } from "@codemirror/lang-html";
+import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
 
 const allOptions: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
-const headerLanguageMap = {
-  pt: headerData.pt,
-  en: headerData.en,
-  es: headerData.es,
-};
-
-export const HeaderTranslate = () => {
+export const BodyTranslate = () => {
   const [isDisable, setIsDisable] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
 
-  const { headerAreaValue, setHeaderAreaValue } = useTranslateArea();
-  const { wasCopied, handleCopy } = useCopyToClipboard(headerAreaValue);
+  const { bodyAreaValue, setBodyAreaValue } = useTranslateArea();
+  const { wasCopied, handleCopy } = useCopyToClipboard(bodyAreaValue);
 
   const onChange = useCallback(
     (value: string) => {
-      setHeaderAreaValue(value);
+      setBodyAreaValue(value);
     },
-    [setHeaderAreaValue],
+    [setBodyAreaValue],
   );
-
-  useEffect(() => {
-    if (selectedLanguage in headerLanguageMap) {
-      setHeaderAreaValue(
-        headerLanguageMap[selectedLanguage as keyof typeof headerLanguageMap],
-      );
-    }
-  }, [selectedLanguage, setHeaderAreaValue]);
 
   return (
     <div
-      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100-100"} select-none flex-col rounded-3xl border border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all`}
+      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100"} select-none flex-col rounded-3xl border border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all`}
     >
       <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3 backdrop-blur-sm">
         <OptionSwitch
@@ -58,7 +42,7 @@ export const HeaderTranslate = () => {
         />
 
         <div className="flex items-center justify-center gap-3">
-          <TagInfo name="header" />
+          <TagInfo name="body" />
 
           <Button
             onClick={() => {
@@ -83,15 +67,15 @@ export const HeaderTranslate = () => {
           />
         </div>
       </div>
-      <CodeMirror
+      <ReactCodeMirror
         className={`overflow-auto rounded-t-lg bg-transparent p-2 transition-all`}
-        value={headerAreaValue}
+        value={bodyAreaValue}
         extensions={[htmlLanguage]}
         onChange={onChange}
         theme={tokyoNight}
         editable={isDisable}
         height="100%"
-        maxHeight="20vh"
+        maxHeight="39vh"
       />
     </div>
   );

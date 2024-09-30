@@ -8,6 +8,7 @@ import { useState } from "react";
 import { HeaderTranslate } from "@/components/HeaderTranslate";
 import { FooterTranslate } from "@/components/FooterTranslate";
 import { TagInfo } from "@/components/TagInfo";
+import { BodyTranslate } from "@/components/BodyTranslate";
 
 const styleOptions: Options = [
   {
@@ -37,6 +38,7 @@ export default function Satori() {
       {/* CODE MIRROR CONTAINER */}
       <div className="flex h-full w-full flex-col items-start justify-start gap-5">
         <HeaderTranslate />
+        <BodyTranslate />
         <FooterTranslate pattern={footerPattern} stylePattern={selectStyle} />
       </div>
       {/* CODE MIRROR CONTAINER */}
@@ -44,7 +46,7 @@ export default function Satori() {
       {/* HTML PREVIEW CONNTAINER */}
       <div className="flex h-full w-full flex-col items-start justify-start gap-3">
         {/* MAIN BAR */}
-        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl border border-slate-200 bg-transparent px-5 shadow-lg backdrop-blur-lg">
+        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl border border-slate-200 bg-slate-100 px-5 shadow-lg backdrop-blur-lg">
           <h1 className="font-skyer text-4xl text-[#8079FB]">satori</h1>
 
           <OptionSwitch
@@ -57,7 +59,7 @@ export default function Satori() {
         {/* MAIN BAR */}
 
         {/* URL INPUT */}
-        <div className="relative flex w-full items-center justify-center rounded-xl border border-slate-200 bg-transparent shadow-lg backdrop-blur-lg">
+        <div className="relative flex w-full items-center justify-center rounded-xl border border-slate-200 bg-slate-100 shadow-lg backdrop-blur-lg">
           <input
             value={urlImage}
             onChange={(e) => setUrlImage(e.target.value)}
@@ -77,8 +79,8 @@ export default function Satori() {
         {/* HTML PREVIEW */}
 
         {/* FOOTER */}
-        <div className="flex w-full items-center justify-between rounded-2xl border border-slate-200 bg-transparent p-5 shadow-md backdrop-blur-lg transition-all">
-          <h1 className="font-skyer text-xl font-bold text-slate-50">Footer</h1>
+        <div className="flex w-full items-center justify-between rounded-2xl border border-slate-200 bg-slate-100 p-5 shadow-md backdrop-blur-lg transition-all">
+          <h1 className="font-skyer text-xl font-bold text-[#8079FB]">Footer</h1>
 
           <SocialMediaLinks name={"X(Twitter)"} />
           <SocialMediaLinks name={"Instagram"} />
