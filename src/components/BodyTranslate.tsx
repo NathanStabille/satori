@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { OptionSwitch } from "./OptionSwitch";
 import { TagInfo } from "./TagInfo";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
@@ -8,6 +8,7 @@ import { Button } from "./Button";
 import {
   CheckIcon,
   ClipboardDocumentListIcon,
+  LanguageIcon,
 } from "@heroicons/react/24/outline";
 import { PencilSquareIcon } from "@heroicons/react/24/solid";
 import ReactCodeMirror from "@uiw/react-codemirror";
@@ -32,33 +33,31 @@ export const BodyTranslate = () => {
     [setBodyAreaValue],
   );
 
-  useEffect(() => {
-    const handleTranslate = async () => {
-      setIsLoading(true);
-      const translated = await translateHtml(bodyAreaValue, selectedLanguage);
+  const handleTranslate = async (html: string, targetLang: string) => {
+    setIsLoading(true);
+    const translated = await translateHtml(html, targetLang);
 
-      if (translated) {
-        setIsLoading(false);
-        setBodyAreaValue(translated);
-      }
-    };
-
-    handleTranslate()
-
-  }, [selectedLanguage, bodyAreaValue, setBodyAreaValue]);
-
-
-  console.log(selectedLanguage)
+    if (translated) {
+      setIsLoading(false);
+      setBodyAreaValue(translated);
+    }
+  };
 
   return (
     <div
-      className={`h- w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} select-none flex-col rounded-3xl border-2 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all dark:border-gray-800`}
+      className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} select-none flex-col rounded-3xl border-2 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all dark:border-gray-800`}
     >
       <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
           options={allOptions}
+        />
+
+        <Button
+          label="Translate"
+          icon={<LanguageIcon className="w-[20px]" />}
+          onClick={() => handleTranslate(bodyAreaValue, selectedLanguage)}
         />
 
         <div className="flex items-center justify-center gap-3">
@@ -96,6 +95,19 @@ export const BodyTranslate = () => {
         editable={isDisable}
         height="38vh"
       />
+
+      {/* loading component */}
+
+      {isLoading && (
+        <div className="absolute top-0 z-10 flex h-full w-full items-center justify-center rounded-3xl bg-[#00000062]">
+          <div className="flex w-full flex-col items-center justify-center gap-4">
+            <div className="flex h-20 w-20 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-[#8079FB] text-4xl text-[#8079FB]">
+              <div className="flex h-16 w-16 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-[#EE3473] text-2xl text-[#EE3473]" />
+            </div>
+          </div>
+        </div>
+      )}
+      {/* loading component */}
     </div>
   );
 };

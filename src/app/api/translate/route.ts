@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const { htmlContent, target_lang } = await request.json();
 
     const response = await axios.post(
-      'https://api-free.deepl.com/v2/translate',
+      'https://api.deepl.com/v2/translate',
       {
         text: [htmlContent],
         target_lang: target_lang.toUpperCase(),
