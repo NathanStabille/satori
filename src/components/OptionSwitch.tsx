@@ -1,7 +1,8 @@
 import { Options } from "@/types/optionsType";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface ILabelSwitchProps {
+interface IOptionsSwitchProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   option: string;
   setOption: (string: string) => void;
   options: Options;
@@ -11,7 +12,8 @@ export const OptionSwitch = ({
   option,
   setOption,
   options,
-}: ILabelSwitchProps) => {
+  ...rest
+}: IOptionsSwitchProps) => {
   const bubbleVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
@@ -22,6 +24,7 @@ export const OptionSwitch = ({
     <div className="flex items-center justify-center gap-1 rounded-lg p-[5px]">
       {options.map((item, index) => (
         <button
+          {...rest}
           key={index}
           onClick={() => setOption(item.id)}
           className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:bg-indigo-500 hover:text-slate-50 dark:hover:bg-[#F03373] dark:active:bg-[#E9004F] ${
