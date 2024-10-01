@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { TranslateAreaProvider } from "@/context/TranslateAreaContext";
 import { StyleHtmlProvider } from "@/context/StyleHtmlConext";
+import { SocialMediaLinksProvider } from "@/context/SocialMediaLinksContext";
 
 const japaneseSans = localFont({
   src: "../../public/fonts/japanese3017.otf",
@@ -29,7 +30,9 @@ export default function RootLayout({
         className={`${japaneseSans.variable} ${skyerSans.variable} box-border h-screen w-screen antialiased transition-all`}
       >
         <TranslateAreaProvider>
-          <StyleHtmlProvider>{children}</StyleHtmlProvider>
+          <StyleHtmlProvider>
+            <SocialMediaLinksProvider>{children}</SocialMediaLinksProvider>
+          </StyleHtmlProvider>
         </TranslateAreaProvider>
       </body>
     </html>

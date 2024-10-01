@@ -1,5 +1,4 @@
 "use client";
-// import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { HtmlPreview } from "@/components/HtmlPreview";
 import { OptionSwitch } from "@/components/OptionSwitch";
 import { Options } from "@/types/optionsType";
@@ -42,10 +41,10 @@ export default function Satori() {
   );
   const [copyHtml, setCopyHtml] = useState("");
   const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({
-    x: false,
-    instagram: false,
-    site: false,
-    threads: false,
+    x: true,
+    instagram: true,
+    site: true,
+    threads: true,
   });
 
   const { wasCopied, handleCopy } = useCopyToClipboard(copyHtml);
@@ -57,11 +56,10 @@ export default function Satori() {
     }));
   };
 
-  console.log(copyHtml);
 
   return (
     <div
-      className={`grid h-full w-full grid-cols-2 items-center justify-center gap-5 overflow-auto bg-[url('/images/bg-light.webp')] bg-cover bg-no-repeat p-5 dark:bg-[url('/images/bg-dark.webp')]`}
+      className={`grid h-full w-full grid-cols-2 items-center justify-center gap-5 overflow-auto bg-[url('/images/bg-light.webp')] bg-cover bg-no-repeat p-5 max-md:grid-cols-1 dark:bg-[url('/images/bg-dark.webp')]`}
     >
       {/* CODE MIRROR CONTAINER */}
       <div className="grid h-full w-full grid-cols-1 flex-col items-start justify-start gap-4">
@@ -74,7 +72,7 @@ export default function Satori() {
       {/* HTML PREVIEW CONNTAINER */}
       <div className="flex h-full w-full flex-col items-start justify-start gap-3">
         {/* MAIN BAR */}
-        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl border-2 bg-slate-100 px-5 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
+        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl border-2 bg-slate-100 p-5 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
           <h1 className="select-none font-skyer text-4xl text-[#8079FB] dark:text-slate-50">
             satori
           </h1>
@@ -142,10 +140,8 @@ export default function Satori() {
           className="flex w-full items-center justify-center rounded-2xl border-none bg-[#8079FB] py-5 font-skyer text-3xl uppercase text-slate-50 shadow-md outline-none transition-all hover:bg-indigo-500 hover:text-slate-50 active:bg-indigo-700 dark:bg-gray-800 dark:hover:bg-slate-900 dark:active:bg-gray-950"
         >
           {wasCopied ? "copied" : "copy code"}
-          {wasCopied ? (
+          {wasCopied && (
             <ClipboardDocumentCheckIcon width="50px" className="pl-3" />
-          ) : (
-            ""
           )}
         </button>
       </div>

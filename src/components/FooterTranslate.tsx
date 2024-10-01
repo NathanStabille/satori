@@ -4,7 +4,7 @@ import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { useCallback, useEffect, useState } from "react";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
-import { footerData } from "@/data/footerData";
+import { footerMainData } from "@/data/footerData";
 import {
   CheckIcon,
   ClipboardDocumentListIcon,
@@ -14,6 +14,8 @@ import CodeMirror from "@uiw/react-codemirror";
 import { TagInfo } from "./TagInfo";
 import { Button } from "./Button";
 import { PencilSquareIcon } from "@heroicons/react/24/solid";
+import { useSocialMediaLinks } from "@/context/SocialMediaLinksContext";
+import { linksData } from "@/data/linksData";
 
 const options: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
@@ -31,15 +33,16 @@ export const FooterTranslate = ({
   const [isDisable, setIsDisable] = useState(false);
   const [allOptions, setAllOptions] = useState(options);
   const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
+  const { x, setX, ig, setIg, site, setSite } = useSocialMediaLinks();
 
   useEffect(() => {
     if (pattern === "affiliate") {
       setAllOptions([{ id: "pt" }]);
       setSelectedLanguage("pt");
       if (stylePattern === "playpix") {
-        setFooterAreaValue(footerData.playpix.affiliate.pt);
+        setFooterAreaValue(footerMainData.playpix.affiliate.pt);
       } else {
-        setFooterAreaValue(footerData.dupoc.affiliate.pt);
+        setFooterAreaValue(footerMainData.dupoc.affiliate.pt);
       }
     } else {
       setAllOptions(options);
@@ -47,29 +50,41 @@ export const FooterTranslate = ({
   }, [pattern, stylePattern, setFooterAreaValue]);
 
   useEffect(() => {
+    if (stylePattern === "playpix") {
+      setX(linksData.playpix.x);
+      setIg(linksData.playpix.ig);
+      setSite(linksData.playpix.site);
+    } else {
+      setX(linksData.dupoc.x);
+      setIg(linksData.dupoc.ig);
+      setSite(linksData.dupoc.site);
+    }
+  }, [stylePattern, setIg, setX, setSite]);
+
+  useEffect(() => {
     if (pattern !== "affiliate") {
       if (stylePattern === "playpix") {
         switch (selectedLanguage) {
           case "pt":
-            setFooterAreaValue(footerData.playpix.player.pt);
+            setFooterAreaValue(footerMainData.playpix.player.pt);
             break;
           case "en":
-            setFooterAreaValue(footerData.playpix.player.en);
+            setFooterAreaValue(footerMainData.playpix.player.en);
             break;
           case "es":
-            setFooterAreaValue(footerData.playpix.player.es);
+            setFooterAreaValue(footerMainData.playpix.player.es);
             break;
         }
       } else {
         switch (selectedLanguage) {
           case "pt":
-            setFooterAreaValue(footerData.dupoc.player.pt);
+            setFooterAreaValue(footerMainData.dupoc.player.pt);
             break;
           case "en":
-            setFooterAreaValue(footerData.dupoc.player.en);
+            setFooterAreaValue(footerMainData.dupoc.player.en);
             break;
           case "es":
-            setFooterAreaValue(footerData.dupoc.player.es);
+            setFooterAreaValue(footerMainData.dupoc.player.es);
             break;
         }
       }

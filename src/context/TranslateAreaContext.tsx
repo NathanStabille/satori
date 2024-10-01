@@ -1,6 +1,6 @@
 "use client";
 import { bodyData } from "@/data/bodyData";
-import { footerData } from "@/data/footerData";
+import { footerMainData } from "@/data/footerData";
 import { headerData } from "@/data/headerData";
 import { createContext, ReactNode, useContext, useState } from "react";
 
@@ -29,7 +29,7 @@ export const TranslateAreaProvider = ({
 }: ITranslateProviderProps) => {
   const [headerAreaValue, setHeaderAreaValue] = useState(headerData.pt);
   const [bodyAreaValue, setBodyAreaValue] = useState(bodyData.deafult);
-  const [footerAreaValue, setFooterAreaValue] = useState(footerData.playpix.player.pt);
+  const [footerAreaValue, setFooterAreaValue] = useState(footerMainData.playpix.player.pt);
 
   return (
     <TranslateAreaContext.Provider

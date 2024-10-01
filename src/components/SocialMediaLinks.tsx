@@ -16,7 +16,7 @@ export const SocialMediaLinks = ({
           className="peer hidden"
           type="checkbox"
           checked={isChecked}
-          onClick={() => setIsChecked(!isChecked)}
+          onChange={(e) => setIsChecked(e.target.checked)}
         />
         <div className="left-2 top-2 z-20 h-3 w-3 scale-0 rounded-md bg-[#8079FB] opacity-0 transition-all duration-300 peer-checked:scale-100 peer-checked:bg-gradient-to-tr peer-checked:opacity-100 peer-checked:transition-all peer-checked:duration-300 dark:bg-[#F03373]" />
       </label>

@@ -24,7 +24,7 @@ export const linksData = {
                         src="https://crmcontent.betconstruct.com/24061916443416602187566920022211300000000000000089176.png"
                         style="display: block; margin: 0 auto;" class="icon-rede-social" alt="icone-rede-social" /></a>
                   </td>`,
-    ig: `td style="padding-right: 20px;">
+    ig: `<td style="padding-right: 20px;">
                     <a href="https://www.instagram.com/dupocofficial"><img
                         src="https://crmcontent.betconstruct.com/24061916442897502187566920022211300000000000000089176.png"
                         style="display: block; margin: 0 auto;" class="icon-rede-social" alt="icone-rede-social" /></a>
