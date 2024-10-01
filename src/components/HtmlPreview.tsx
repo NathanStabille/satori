@@ -5,16 +5,31 @@ import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { styleHtmlData } from "@/data/styleHtmlData";
 import { useEffect } from "react";
 import { TagInfo } from "./TagInfo";
+import { footerData } from "@/data/footerData";
+import { linksData } from "@/data/linksData";
 
 interface IHtmlPreviewProps {
   urlImage: string;
   selectStyle: string;
+  copyHtml: string;
+  setCopyHtml: (copyHtml: string) => void;
+  checkedItems: { [key: string]: boolean };
 }
 
-export const HtmlPreview = ({ urlImage, selectStyle }: IHtmlPreviewProps) => {
-  const { headerAreaValue } = useTranslateArea();
-  const { bodyAreaValue } = useTranslateArea();
-  const { footerAreaValue } = useTranslateArea();
+export const HtmlPreview = ({
+  urlImage,
+  selectStyle,
+  copyHtml,
+  setCopyHtml,
+  checkedItems,
+}: IHtmlPreviewProps) => {
+  const {
+    headerAreaValue,
+    bodyAreaValue,
+    footerAreaValue,
+    setFooterAreaValue,
+  } = useTranslateArea();
+
   const { styleHtml, setStyleHtml } = useStyleHtml();
 
   useEffect(() => {
@@ -225,11 +240,62 @@ export const HtmlPreview = ({ urlImage, selectStyle }: IHtmlPreviewProps) => {
 
 </html>`;
 
-  // htmlValue = mainHtml.replaceAll(linksData.playpix.x, (match) => {
-  //   if (match.includes(linksData.playpix.x)) {
-  //     return "";
-  //   }
-  // });
+  useEffect(() => {
+    // Remover o estilo do scrollbar
+    const formattedHtml = mainHtml.replaceAll(scrollbarStyle, () => {
+      return "";
+    });
+
+    // Modificar o footer com base nos links selecionados
+    let formattedFooter = footerAreaValue;
+
+    // Remover o link do Instagram se o checkbox estiver desmarcado
+    if (!checkedItems.instagram) {
+      formattedFooter = formattedFooter.replaceAll(linksData.playpix.ig, () => {
+        return "";
+      });
+    }
+
+    // Remover o link de 'x' se o checkbox estiver desmarcado
+    if (!checkedItems.x) {
+      formattedFooter = formattedFooter.replaceAll(linksData.playpix.x, () => {
+        return "";
+      });
+    }
+
+    // Remover o link de 'site' se o checkbox estiver desmarcado
+    if (!checkedItems.site) {
+      formattedFooter = formattedFooter.replaceAll(
+        linksData.playpix.site,
+        () => {
+          return "";
+        },
+      );
+    }
+
+    // Remover o link de 'threads' se o checkbox estiver desmarcado
+    if (!checkedItems.threads) {
+      formattedFooter = formattedFooter.replaceAll(
+        linksData.playpix.threads,
+        () => {
+          return "";
+        },
+      );
+    }
+
+    // Atualizar os estados
+    setFooterAreaValue(formattedFooter);
+    setCopyHtml(formattedHtml);
+  }, [
+    mainHtml,
+    setCopyHtml,
+    scrollbarStyle,
+    checkedItems, // Agora, também reagimos à mudança no estado checkedItems
+    footerAreaValue,
+    setFooterAreaValue,
+  ]);
+
+  console.log(copyHtml);
 
   return (
     <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-transparent p-3 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">

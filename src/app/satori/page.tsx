@@ -10,6 +10,8 @@ import { TagInfo } from "@/components/TagInfo";
 import { BodyTranslate } from "@/components/BodyTranslate";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { SocialMediaLinks } from "@/components/SocialMediaLinks";
+import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
+import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
 
 const styleOptions: Options = [
   {
@@ -38,8 +40,24 @@ export default function Satori() {
   const [urlImage, setUrlImage] = useState(
     "https://crmcontent.betconstruct.com/24092616491379102187501150023061900000000000000089176.png",
   );
-
   const [copyHtml, setCopyHtml] = useState("");
+  const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({
+    x: false,
+    instagram: false,
+    site: false,
+    threads: false,
+  });
+
+  const { wasCopied, handleCopy } = useCopyToClipboard(copyHtml);
+
+  const handleCheck = (name: string, isChecked: boolean) => {
+    setCheckedItems((prevState) => ({
+      ...prevState,
+      [name]: isChecked,
+    }));
+  };
+
+  console.log(copyHtml);
 
   return (
     <div
@@ -83,7 +101,13 @@ export default function Satori() {
         {/* URL INPUT */}
 
         {/* HTML PREVIEW */}
-        <HtmlPreview urlImage={urlImage} selectStyle={selectStyle} />
+        <HtmlPreview
+          urlImage={urlImage}
+          selectStyle={selectStyle}
+          copyHtml={copyHtml}
+          setCopyHtml={setCopyHtml}
+          checkedItems={checkedItems}
+        />
         {/* HTML PREVIEW */}
 
         {/* FOOTER */}
@@ -96,7 +120,12 @@ export default function Satori() {
             (item, index) =>
               (item.id !== "threads" ||
                 (item.id === "threads" && selectStyle === "dupoc")) && (
-                <SocialMediaLinks name={item.id} key={index} />
+                <SocialMediaLinks
+                  name={item.id}
+                  key={index}
+                  isChecked={checkedItems[item.id]}
+                  setIsChecked={(isChecked) => handleCheck(item.id, isChecked)}
+                />
               ),
           )}
 
@@ -108,8 +137,16 @@ export default function Satori() {
         </div>
         {/* FOOTER */}
 
-        <button className="w-full rounded-2xl border-none bg-[#8079FB] py-5 font-skyer text-3xl text-slate-50 shadow-md outline-none transition-all hover:bg-indigo-500 hover:text-slate-50 active:bg-indigo-700 dark:bg-gray-800 dark:hover:bg-slate-900 dark:active:bg-gray-950">
-          COPY CODE
+        <button
+          onClick={() => handleCopy()}
+          className="flex w-full items-center justify-center rounded-2xl border-none bg-[#8079FB] py-5 font-skyer text-3xl uppercase text-slate-50 shadow-md outline-none transition-all hover:bg-indigo-500 hover:text-slate-50 active:bg-indigo-700 dark:bg-gray-800 dark:hover:bg-slate-900 dark:active:bg-gray-950"
+        >
+          {wasCopied ? "copied" : "copy code"}
+          {wasCopied ? (
+            <ClipboardDocumentCheckIcon width="50px" className="pl-3" />
+          ) : (
+            ""
+          )}
         </button>
       </div>
       {/* HTML PREVIEW CONNTAINER */}
