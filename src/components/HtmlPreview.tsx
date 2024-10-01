@@ -1,8 +1,10 @@
 "use client";
 import { useStyleHtml } from "@/context/StyleHtmlConext";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
+// import { linksData } from "@/data/linksData";
 import { styleHtmlData } from "@/data/styleHtmlData";
 import { useEffect } from "react";
+import { TagInfo } from "./TagInfo";
 
 interface IHtmlPreviewProps {
   urlImage: string;
@@ -23,7 +25,8 @@ export const HtmlPreview = ({ urlImage, selectStyle }: IHtmlPreviewProps) => {
     }
   });
 
-  const scrollbarStyle = `::-webkit-scrollbar {
+  const scrollbarStyle = `
+  ::-webkit-scrollbar {
   width: 10px !important;
   height: 10px !important;
   border-radius: 10px !important;
@@ -50,10 +53,11 @@ export const HtmlPreview = ({ urlImage, selectStyle }: IHtmlPreviewProps) => {
   display: none;
 }`;
 
-  const mainHtml = `<!DOCTYPE html>
-<html lang="PT-BR">
+  const mainHtml = `
+  <!DOCTYPE html>
+  <html lang="PT-BR">
 
-<head>
+  <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8">
@@ -221,8 +225,15 @@ export const HtmlPreview = ({ urlImage, selectStyle }: IHtmlPreviewProps) => {
 
 </html>`;
 
+  // htmlValue = mainHtml.replaceAll(linksData.playpix.x, (match) => {
+  //   if (match.includes(linksData.playpix.x)) {
+  //     return "";
+  //   }
+  // });
+
   return (
-    <div className="flex h-full w-full items-center justify-center rounded">
+    <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-transparent p-3 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
+      <TagInfo name="preview" className="mb-2" />
       <iframe
         srcDoc={mainHtml}
         className="h-full w-full border-none"

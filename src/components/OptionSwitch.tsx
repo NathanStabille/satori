@@ -21,7 +21,7 @@ export const OptionSwitch = ({
   };
 
   return (
-    <div className="flex items-center justify-center gap-1 rounded-lg p-[5px]">
+    <div className="flex items-center justify-center gap-1 rounded-lg p-[5px] select-none">
       {options.map((item, index) => (
         <button
           {...rest}

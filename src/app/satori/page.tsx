@@ -1,5 +1,5 @@
 "use client";
-import { SocialMediaLinks } from "@/components/SocialMediaLinks";
+// import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { HtmlPreview } from "@/components/HtmlPreview";
 import { OptionSwitch } from "@/components/OptionSwitch";
 import { Options } from "@/types/optionsType";
@@ -9,6 +9,7 @@ import { FooterTranslate } from "@/components/FooterTranslate";
 import { TagInfo } from "@/components/TagInfo";
 import { BodyTranslate } from "@/components/BodyTranslate";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 
 const styleOptions: Options = [
   {
@@ -24,12 +25,21 @@ const footerOptions: Options = [
   { id: "affiliate" },
 ];
 
+const linksOptions: Options = [
+  { id: "x" },
+  { id: "instagram" },
+  { id: "site" },
+  { id: "threads" },
+];
+
 export default function Satori() {
   const [selectStyle, setSelectStyle] = useState(styleOptions[0].id);
   const [footerPattern, setFooterPattern] = useState(footerOptions[0].id);
   const [urlImage, setUrlImage] = useState(
     "https://crmcontent.betconstruct.com/24092616491379102187501150023061900000000000000089176.png",
   );
+
+  const [copyHtml, setCopyHtml] = useState("");
 
   return (
     <div
@@ -46,8 +56,8 @@ export default function Satori() {
       {/* HTML PREVIEW CONNTAINER */}
       <div className="flex h-full w-full flex-col items-start justify-start gap-3">
         {/* MAIN BAR */}
-        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl border-2 bg-slate-100 px-5 shadow-lg backdrop-blur-lg dark:border-slate-800 dark:bg-[#1e1e1e88]">
-          <h1 className="font-skyer text-4xl text-[#8079FB] dark:text-slate-50">
+        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl border-2 bg-slate-100 px-5 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
+          <h1 className="select-none font-skyer text-4xl text-[#8079FB] dark:text-slate-50">
             satori
           </h1>
 
@@ -73,23 +83,22 @@ export default function Satori() {
         {/* URL INPUT */}
 
         {/* HTML PREVIEW */}
-        <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl border bg-transparent p-3 shadow-lg backdrop-blur-lg dark:border-slate-800 dark:bg-[#1e1e1e88]">
-          <TagInfo name="preview" className="mb-2" />
-
-          <HtmlPreview urlImage={urlImage} selectStyle={selectStyle} />
-        </div>
+        <HtmlPreview urlImage={urlImage} selectStyle={selectStyle} />
         {/* HTML PREVIEW */}
 
         {/* FOOTER */}
-        <div className="flex w-full items-center justify-between rounded-2xl border-2 bg-slate-100 p-5 shadow-md backdrop-blur-lg transition-all dark:border-slate-800 dark:bg-[#1e1e1e88]">
-          <h1 className="font-skyer text-xl font-bold text-[#8079FB] dark:text-slate-50">
+        <div className="flex w-full items-center justify-between rounded-2xl border-2 bg-slate-100 p-5 shadow-md backdrop-blur-lg transition-all dark:border-none dark:bg-[#1e1e1e88]">
+          <h1 className="select-none font-skyer text-xl font-bold text-[#8079FB] dark:text-slate-50">
             Footer
           </h1>
 
-          <SocialMediaLinks name={"X(Twitter)"} />
-          <SocialMediaLinks name={"Instagram"} />
-          <SocialMediaLinks name={"Site"} />
-          {selectStyle === "dupoc" && <SocialMediaLinks name={"Threads"} />}
+          {linksOptions.map(
+            (item, index) =>
+              (item.id !== "threads" ||
+                (item.id === "threads" && selectStyle === "dupoc")) && (
+                <SocialMediaLinks name={item.id} key={index} />
+              ),
+          )}
 
           <OptionSwitch
             options={footerOptions}
@@ -99,7 +108,7 @@ export default function Satori() {
         </div>
         {/* FOOTER */}
 
-        <button className="w-full rounded-2xl border-none bg-[#8079FB] py-5 font-skyer text-3xl text-slate-50 shadow-md outline-none transition-all hover:bg-indigo-500 hover:text-slate-50 active:bg-indigo-700 dark:bg-[#F03373] dark:hover:bg-[#ff4a86] dark:active:bg-[#E9004F]">
+        <button className="w-full rounded-2xl border-none bg-[#8079FB] py-5 font-skyer text-3xl text-slate-50 shadow-md outline-none transition-all hover:bg-indigo-500 hover:text-slate-50 active:bg-indigo-700 dark:bg-gray-800 dark:hover:bg-slate-900 dark:active:bg-gray-950">
           COPY CODE
         </button>
       </div>

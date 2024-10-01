@@ -85,7 +85,7 @@ export const FooterTranslate = ({
 
   return (
     <div
-      className={`h-full relative w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} select-none flex-col rounded-3xl border-2 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all dark:border-gray-800`}
+      className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl border-2 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
     >
       <div className="rounded-xxl flex items-center justify-between bg-transparent p-3">
         <OptionSwitch
