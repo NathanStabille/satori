@@ -68,7 +68,7 @@ export default function Satori() {
       className={`flex h-full w-full items-center justify-center gap-5 overflow-auto p-5 max-md:flex-col`}
     >
       {/* CODE MIRROR CONTAINER */}
-      <div className="grid h-full w-full grid-cols-1 flex-col items-start justify-start gap-4">
+      <div className="mitems-center grid h-full w-full grid-cols-1 justify-center gap-4">
         <HeaderTranslate />
         <BodyTranslate />
         <FooterTranslate
@@ -80,7 +80,7 @@ export default function Satori() {
       {/* CODE MIRROR CONTAINER */}
 
       {/* HTML PREVIEW CONNTAINER */}
-      <div className="flex h-full w-full flex-col items-start justify-start gap-3">
+      <div className="flex h-full w-full flex-col items-center justify-center gap-3">
         {/* MAIN BAR */}
         <div className="flex h-[100px] w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
           <h1 className="select-none font-skyer text-4xl text-[#8079FB] dark:text-slate-50">
@@ -98,28 +98,31 @@ export default function Satori() {
         {/* MAIN BAR */}
 
         {/* URL INPUT */}
-        <div className="rounded-xlshadow-lg relative flex w-full items-center justify-center bg-slate-100 backdrop-blur-lg dark:bg-[#1e1e1e88]">
+        <div className="relative flex w-full items-center justify-center rounded-xl bg-slate-100 py-1 shadow-lg backdrop-blur-lg dark:bg-[#1e1e1e88]">
           <input
             value={urlImage}
             onChange={(e) => setUrlImage(e.target.value)}
             type="url"
-            className="h-full flex-1 rounded-xl bg-transparent p-3 pr-36 font-baiJamjuree text-lg font-medium text-[#8079FB] focus:outline focus:outline-[#8079FB] dark:text-[#F03373] dark:focus:outline-[#F03373]"
+            className="h-full flex-1 rounded-xl bg-transparent p-3 pr-44 font-baiJamjuree text-lg font-medium text-[#8079FB] focus:outline focus:outline-[#8079FB] dark:text-[#F03373] dark:focus:outline-[#F03373]"
           />
-          <TagInfo name="url image" className="absolute right-1 mx-2" />
+          <TagInfo name="header image </>" className="absolute right-1 mx-2" />
         </div>
         {/* URL INPUT */}
 
         {/* HTML PREVIEW */}
 
-        <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-slate-100 p-3 shadow-lg backdrop-blur-lg max-md:h-[100vh] dark:border-none dark:bg-[#1e1e1e88]">
-          <div className="mb-2 flex w-full items-center justify-between">
+        <div
+          style={{ backdropFilter: "blur(20px)" }}
+          className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-slate-100 p-3 shadow-lg backdrop-blur-lg max-md:h-[100vh] dark:border-none dark:bg-[#1e1e1e88]"
+        >
+          <div className="mb-4 flex w-full items-center justify-between">
             <Link href="/satori/library">
               <Button
                 label="Library"
                 iconAfter={<Square3Stack3DIcon className="w-[23px]" />}
               />
             </Link>
-            <TagInfo name="preview" className="" />
+            <TagInfo name="preview </>" />
           </div>
           <HtmlPreview
             urlImage={urlImage}
@@ -132,7 +135,10 @@ export default function Satori() {
         {/* HTML PREVIEW */}
 
         {/* FOOTER */}
-        <div className="flex w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-md backdrop-blur-lg transition-all dark:border-none dark:bg-[#1e1e1e88]">
+        <div
+          style={{ backdropFilter: "blur(20px)" }}
+          className="flex w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-lg backdrop-blur-lg transition-all dark:border-none dark:bg-[#1e1e1e88]"
+        >
           <h1 className="select-none font-skyer text-xl font-bold text-[#8079FB] dark:text-slate-50">
             Footer
           </h1>
@@ -160,7 +166,7 @@ export default function Satori() {
 
         <button
           onClick={() => handleCopy()}
-          className="flex w-full items-center justify-center rounded-2xl border-none bg-[#8079FB] py-5 font-skyer text-3xl uppercase text-slate-50 shadow-md outline-none transition-all hover:bg-indigo-500 hover:text-slate-50 active:bg-indigo-700 dark:bg-gray-800 dark:hover:bg-slate-900 dark:active:bg-gray-950"
+          className="flex w-full items-center justify-center rounded-2xl border-none bg-[#8079FB] py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-500 hover:text-slate-50 active:bg-indigo-700 dark:bg-gray-800 dark:hover:bg-slate-900 dark:active:bg-gray-950"
         >
           {wasCopied ? "copied" : "copy code"}
           {wasCopied && (

@@ -20,10 +20,19 @@ const config: Config = {
           "0%": { backgroundPosition: "0%" },
           "100%": { backgroundPosition: "100%" },
         },
+        rotation: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
       },
 
       animation: {
         colorsAnimated: "colorsAnimated 2s infinite alternate-reverse",
+        rotation: "rotation  5s infinite linear",
       },
     },
   },

@@ -11,7 +11,7 @@ import {
   LanguageIcon,
 } from "@heroicons/react/24/outline";
 import { PencilSquareIcon } from "@heroicons/react/24/solid";
-import ReactCodeMirror from "@uiw/react-codemirror";
+import CodeMirror from "@uiw/react-codemirror";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
 import { translateHtml } from "@/utils/translateHtml";
@@ -45,7 +45,8 @@ export const BodyTranslate = () => {
 
   return (
     <div
-      className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl  pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
+      style={{ backdropFilter: "blur(20px)" }}
+      className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
     >
       <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
         <OptionSwitch
@@ -61,7 +62,7 @@ export const BodyTranslate = () => {
         />
 
         <div className="flex items-center justify-center gap-3">
-          <TagInfo name="body" />
+          <TagInfo name="body </>" />
 
           <Button
             onClick={() => {
@@ -86,7 +87,7 @@ export const BodyTranslate = () => {
           />
         </div>
       </div>
-      <ReactCodeMirror
+      <CodeMirror
         className={`overflow-auto rounded-t-lg bg-transparent p-2 transition-all`}
         value={bodyAreaValue}
         extensions={[htmlLanguage]}

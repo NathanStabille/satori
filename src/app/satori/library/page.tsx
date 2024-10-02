@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/Button";
+import { LibraryCard } from "@/components/LibraryCard";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
@@ -18,7 +19,7 @@ export default function Library() {
           <Button
             iconBefore={<ArrowLeftIcon className="w-[23px]" />}
             label="Back to Satori"
-            className="rounded-[100px] border-none bg-[#7f79fb3d] px-5 py-2 text-sm font-semibold backdrop-blur-md"
+            className="border-none bg-[#7f79fb3d] dark:bg-[#68233a8a] px-5 py-2 text-sm font-semibold backdrop-blur-md"
           />
         </Link>
 
@@ -27,7 +28,19 @@ export default function Library() {
       <h1 className="font-skyer text-5xl font-medium text-[#8079FB] dark:text-[#EE3473]">
         satori library
       </h1>
-      <div className="flex h-full w-full rounded-3xl bg-transparent p-5 shadow-lg backdrop-blur-md"></div>
+      <div className=" relative grid h-full w-full grid-cols-4 grid-rows-3 items-center justify-center gap-10 rounded-3xl bg-transparent p-5 transition-all">
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+      </div>
     </motion.div>
   );
 }

@@ -48,6 +48,8 @@ export const HeaderTranslate = () => {
 
   return (
     <div
+      style={{ backdropFilter: "blur(20px)" }}
+
       className={`h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
     >
       <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
@@ -58,7 +60,7 @@ export const HeaderTranslate = () => {
         />
 
         <div className="flex items-center justify-center gap-3">
-          <TagInfo name="header" />
+          <TagInfo name="header </>" />
 
           <Button
             onClick={() => {
