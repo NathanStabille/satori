@@ -15,6 +15,13 @@ const config: Config = {
         baiJamjuree: ["Bai Jamjuree"],
         jetBrains: ["JetBrains Mono"],
       },
+
+      colors: {
+
+        darkThemeColor: '#F03373' ,
+        lightThemeColor: '#655dff' ,
+
+      },
       keyframes: {
         colorsAnimated: {
           "0%": { backgroundPosition: "0%" },

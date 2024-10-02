@@ -12,23 +12,28 @@ export default function Library() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.75 }}
-      className="relative flex h-full w-full flex-col items-center justify-center gap-5 p-5"
+      className="relative flex h-full w-full flex-col items-center justify-center gap-5 overflow-y-auto p-5"
     >
       <div className="fixed top-5 flex w-full items-center justify-between px-5">
         <Link href="/satori">
           <Button
             iconBefore={<ArrowLeftIcon className="w-[23px]" />}
             label="Back to Satori"
-            className="border-none bg-[#7f79fb3d] dark:bg-[#68233a8a] px-5 py-2 text-sm font-semibold backdrop-blur-md"
+            className="border-none bg-[#7f79fb3d] px-5 py-2 text-sm font-semibold backdrop-blur-md dark:bg-[#68233a8a]"
           />
         </Link>
 
         <ThemeSwitcher />
       </div>
-      <h1 className="font-skyer text-5xl font-medium text-[#8079FB] dark:text-[#EE3473]">
+      <h1 className="mb-5 pt-10 font-skyer text-5xl font-medium text-[#8079FB] dark:text-[#EE3473]">
         satori library
       </h1>
-      <div className=" relative grid h-full w-full grid-cols-4 grid-rows-3 items-center justify-center gap-10 rounded-3xl bg-transparent p-5 transition-all">
+      <div className="grid h-full w-full grid-cols-4 items-center justify-center gap-10 overflow-auto rounded-3xl bg-transparent p-5 transition-all max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 2xl:grid-cols-5">
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
+        <LibraryCard />
         <LibraryCard />
         <LibraryCard />
         <LibraryCard />
