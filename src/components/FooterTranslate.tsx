@@ -4,7 +4,7 @@ import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { useCallback, useEffect, useState } from "react";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
-import { footerMainData } from "@/data/footerData";
+import { footerAdvisor, footerMainData } from "@/data/footerData";
 import {
   CheckIcon,
   ClipboardDocumentListIcon,
@@ -22,18 +22,21 @@ const options: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 interface IFooterTranslateProps {
   pattern: string;
   stylePattern: string;
+  checkedItems: { [key: string]: boolean };
 }
 
 export const FooterTranslate = ({
   pattern,
   stylePattern,
+  checkedItems,
 }: IFooterTranslateProps) => {
-  const { footerAreaValue, setFooterAreaValue } = useTranslateArea();
+  const { footerAreaValue, setFooterAreaValue, setFooterAdv } =
+    useTranslateArea();
   const { wasCopied, handleCopy } = useCopyToClipboard(footerAreaValue);
   const [isDisable, setIsDisable] = useState(false);
   const [allOptions, setAllOptions] = useState(options);
   const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
-  const { x, setX, ig, setIg, site, setSite } = useSocialMediaLinks();
+  const { setX, setIg,  setSite } = useSocialMediaLinks();
 
   useEffect(() => {
     if (pattern === "affiliate") {
@@ -50,16 +53,18 @@ export const FooterTranslate = ({
   }, [pattern, stylePattern, setFooterAreaValue]);
 
   useEffect(() => {
-    if (stylePattern === "playpix") {
-      setX(linksData.playpix.x);
-      setIg(linksData.playpix.ig);
-      setSite(linksData.playpix.site);
-    } else {
-      setX(linksData.dupoc.x);
-      setIg(linksData.dupoc.ig);
-      setSite(linksData.dupoc.site);
+    switch (selectedLanguage) {
+      case "pt":
+        setFooterAdv(footerAdvisor.pt);
+        break;
+      case "en":
+        setFooterAdv(footerAdvisor.en);
+        break;
+      case "es":
+        setFooterAdv(footerAdvisor.es);
+        break;
     }
-  }, [stylePattern, setIg, setX, setSite]);
+  }, [selectedLanguage, setFooterAdv]);
 
   useEffect(() => {
     if (pattern !== "affiliate") {
@@ -90,6 +95,38 @@ export const FooterTranslate = ({
       }
     }
   }, [selectedLanguage, stylePattern, pattern, setFooterAreaValue]);
+
+  useEffect(() => {
+    if (checkedItems.x) {
+      if (stylePattern === "playpix") {
+        setX(linksData.playpix.x);
+      } else {
+        setX(linksData.dupoc.x);
+      }
+    } else {
+      setX("");
+    }
+    if (checkedItems.instagram) {
+      if (stylePattern === "playpix") {
+        setIg(linksData.playpix.ig);
+      } else {
+        setIg(linksData.dupoc.ig);
+      }
+    } else {
+      setIg("");
+    }
+    if (checkedItems.site) {
+      if (stylePattern === "playpix") {
+        setSite(linksData.playpix.site);
+      } else {
+        setSite(linksData.dupoc.site);
+      }
+    } else {
+      setSite("");
+    }
+  }, [checkedItems, setX, stylePattern, setIg, setSite]);
+
+  // console.log(checkedItems.instagram)
 
   const onChange = useCallback(
     (value: string) => {

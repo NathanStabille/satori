@@ -12,6 +12,9 @@ import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
 
+
+
+
 const styleOptions: Options = [
   {
     id: "playpix",
@@ -32,6 +35,7 @@ const linksOptions: Options = [
   { id: "site" },
   { id: "threads" },
 ];
+
 
 export default function Satori() {
   const [selectStyle, setSelectStyle] = useState(styleOptions[0].id);
@@ -65,7 +69,7 @@ export default function Satori() {
       <div className="grid h-full w-full grid-cols-1 flex-col items-start justify-start gap-4">
         <HeaderTranslate />
         <BodyTranslate />
-        <FooterTranslate pattern={footerPattern} stylePattern={selectStyle} />
+        <FooterTranslate pattern={footerPattern} stylePattern={selectStyle} checkedItems={checkedItems} />
       </div>
       {/* CODE MIRROR CONTAINER */}
 

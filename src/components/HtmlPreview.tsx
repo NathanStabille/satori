@@ -3,7 +3,6 @@ import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { styleHtmlData } from "@/data/styleHtmlData";
 import { useEffect } from "react";
 import { TagInfo } from "./TagInfo";
-import { footerAdvisor } from "@/data/footerData";
 import { linksData } from "@/data/linksData";
 import { useSocialMediaLinks } from "@/context/SocialMediaLinksContext";
 
@@ -20,7 +19,7 @@ export const HtmlPreview = ({
   selectStyle,
   setCopyHtml,
 }: IHtmlPreviewProps) => {
-  const { headerAreaValue, bodyAreaValue, footerAreaValue } =
+  const { headerAreaValue, bodyAreaValue, footerAreaValue, footerAdv } =
     useTranslateArea();
 
   const { x, ig, site } = useSocialMediaLinks();
@@ -244,7 +243,7 @@ export const HtmlPreview = ({
             </td>
           </tr>
 
-          ${footerAdvisor.pt}
+          ${footerAdv}
 
         </table>
       </td>

@@ -1,6 +1,6 @@
 "use client";
 import { bodyData } from "@/data/bodyData";
-import { footerMainData } from "@/data/footerData";
+import { footerAdvisor, footerMainData } from "@/data/footerData";
 import { headerData } from "@/data/headerData";
 import { createContext, ReactNode, useContext, useState } from "react";
 
@@ -14,6 +14,8 @@ interface ITranslateAreaContextType {
   setBodyAreaValue: (value: string) => void;
   footerAreaValue: string;
   setFooterAreaValue: (value: string) => void;
+  footerAdv: string;
+  setFooterAdv: (value: string) => void;
 }
 const TranslateAreaContext = createContext<ITranslateAreaContextType>({
   headerAreaValue: "",
@@ -22,6 +24,8 @@ const TranslateAreaContext = createContext<ITranslateAreaContextType>({
   setBodyAreaValue: () => {},
   footerAreaValue: "",
   setFooterAreaValue: () => {},
+  footerAdv: "",
+  setFooterAdv: () => {},
 });
 
 export const TranslateAreaProvider = ({
@@ -29,7 +33,10 @@ export const TranslateAreaProvider = ({
 }: ITranslateProviderProps) => {
   const [headerAreaValue, setHeaderAreaValue] = useState(headerData.pt);
   const [bodyAreaValue, setBodyAreaValue] = useState(bodyData.deafult);
-  const [footerAreaValue, setFooterAreaValue] = useState(footerMainData.playpix.player.pt);
+  const [footerAreaValue, setFooterAreaValue] = useState(
+    footerMainData.playpix.player.pt,
+  );
+  const [footerAdv, setFooterAdv] = useState(footerAdvisor.pt);
 
   return (
     <TranslateAreaContext.Provider
@@ -40,6 +47,8 @@ export const TranslateAreaProvider = ({
         setBodyAreaValue,
         footerAreaValue,
         setFooterAreaValue,
+        footerAdv,
+        setFooterAdv,
       }}
     >
       {children}
