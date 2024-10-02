@@ -267,7 +267,7 @@ export const HtmlPreview = ({
   return (
     <iframe
       srcDoc={mainHtml}
-      className="h-full border-none rounded-xl"
+      className="box-border h-full w-full rounded-xl border-none"
       sandbox="allow-scripts allow-same-origin"
       title="HTML Preview"
     />

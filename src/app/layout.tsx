@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} box-border h-screen w-screen bg-[url('/images/bg-light.webp')] bg-cover bg-no-repeat antialiased dark:bg-[url('/images/bg-dark.webp')]`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} relative h-screen w-screen bg-[url('/images/bg-light.webp')] bg-cover bg-no-repeat antialiased dark:bg-[url('/images/bg-dark.webp')]`}
       >
         <AnimatePresence mode="wait">
           <TranslateAreaProvider>

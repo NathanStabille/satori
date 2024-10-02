@@ -8,12 +8,12 @@ import Link from "next/link";
 export default function Library() {
   return (
     <motion.div
-      initial={{ x: 20, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.75 }}
       className="relative flex h-full w-full flex-col items-center justify-center gap-5 p-5"
     >
-      <div className="absolute top-5 flex w-full items-center justify-between px-5">
+      <div className="fixed top-5 flex w-full items-center justify-between px-5">
         <Link href="/satori">
           <Button
             iconBefore={<ArrowLeftIcon className="w-[23px]" />}

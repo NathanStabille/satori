@@ -62,10 +62,10 @@ export default function Satori() {
 
   return (
     <motion.div
-      initial={{ x: 20, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.75 }}
-      className={`grid h-full w-full grid-cols-2 items-center justify-center gap-5 overflow-auto p-5 max-md:grid-cols-1`}
+      className={`flex h-full w-full items-center justify-center gap-5 overflow-auto p-5 max-md:flex-col`}
     >
       {/* CODE MIRROR CONTAINER */}
       <div className="grid h-full w-full grid-cols-1 flex-col items-start justify-start gap-4">
