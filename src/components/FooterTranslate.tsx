@@ -153,7 +153,7 @@ export const FooterTranslate = ({
               handleCopy();
             }}
             label={`${wasCopied ? "copied!" : "copy code"}`}
-            icon={
+            iconAfter={
               wasCopied ? (
                 <CheckIcon className="w-[23px]" />
               ) : (
@@ -167,7 +167,7 @@ export const FooterTranslate = ({
               setIsDisable(!isDisable);
             }}
             label="edit"
-            icon={<PencilSquareIcon className="w-[23px]" />}
+            iconAfter={<PencilSquareIcon className="w-[23px]" />}
           />
         </div>
       </div>

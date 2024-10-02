@@ -56,7 +56,7 @@ export const BodyTranslate = () => {
 
         <Button
           label="Translate"
-          icon={<LanguageIcon className="w-[20px]" />}
+          iconAfter={<LanguageIcon className="w-[20px]" />}
           onClick={() => handleTranslate(bodyAreaValue, selectedLanguage)}
         />
 
@@ -68,7 +68,7 @@ export const BodyTranslate = () => {
               handleCopy();
             }}
             label={`${wasCopied ? "copied!" : "copy code"}`}
-            icon={
+            iconAfter={
               wasCopied ? (
                 <CheckIcon className="w-[23px]" />
               ) : (
@@ -82,7 +82,7 @@ export const BodyTranslate = () => {
               setIsDisable(!isDisable);
             }}
             label="edit"
-            icon={<PencilSquareIcon className="w-[23px]" />}
+            iconAfter={<PencilSquareIcon className="w-[23px]" />}
           />
         </div>
       </div>

@@ -48,9 +48,9 @@ export const HeaderTranslate = () => {
 
   return (
     <div
-      className={`h-full w-full ${isDisable ? "bg-[#1a1b26]" : "dark:bg-[#1e1e1e88] bg-slate-100"} flex-col rounded-3xl border-2 border-slate-200 dark:border-none pb-2 shadow-lg backdrop-blur-md transition-all`}
+      className={`h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl border-2 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
     >
-      <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3 ">
+      <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
@@ -65,7 +65,7 @@ export const HeaderTranslate = () => {
               handleCopy();
             }}
             label={`${wasCopied ? "copied!" : "copy code"}`}
-            icon={
+            iconAfter={
               wasCopied ? (
                 <CheckIcon className="w-[23px]" />
               ) : (
@@ -79,7 +79,7 @@ export const HeaderTranslate = () => {
               setIsDisable(!isDisable);
             }}
             label="edit"
-            icon={<PencilSquareIcon className="w-[23px]" />}
+            iconAfter={<PencilSquareIcon className="w-[23px]" />}
           />
         </div>
       </div>
