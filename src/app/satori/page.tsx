@@ -11,9 +11,10 @@ import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
-
-
-
+import { Button } from "@/components/Button";
+import { Square3Stack3DIcon } from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const styleOptions: Options = [
   {
@@ -35,7 +36,6 @@ const linksOptions: Options = [
   { id: "site" },
   { id: "threads" },
 ];
-
 
 export default function Satori() {
   const [selectStyle, setSelectStyle] = useState(styleOptions[0].id);
@@ -60,23 +60,29 @@ export default function Satori() {
     }));
   };
 
-
   return (
-    <div
-      className={`grid h-full w-full grid-cols-2 items-center justify-center gap-5 overflow-auto bg-[url('/images/bg-light.webp')] bg-cover bg-no-repeat p-5 max-md:grid-cols-1 dark:bg-[url('/images/bg-dark.webp')]`}
+    <motion.div
+      initial={{ x: 20, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+      className={`grid h-full w-full grid-cols-2 items-center justify-center gap-5 overflow-auto p-5 max-md:grid-cols-1`}
     >
       {/* CODE MIRROR CONTAINER */}
       <div className="grid h-full w-full grid-cols-1 flex-col items-start justify-start gap-4">
         <HeaderTranslate />
         <BodyTranslate />
-        <FooterTranslate pattern={footerPattern} stylePattern={selectStyle} checkedItems={checkedItems} />
+        <FooterTranslate
+          pattern={footerPattern}
+          stylePattern={selectStyle}
+          checkedItems={checkedItems}
+        />
       </div>
       {/* CODE MIRROR CONTAINER */}
 
       {/* HTML PREVIEW CONNTAINER */}
       <div className="flex h-full w-full flex-col items-start justify-start gap-3">
         {/* MAIN BAR */}
-        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl border-2 bg-slate-100 p-5 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
+        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
           <h1 className="select-none font-skyer text-4xl text-[#8079FB] dark:text-slate-50">
             satori
           </h1>
@@ -86,12 +92,13 @@ export default function Satori() {
             option={selectStyle}
             setOption={setSelectStyle}
           />
+
           <ThemeSwitcher />
         </div>
         {/* MAIN BAR */}
 
         {/* URL INPUT */}
-        <div className="relative flex w-full items-center justify-center rounded-xl bg-slate-100 shadow-lg backdrop-blur-lg dark:bg-[#1e1e1e88]">
+        <div className="rounded-xlshadow-lg relative flex w-full items-center justify-center bg-slate-100 backdrop-blur-lg dark:bg-[#1e1e1e88]">
           <input
             value={urlImage}
             onChange={(e) => setUrlImage(e.target.value)}
@@ -103,17 +110,29 @@ export default function Satori() {
         {/* URL INPUT */}
 
         {/* HTML PREVIEW */}
-        <HtmlPreview
-          urlImage={urlImage}
-          selectStyle={selectStyle}
-          copyHtml={copyHtml}
-          setCopyHtml={setCopyHtml}
-          checkedItems={checkedItems}
-        />
+
+        <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-slate-100 p-3 shadow-lg backdrop-blur-lg max-md:h-[100vh] dark:border-none dark:bg-[#1e1e1e88]">
+          <div className="mb-2 flex w-full items-center justify-between">
+            <Link href="/satori/library">
+              <Button
+                label="Library"
+                iconAfter={<Square3Stack3DIcon className="w-[23px]" />}
+              />
+            </Link>
+            <TagInfo name="preview" className="" />
+          </div>
+          <HtmlPreview
+            urlImage={urlImage}
+            selectStyle={selectStyle}
+            copyHtml={copyHtml}
+            setCopyHtml={setCopyHtml}
+            checkedItems={checkedItems}
+          />
+        </div>
         {/* HTML PREVIEW */}
 
         {/* FOOTER */}
-        <div className="flex w-full items-center justify-between rounded-2xl border-2 bg-slate-100 p-5 shadow-md backdrop-blur-lg transition-all dark:border-none dark:bg-[#1e1e1e88]">
+        <div className="flex w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-md backdrop-blur-lg transition-all dark:border-none dark:bg-[#1e1e1e88]">
           <h1 className="select-none font-skyer text-xl font-bold text-[#8079FB] dark:text-slate-50">
             Footer
           </h1>
@@ -150,6 +169,6 @@ export default function Satori() {
         </button>
       </div>
       {/* HTML PREVIEW CONNTAINER */}
-    </div>
+    </motion.div>
   );
 }

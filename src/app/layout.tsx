@@ -4,6 +4,7 @@ import "./globals.css";
 import { TranslateAreaProvider } from "@/context/TranslateAreaContext";
 import { StyleHtmlProvider } from "@/context/StyleHtmlConext";
 import { SocialMediaLinksProvider } from "@/context/SocialMediaLinksContext";
+import { AnimatePresence } from "framer-motion";
 
 const japaneseSans = localFont({
   src: "../../public/fonts/japanese3017.otf",
@@ -25,15 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" className="transition">
+    <html lang="pt-br">
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} box-border h-screen w-screen antialiased transition-all`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} box-border h-screen w-screen bg-[url('/images/bg-light.webp')] bg-cover bg-no-repeat antialiased dark:bg-[url('/images/bg-dark.webp')]`}
       >
-        <TranslateAreaProvider>
-          <StyleHtmlProvider>
-            <SocialMediaLinksProvider>{children}</SocialMediaLinksProvider>
-          </StyleHtmlProvider>
-        </TranslateAreaProvider>
+        <AnimatePresence mode="wait">
+          <TranslateAreaProvider>
+            <StyleHtmlProvider>
+              <SocialMediaLinksProvider>{children}</SocialMediaLinksProvider>
+            </StyleHtmlProvider>
+          </TranslateAreaProvider>
+        </AnimatePresence>
       </body>
     </html>
   );

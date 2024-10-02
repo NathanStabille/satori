@@ -2,7 +2,6 @@ import { useStyleHtml } from "@/context/StyleHtmlConext";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { styleHtmlData } from "@/data/styleHtmlData";
 import { useEffect } from "react";
-import { TagInfo } from "./TagInfo";
 import { linksData } from "@/data/linksData";
 import { useSocialMediaLinks } from "@/context/SocialMediaLinksContext";
 
@@ -39,6 +38,7 @@ export const HtmlPreview = ({
   height: 10px !important;
   border-radius: 10px !important;
   background-color: transparent !important;
+  display: none !important
 }
 
 ::-webkit-scrollbar-track {
@@ -265,14 +265,11 @@ export const HtmlPreview = ({
   }, [mainHtml, scrollbarStyle, setCopyHtml]);
 
   return (
-    <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-transparent p-3 shadow-lg backdrop-blur-lg max-md:h-[100vh] dark:border-none dark:bg-[#1e1e1e88]">
-      <TagInfo name="preview" className="mb-2" />
-      <iframe
-        srcDoc={mainHtml}
-        className="h-full w-full border-none"
-        sandbox="allow-scripts allow-same-origin"
-        title="HTML Preview"
-      />
-    </div>
+    <iframe
+      srcDoc={mainHtml}
+      className="h-full border-none rounded-xl"
+      sandbox="allow-scripts allow-same-origin"
+      title="HTML Preview"
+    />
   );
 };

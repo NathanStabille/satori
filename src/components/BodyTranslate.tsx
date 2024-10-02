@@ -45,7 +45,7 @@ export const BodyTranslate = () => {
 
   return (
     <div
-      className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl border-2 border-slate-200 pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
+      className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl  pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
     >
       <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
         <OptionSwitch
