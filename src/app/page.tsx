@@ -74,6 +74,9 @@ export default function Satori() {
           pattern={footerPattern}
           stylePattern={selectStyle}
           checkedItems={checkedItems}
+          footerPattern={footerPattern}
+          setFooterPattern={setFooterPattern}
+          footerOptions={footerOptions}
         />
       </div>
       {/* CODE MIRROR CONTAINER */}
@@ -82,7 +85,7 @@ export default function Satori() {
       <div className="flex h-full w-[45%] flex-col items-center justify-center gap-3">
         {/* MAIN BAR */}
         <div className="flex h-[100px] w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
-          <h1 className="select-none font-skyer text-4xl text-[#8079FB] dark:text-slate-50">
+          <h1 className="text-lightPrimarColor select-none font-skyer text-4xl dark:text-slate-50">
             satori
           </h1>
 
@@ -102,7 +105,7 @@ export default function Satori() {
             value={urlImage}
             onChange={(e) => setUrlImage(e.target.value)}
             type="url"
-            className="h-full flex-1 rounded-xl bg-transparent p-3 pr-44 font-baiJamjuree text-lg font-medium text-[#8079FB] focus:outline focus:outline-[#8079FB] dark:text-[#F03373] dark:focus:outline-[#F03373]"
+            className="text-lightPrimarColor focus:outline-lightPrimarColor dark:text-darkPrimaryColor dark:focus:outline-darkPrimaryColor h-full flex-1 rounded-xl bg-transparent p-3 pr-44 font-baiJamjuree text-lg font-medium focus:outline"
           />
           <TagInfo name="header image </>" className="absolute right-1 mx-2" />
         </div>
@@ -138,34 +141,32 @@ export default function Satori() {
           style={{ backdropFilter: "blur(20px)" }}
           className="flex w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-lg backdrop-blur-lg transition-all dark:border-none dark:bg-[#1e1e1e88]"
         >
-          <h1 className="select-none font-skyer text-xl font-bold text-[#8079FB] dark:text-slate-50">
+          <h1 className="text-lightPrimarColor select-none font-skyer text-xl font-bold dark:text-slate-50">
             Footer
           </h1>
 
-          {linksOptions.map(
-            (item, index) =>
-              (item.id !== "threads" ||
-                (item.id === "threads" && selectStyle === "dupoc")) && (
-                <SocialMediaLinks
-                  name={item.id}
-                  key={index}
-                  isChecked={checkedItems[item.id]}
-                  setIsChecked={(isChecked) => handleCheck(item.id, isChecked)}
-                />
-              ),
-          )}
-
-          <OptionSwitch
-            options={footerOptions}
-            option={footerPattern}
-            setOption={setFooterPattern}
-          />
+          <div className="flex w-full justify-around">
+            {linksOptions.map(
+              (item, index) =>
+                (item.id !== "threads" ||
+                  (item.id === "threads" && selectStyle === "dupoc")) && (
+                  <SocialMediaLinks
+                    name={item.id}
+                    key={index}
+                    isChecked={checkedItems[item.id]}
+                    setIsChecked={(isChecked) =>
+                      handleCheck(item.id, isChecked)
+                    }
+                  />
+                ),
+            )}
+          </div>
         </div>
         {/* FOOTER */}
 
         <button
           onClick={() => handleCopy()}
-          className="flex w-full items-center justify-center rounded-2xl border-none bg-lightThemeColor py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-500 hover:text-slate-50 active:bg-indigo-700 dark:bg-gray-800 dark:hover:bg-slate-900 dark:active:bg-gray-950"
+          className="bg-lightPrimarColor dark:bg-darkPrimaryColor flex w-full items-center justify-center rounded-2xl border-none py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-600 hover:text-slate-50 active:bg-indigo-700 dark:hover:bg-red-600 dark:active:bg-red-700"
         >
           {wasCopied ? "copied" : "copy code"}
           {wasCopied && (

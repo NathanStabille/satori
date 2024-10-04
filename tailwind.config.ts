@@ -18,8 +18,12 @@ const config: Config = {
       },
 
       colors: {
-        darkThemeColor: "#F03373",
-        lightThemeColor: "#655dff",
+        darkPrimaryColor: "#ef4444",
+        darkSecondColor: "#383838",
+        darkBgColor: "#0F0F0F",
+        lightPrimarColor: "#655dff",
+        lightSecondColor: "#E6E7EB",
+        lightBgColor: "#CDCED0",
       },
       keyframes: {
         colorsAnimated: {

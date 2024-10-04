@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} h-screen w-screen bg-slate-50 antialiased dark:bg-gray-900`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} bg-lightBgColor dark:bg-darkBgColor h-screen w-screen antialiased transition-all`}
       >
         <AnimatePresence mode="wait">
           <TranslateAreaProvider>

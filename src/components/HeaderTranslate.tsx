@@ -47,11 +47,10 @@ export const HeaderTranslate = () => {
   }, [selectedLanguage, setHeaderAreaValue]);
 
   return (
-    <div
-      style={{ backdropFilter: "blur(20px)" }}
-      className={`h-full mb-4 w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
-    >
-      <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
+    <>
+      <div
+        className={`rounded-xxl flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} p-3`}
+      >
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
@@ -84,15 +83,20 @@ export const HeaderTranslate = () => {
           />
         </div>
       </div>
-      <CodeMirror
-        className={`overflow-auto rounded-t-lg bg-transparent p-2 transition-all`}
-        value={headerAreaValue}
-        extensions={[htmlLanguage]}
-        onChange={onChange}
-        theme={tokyoNight}
-        editable={isDisable}
-        height={`100%`}
-      />
-    </div>
+      <div
+        style={{ backdropFilter: "blur(20px)" }}
+        className={`relative mb-5 h-[40%] w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-xl backdrop-blur-md transition-all dark:border-none`}
+      >
+        <CodeMirror
+          className={`overflow-auto rounded-t-lg bg-transparent p-2 transition-all`}
+          value={headerAreaValue}
+          extensions={[htmlLanguage]}
+          onChange={onChange}
+          theme={tokyoNight}
+          editable={isDisable}
+          height={`100%`}
+        />
+      </div>
+    </>
   );
 };

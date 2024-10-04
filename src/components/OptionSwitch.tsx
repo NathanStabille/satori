@@ -21,23 +21,23 @@ export const OptionSwitch = ({
   };
 
   return (
-    <div className="flex items-center justify-center gap-1 rounded-lg p-[5px] select-none">
+    <div className="flex select-none items-center justify-center gap-1 rounded-lg p-[5px]">
       {options.map((item, index) => (
         <button
           {...rest}
           key={index}
           onClick={() => setOption(item.id)}
-          className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:bg-indigo-500 hover:text-slate-50 dark:hover:bg-[#F03373] dark:active:bg-[#E9004F] ${
+          className={`dark:hover:bg-darkPrimaryColor hover:bg-lightPrimarColor relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:text-slate-50 dark:active:bg-red-600 ${
             option === item.id
               ? "text-slate-50"
-              : "text-[#8079FB] dark:text-[#F03373]"
+              : "text-lightPrimarColor dark:text-darkPrimaryColor"
           }`}
         >
           <AnimatePresence>
             {option === item.id && (
               <motion.div
                 key={`bubble-${index}`}
-                className="absolute inset-0 z-0 rounded bg-[#8079FB] dark:bg-[#F03373]"
+                className="bg-lightPrimarColor dark:bg-darkPrimaryColor absolute inset-0 z-0 rounded"
                 variants={bubbleVariants}
                 initial="initial"
                 animate="animate"

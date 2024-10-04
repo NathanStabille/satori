@@ -23,12 +23,18 @@ interface IFooterTranslateProps {
   pattern: string;
   stylePattern: string;
   checkedItems: { [key: string]: boolean };
+  footerOptions: Options;
+  footerPattern: string;
+  setFooterPattern: (value: string) => void;
 }
 
 export const FooterTranslate = ({
   pattern,
   stylePattern,
   checkedItems,
+  footerOptions,
+  footerPattern,
+  setFooterPattern,
 }: IFooterTranslateProps) => {
   const { footerAreaValue, setFooterAreaValue, setFooterAdv } =
     useTranslateArea();
@@ -135,8 +141,6 @@ export const FooterTranslate = ({
     }
   }, [checkedItems, setX, stylePattern, setIg, setSite, setThreads]);
 
-  // console.log(checkedItems.instagram)
-
   const onChange = useCallback(
     (value: string) => {
       setFooterAreaValue(value);
@@ -156,33 +160,40 @@ export const FooterTranslate = ({
         />
 
         <div className="flex items-center justify-center gap-3">
-          <TagInfo name="footer </>" />
-          <Button
-            onClick={() => {
-              handleCopy();
-            }}
-            label={`${wasCopied ? "copied!" : "copy code"}`}
-            iconAfter={
-              wasCopied ? (
-                <CheckIcon className="w-[23px]" />
-              ) : (
-                <ClipboardDocumentListIcon className="w-[23px]" />
-              )
-            }
+          <OptionSwitch
+            options={footerOptions}
+            option={footerPattern}
+            setOption={setFooterPattern}
           />
+          <div className="flex items-center justify-center gap-3">
+            <TagInfo name="footer </>" />
+            <Button
+              onClick={() => {
+                handleCopy();
+              }}
+              label={`${wasCopied ? "copied!" : "copy code"}`}
+              iconAfter={
+                wasCopied ? (
+                  <CheckIcon className="w-[23px]" />
+                ) : (
+                  <ClipboardDocumentListIcon className="w-[23px]" />
+                )
+              }
+            />
 
-          <Button
-            onClick={() => {
-              setIsDisable(!isDisable);
-            }}
-            label="edit"
-            iconAfter={<PencilSquareIcon className="w-[23px]" />}
-          />
+            <Button
+              onClick={() => {
+                setIsDisable(!isDisable);
+              }}
+              label="edit"
+              iconAfter={<PencilSquareIcon className="w-[23px]" />}
+            />
+          </div>
         </div>
       </div>
       <div
         style={{ backdropFilter: "blur(20px)" }}
-        className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-xl backdrop-blur-md transition-all dark:border-none`}
+        className={`relative h-[80%] w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-xl backdrop-blur-md transition-all dark:border-none`}
       >
         <CodeMirror
           className={`overflow-auto bg-transparent transition-all`}

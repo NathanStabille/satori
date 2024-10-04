@@ -44,11 +44,10 @@ export const BodyTranslate = () => {
   };
 
   return (
-    <div
-      style={{ backdropFilter: "blur(20px)" }}
-      className={`relative mb-4 h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl pb-2 shadow-lg outline-none backdrop-blur-md transition-all dark:border-none`}
-    >
-      <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
+    <>
+      <div
+        className={`rounded-xxl flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} p-3`}
+      >
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
@@ -86,29 +85,33 @@ export const BodyTranslate = () => {
           />
         </div>
       </div>
-      <CodeMirror
-        className={`overflow-auto rounded-t-lg bg-transparent p-2 transition-all`}
-        value={bodyAreaValue}
-        extensions={[htmlLanguage]}
-        onChange={onChange}
-        theme={tokyoNight}
-        editable={isDisable}
-        height={`${90 /3}vh`}
-        // style={{ overflow: "auto" }}
-      />
+      <div
+        style={{ backdropFilter: "blur(20px)" }}
+        className={`relative mb-5 h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-xl backdrop-blur-md transition-all dark:border-none`}
+      >
+        <CodeMirror
+          className={`overflow-auto rounded-t-lg bg-transparent p-2 transition-all`}
+          value={bodyAreaValue}
+          extensions={[htmlLanguage]}
+          onChange={onChange}
+          theme={tokyoNight}
+          editable={isDisable}
+          height={`100%`}
+        />
 
-      {/* loading component */}
+        {/* loading component */}
 
-      {isLoading && (
-        <div className="absolute top-0 z-10 flex h-full w-full items-center justify-center rounded-3xl bg-[#00000062]">
-          <div className="flex w-full flex-col items-center justify-center gap-4">
-            <div className="flex h-20 w-20 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-[#8079FB] text-4xl text-[#8079FB]">
-              <div className="flex h-16 w-16 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-[#EE3473] text-2xl text-[#EE3473]" />
+        {isLoading && (
+          <div className="absolute top-0 z-10 flex h-full w-full items-center justify-center rounded-3xl bg-[#00000062]">
+            <div className="flex w-full flex-col items-center justify-center gap-4">
+              <div className="flex h-20 w-20 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-[#8079FB] text-4xl text-[#8079FB]">
+                <div className="flex h-16 w-16 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-[#EE3473] text-2xl text-[#EE3473]" />
+              </div>
             </div>
           </div>
-        </div>
-      )}
-      {/* loading component */}
-    </div>
+        )}
+        {/* loading component */}
+      </div>
+    </>
   );
 };
