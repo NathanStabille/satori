@@ -4,9 +4,17 @@ import { LibraryCard } from "@/components/LibraryCard";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import { libraryData } from "@/data/libraryData";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function Library() {
+  const building = true;
+
+  if (building) {
+    redirect("/satori");
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -28,23 +36,17 @@ export default function Library() {
       <h1 className="mb-5 pt-10 font-skyer text-5xl font-medium text-[#8079FB] dark:text-[#EE3473]">
         satori library
       </h1>
-      <div className="grid h-full w-full grid-cols-4 items-center justify-center gap-10 overflow-auto rounded-3xl bg-transparent p-5 transition-all max-xl:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 2xl:grid-cols-5">
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
-        <LibraryCard />
+      <div className="grid h-full w-full grid-cols-2 justify-items-center gap-5 overflow-auto rounded-3xl bg-transparent p-5 transition-all">
+        {libraryData.map((item, index) => (
+          <LibraryCard
+            key={index}
+            type={item.type}
+            url={item.url}
+            html={item.html}
+            pattern={item.pattern}
+            color={item.color}
+          />
+        ))}
       </div>
     </motion.div>
   );

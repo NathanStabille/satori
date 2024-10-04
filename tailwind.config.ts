@@ -14,13 +14,12 @@ const config: Config = {
         skyer: ["var(--font-skyer)"],
         baiJamjuree: ["Bai Jamjuree"],
         jetBrains: ["JetBrains Mono"],
+        avenirBold: ["var(--font-avenirBold)"],
       },
 
       colors: {
-
-        darkThemeColor: '#F03373' ,
-        lightThemeColor: '#655dff' ,
-
+        darkThemeColor: "#F03373",
+        lightThemeColor: "#655dff",
       },
       keyframes: {
         colorsAnimated: {

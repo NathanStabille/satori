@@ -12,12 +12,14 @@
 ::-webkit-scrollbar-track {
   border-radius: 10px !important;
   background-color: transparent !important;
-  margin: 10px;
+  margin: 10px!important;
+  padding: 10px!important;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px !important;
   background: #cccc !important;
+  margin: 10px
 }
 
 ::-webkit-scrollbar-thumb:hover {

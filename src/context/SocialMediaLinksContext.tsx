@@ -15,6 +15,8 @@ interface ISocialMediaLinksType {
   setIg: (ig: string) => void;
   site: string;
   setSite: (site: string) => void;
+  threads: string;
+  setThreads: (site: string) => void;
 }
 
 const SocialMediaLinksContext = createContext<ISocialMediaLinksType>({
@@ -24,6 +26,8 @@ const SocialMediaLinksContext = createContext<ISocialMediaLinksType>({
   setIg: () => {},
   site: "",
   setSite: () => {},
+  threads: "",
+  setThreads: () => {},
 });
 
 export const SocialMediaLinksProvider = ({
@@ -32,6 +36,7 @@ export const SocialMediaLinksProvider = ({
   const [x, setX] = useState(linksData.playpix.x);
   const [ig, setIg] = useState(linksData.playpix.ig);
   const [site, setSite] = useState(linksData.playpix.site);
+  const [threads, setThreads] = useState(linksData.dupoc.thr);
 
   return (
     <SocialMediaLinksContext.Provider
@@ -42,6 +47,8 @@ export const SocialMediaLinksProvider = ({
         setIg,
         site,
         setSite,
+        threads,
+        setThreads,
       }}
     >
       {children}

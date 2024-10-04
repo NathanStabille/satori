@@ -46,7 +46,7 @@ export const BodyTranslate = () => {
   return (
     <div
       style={{ backdropFilter: "blur(20px)" }}
-      className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
+      className={`relative mb-4 h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl pb-2 shadow-lg outline-none backdrop-blur-md transition-all dark:border-none`}
     >
       <div className="flex w-full items-center justify-between rounded-3xl bg-transparent p-3">
         <OptionSwitch
@@ -60,7 +60,6 @@ export const BodyTranslate = () => {
           iconAfter={<LanguageIcon className="w-[20px]" />}
           onClick={() => handleTranslate(bodyAreaValue, selectedLanguage)}
         />
-
         <div className="flex items-center justify-center gap-3">
           <TagInfo name="body </>" />
 
@@ -94,7 +93,8 @@ export const BodyTranslate = () => {
         onChange={onChange}
         theme={tokyoNight}
         editable={isDisable}
-        height="38vh"
+        height={`${90 /3}vh`}
+        // style={{ overflow: "auto" }}
       />
 
       {/* loading component */}

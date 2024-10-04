@@ -2,7 +2,6 @@ import { useStyleHtml } from "@/context/StyleHtmlConext";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { styleHtmlData } from "@/data/styleHtmlData";
 import { useEffect } from "react";
-import { linksData } from "@/data/linksData";
 import { useSocialMediaLinks } from "@/context/SocialMediaLinksContext";
 
 interface IHtmlPreviewProps {
@@ -21,7 +20,7 @@ export const HtmlPreview = ({
   const { headerAreaValue, bodyAreaValue, footerAreaValue, footerAdv } =
     useTranslateArea();
 
-  const { x, ig, site } = useSocialMediaLinks();
+  const { x, ig, site, threads } = useSocialMediaLinks();
 
   const { styleHtml, setStyleHtml } = useStyleHtml();
   useEffect(() => {
@@ -236,7 +235,7 @@ export const HtmlPreview = ({
                 <tr>
                   ${x}
                   ${ig}
-                  ${selectStyle === "dupoc" ? linksData.dupoc.thr : ""}
+                  ${threads}
                   ${site}
                 </tr>
               </table>

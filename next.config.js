@@ -4,6 +4,8 @@ module.exports = {
     DEEPL_API_KEY: process.env.DEEPL_API_KEY,
   },
   images: {
-    domains: ['crmcontent.betconstruct.com'], 
+    domains: ["crmcontent.betconstruct.com"],
   },
+
+  
 };

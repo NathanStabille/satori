@@ -14,10 +14,14 @@ const skyerSans = localFont({
   src: "../../public/fonts/skyer.otf",
   variable: "--font-skyer",
 });
+const avenirBold = localFont({
+  src: "../../public/fonts/avenirBold.otf",
+  variable: "--font-avenirBold",
+});
 
 export const metadata: Metadata = {
-  title: "EMPTHY",
-  description: "EMPTHY",
+  title: "SATORI",
+  description: "Satori",
 };
 
 export default function RootLayout({
@@ -28,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} relative h-screen w-screen bg-[url('/images/bg-light.webp')] bg-cover bg-no-repeat antialiased dark:bg-[url('/images/bg-dark.webp')]`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} h-screen w-screen bg-slate-50 antialiased dark:bg-gray-900`}
       >
         <AnimatePresence mode="wait">
           <TranslateAreaProvider>

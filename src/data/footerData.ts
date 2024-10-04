@@ -477,8 +477,7 @@ export const footerAdvisor = {
               <tr>
                 <td>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                    class="text-body-secundary"><b>Atenção:</b> Jogos de azar podem ser viciantes. Por favor, jogue
-                    com responsabilidade.</p>
+                    class="text-body-secundary"><b>Atenção:</b> +18 Jogue com consciência e responsabilidade. Aposta é diversão, não investimento. | SIGAP: 044/2024 | Portaria: 1475/24.</p>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary">Você está recebendo este e-mail por ter criado uma conta na PlayPix.
                   </p>
@@ -494,8 +493,7 @@ export const footerAdvisor = {
               <tr>
                 <td>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                    class="text-body-secundary"><b>Warning:</b> Gambling can be addictive. Please gamble responsibly.
-                  </p>
+                    class="text-body-secundary"><b>Warning:</b> Attention: +18 Play with awareness and responsibility. Betting is fun, not an investment. | SIGAP: 044/2024 | Ordinance: 1475/24.</p>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary">You are receiving this email because you created an account with
                     PlayPix.</p>
@@ -511,8 +509,7 @@ export const footerAdvisor = {
               <tr>
                 <td>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                    class="text-body-secundary"><b>Advertencia:</b> Los juegos de azar pueden ser adictivos. Por
-                    favor, juegue responsablemente.</p>
+                    class="text-body-secundary"><b>Advertencia:</b>Atención: +18 Juega con conciencia y responsabilidad. Apostar es diversión, no inversión. | SIGAP: 044/2024 | Ordenanza: 1475/24.</p>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary">Estás recibiendo este correo electrónico porque creaste una cuenta en
                     PlayPix.</p>
@@ -522,4 +519,3 @@ export const footerAdvisor = {
           </td>
         </tr>`,
 };
-

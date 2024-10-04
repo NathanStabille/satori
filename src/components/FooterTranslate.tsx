@@ -36,7 +36,7 @@ export const FooterTranslate = ({
   const [isDisable, setIsDisable] = useState(false);
   const [allOptions, setAllOptions] = useState(options);
   const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
-  const { setX, setIg, setSite } = useSocialMediaLinks();
+  const { setX, setIg, setSite, setThreads } = useSocialMediaLinks();
 
   useEffect(() => {
     if (pattern === "affiliate") {
@@ -124,7 +124,16 @@ export const FooterTranslate = ({
     } else {
       setSite("");
     }
-  }, [checkedItems, setX, stylePattern, setIg, setSite]);
+    if (checkedItems.threads) {
+      if (stylePattern === "playpix") {
+        setThreads("");
+      } else {
+        setThreads(linksData.dupoc.thr);
+      }
+    } else {
+      setThreads("");
+    }
+  }, [checkedItems, setX, stylePattern, setIg, setSite, setThreads]);
 
   // console.log(checkedItems.instagram)
 
@@ -136,12 +145,10 @@ export const FooterTranslate = ({
   );
 
   return (
-    <div
-    style={{ backdropFilter: "blur(20px)" }}
-
-      className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col rounded-3xl pb-2 shadow-lg backdrop-blur-md transition-all dark:border-none`}
-    >
-      <div className="rounded-xxl flex items-center justify-between bg-transparent p-3">
+    <>
+      <div
+        className={`rounded-xxl flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} p-3`}
+      >
         <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
@@ -173,15 +180,20 @@ export const FooterTranslate = ({
           />
         </div>
       </div>
-      <CodeMirror
-        className={`relative overflow-auto rounded-t-lg bg-transparent p-1 transition-all`}
-        value={footerAreaValue}
-        extensions={[htmlLanguage]}
-        onChange={onChange}
-        theme={tokyoNight}
-        editable={isDisable}
-        height="24vh"
-      />
-    </div>
+      <div
+        style={{ backdropFilter: "blur(20px)" }}
+        className={`relative h-full w-full ${isDisable ? "bg-[#1a1b26]" : "bg-slate-100 dark:bg-[#1e1e1e88]"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-xl backdrop-blur-md transition-all dark:border-none`}
+      >
+        <CodeMirror
+          className={`overflow-auto bg-transparent transition-all`}
+          value={footerAreaValue}
+          extensions={[htmlLanguage]}
+          onChange={onChange}
+          theme={tokyoNight}
+          editable={isDisable}
+          height={`100%`}
+        />
+      </div>
+    </>
   );
 };
