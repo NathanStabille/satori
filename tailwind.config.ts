@@ -19,10 +19,10 @@ const config: Config = {
 
       colors: {
         darkPrimaryColor: "#ef4444",
-        darkSecondColor: "#383838",
+        darkSecondColor: "#171717",
         darkBgColor: "#0F0F0F",
         lightPrimarColor: "#655dff",
-        lightSecondColor: "#E6E7EB",
+        lightSecondColor: "#f8f9fa",
         lightBgColor: "#CDCED0",
       },
       keyframes: {

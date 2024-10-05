@@ -84,7 +84,7 @@ export default function Satori() {
       {/* HTML PREVIEW CONNTAINER */}
       <div className="flex h-full w-[45%] flex-col items-center justify-center gap-3">
         {/* MAIN BAR */}
-        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-lg backdrop-blur-lg dark:border-none dark:bg-[#1e1e1e88]">
+        <div className="bg-lightSecondColor dark:bg-darkSecondColor flex h-[100px] w-full items-center justify-between rounded-2xl p-5 shadow-lg backdrop-blur-lg dark:border-none">
           <h1 className="text-lightPrimarColor select-none font-skyer text-4xl dark:text-slate-50">
             satori
           </h1>
@@ -100,7 +100,7 @@ export default function Satori() {
         {/* MAIN BAR */}
 
         {/* URL INPUT */}
-        <div className="relative flex w-full items-center justify-center rounded-xl bg-slate-100 py-1 shadow-lg backdrop-blur-lg dark:bg-[#1e1e1e88]">
+        <div className="bg-lightSecondColor dark:bg-darkSecondColor relative flex w-full items-center justify-center rounded-xl py-1 shadow-lg backdrop-blur-lg">
           <input
             value={urlImage}
             onChange={(e) => setUrlImage(e.target.value)}
@@ -115,7 +115,7 @@ export default function Satori() {
 
         <div
           style={{ backdropFilter: "blur(20px)" }}
-          className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-slate-100 p-3 shadow-lg backdrop-blur-lg max-md:h-[100vh] dark:border-none dark:bg-[#1e1e1e88]"
+          className="bg-lightSecondColor dark:bg-darkSecondColor flex h-full w-full flex-col items-end justify-start rounded-2xl p-3 shadow-lg backdrop-blur-lg max-md:h-[100vh] dark:border-none"
         >
           <div className="mb-4 flex w-full items-center justify-end">
             {/* <Link href="/satori/library">
@@ -139,7 +139,7 @@ export default function Satori() {
         {/* FOOTER */}
         <div
           style={{ backdropFilter: "blur(20px)" }}
-          className="flex w-full items-center justify-between rounded-2xl bg-slate-100 p-5 shadow-lg backdrop-blur-lg transition-all dark:border-none dark:bg-[#1e1e1e88]"
+          className="bg-lightSecondColor dark:bg-darkSecondColor flex w-full items-center justify-between rounded-2xl p-5 shadow-lg backdrop-blur-lg transition-all dark:border-none"
         >
           <h1 className="text-lightPrimarColor select-none font-skyer text-xl font-bold dark:text-slate-50">
             Footer
