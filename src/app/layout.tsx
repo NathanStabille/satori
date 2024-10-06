@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { TranslateAreaProvider } from "@/context/TranslateAreaContext";
-import { StyleHtmlProvider } from "@/context/StyleHtmlConext";
+import { StyleHtmlProvider } from "@/context/StyleHtmlContext";
 import { SocialMediaLinksProvider } from "@/context/SocialMediaLinksContext";
-import { AnimatePresence } from "framer-motion";
+import { ThemeProvider } from "next-themes";
 
 const japaneseSans = localFont({
   src: "../../public/fonts/japanese3017.otf",
@@ -30,17 +30,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" suppressHydrationWarning>
       <body
         className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} bg-lightBgColor dark:bg-darkBgColor h-screen w-screen antialiased transition-all`}
       >
-        <AnimatePresence mode="wait">
+        <ThemeProvider attribute="class">
           <TranslateAreaProvider>
             <StyleHtmlProvider>
               <SocialMediaLinksProvider>{children}</SocialMediaLinksProvider>
             </StyleHtmlProvider>
           </TranslateAreaProvider>
-        </AnimatePresence>
+        </ThemeProvider>
       </body>
     </html>
   );

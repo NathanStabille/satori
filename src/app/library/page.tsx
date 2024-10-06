@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/Button";
 import { LibraryCard } from "@/components/LibraryCard";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcherButton";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { libraryData } from "@/data/libraryData";
@@ -12,7 +12,7 @@ export default function Library() {
   const building = true;
 
   if (building) {
-    redirect("/satori");
+    redirect("/");
   }
 
   return (

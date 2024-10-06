@@ -1,4 +1,4 @@
-import { useStyleHtml } from "@/context/StyleHtmlConext";
+import { useStyleHtml } from "@/context/StyleHtmlContext";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { styleHtmlData } from "@/data/styleHtmlData";
 import { useEffect } from "react";

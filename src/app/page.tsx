@@ -7,11 +7,12 @@ import { HeaderTranslate } from "@/components/HeaderTranslate";
 import { FooterTranslate } from "@/components/FooterTranslate";
 import { TagInfo } from "@/components/TagInfo";
 import { BodyTranslate } from "@/components/BodyTranslate";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { ThemeSwitcher } from "@/components/ThemeSwitcherButton";
 import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import Loading from "./loading";
 
 const styleOptions: Options = [
   {
