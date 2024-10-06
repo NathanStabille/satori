@@ -12,7 +12,6 @@ import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
-import Loading from "./loading";
 
 const styleOptions: Options = [
   {
@@ -62,7 +61,7 @@ export default function Satori() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeInOut", duration: 0.75 }}
-      className={`flex h-full w-full items-center justify-center gap-5 overflow-auto p-5 max-md:flex-col`}
+      className={`flex h-full w-full items-center justify-center gap-4 overflow-auto p-5 max-md:flex-col`}
     >
       {/* CODE MIRROR CONTAINER */}
       <div className="flex h-full w-[55%] flex-1 flex-col items-center justify-center">
@@ -80,7 +79,7 @@ export default function Satori() {
       {/* CODE MIRROR CONTAINER */}
 
       {/* HTML PREVIEW CONNTAINER */}
-      <div className="flex h-full w-[45%] flex-col items-center justify-center gap-3">
+      <div className="flex h-full w-[45%] flex-col items-center justify-center gap-4">
         {/* MAIN BAR */}
         <div className="bg-lightSecondColor dark:bg-darkSecondColor flex h-[100px] w-full items-center justify-between rounded-2xl p-5 shadow-lg backdrop-blur-lg dark:border-none">
           <h1 className="text-lightPrimarColor select-none font-skyer text-4xl dark:text-slate-50">
