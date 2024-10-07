@@ -46,7 +46,7 @@ export const BodyTranslate = () => {
   return (
     <>
       <div
-        className={`rounded-xxl flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "dark:bg-darkSecondColor bg-lightSecondColor"} p-3`}
+        className={`rounded-xxl relative flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "dark:bg-darkSecondColor bg-lightSecondColor"} p-3`}
       >
         <OptionSwitch
           option={selectedLanguage}
@@ -88,20 +88,22 @@ export const BodyTranslate = () => {
       <div
         className={`relative mb-4 h-full w-full ${isDisable ? "bg-gray-900" : "dark:bg-darkSecondColor bg-lightSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
       >
-        <CodeMirror
-          className={`overflow-auto rounded-t-lg bg-transparent p-2 transition-all`}
-          value={bodyAreaValue}
-          extensions={[htmlLanguage]}
-          onChange={onChange}
-          theme={tokyoNight}
-          editable={isDisable}
-          height={`100%`}
-        />
+        {!isLoading && (
+          <CodeMirror
+            className={`relative rounded-t-lg bg-transparent p-2 transition-all`}
+            value={bodyAreaValue}
+            extensions={[htmlLanguage]}
+            onChange={onChange}
+            theme={tokyoNight}
+            editable={isDisable}
+            height={`100%`}
+          />
+        )}
 
         {/* loading component */}
 
         {isLoading && (
-          <div className="absolute top-0 z-10 flex h-full w-full items-center justify-center rounded-3xl bg-[#00000062] backdrop-blur-sm">
+          <div className="absolute inset-0 top-0 z-10 flex h-full w-full items-center justify-center overflow-hidden rounded-3xl bg-[#00000062] backdrop-blur-sm">
             <div className="flex w-full flex-col items-center justify-center gap-4">
               <div className="flex h-20 w-20 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-[#8079FB] text-4xl text-[#8079FB]">
                 <div className="flex h-16 w-16 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-[#EE3473] text-2xl text-[#EE3473]" />

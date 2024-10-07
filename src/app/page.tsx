@@ -64,7 +64,7 @@ export default function Satori() {
       className={`flex h-full w-full items-center justify-center gap-4 overflow-auto p-5 max-md:flex-col`}
     >
       {/* CODE MIRROR CONTAINER */}
-      <div className="flex h-full w-[55%] flex-1 flex-col items-center justify-center">
+      <div className="relative flex h-full w-[55%] flex-1 flex-col items-center justify-center">
         <HeaderTranslate />
         <BodyTranslate />
         <FooterTranslate
@@ -156,7 +156,7 @@ export default function Satori() {
           onClick={() => handleCopy()}
           className="bg-lightPrimarColor dark:bg-darkPrimaryColor flex w-full items-center justify-center rounded-2xl border-none py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-600 hover:text-slate-50 active:bg-indigo-700 dark:hover:bg-red-600 dark:active:bg-red-700"
         >
-          {wasCopied ? "copied" : "copy code"}
+          {wasCopied ? "copied" : "copy html"}
           {wasCopied && (
             <ClipboardDocumentCheckIcon width="50px" className="pl-3" />
           )}
