@@ -81,7 +81,7 @@ export default function Satori() {
       {/* HTML PREVIEW CONNTAINER */}
       <div className="flex h-full w-[45%] flex-col items-center justify-center gap-4">
         {/* MAIN BAR */}
-        <div className="bg-lightSecondColor dark:bg-darkSecondColor flex h-[100px] w-full items-center justify-between rounded-2xl p-5 shadow-lg backdrop-blur-lg dark:border-none">
+        <div className="bg-lightSecondColor dark:bg-darkSecondColor flex h-[100px] w-full items-center justify-between rounded-2xl p-5 shadow-lg dark:border-none">
           <h1 className="text-lightPrimarColor select-none font-skyer text-4xl dark:text-slate-50">
             satori
           </h1>
@@ -97,7 +97,7 @@ export default function Satori() {
         {/* MAIN BAR */}
 
         {/* URL INPUT */}
-        <div className="bg-lightSecondColor dark:bg-darkSecondColor relative flex w-full items-center justify-center rounded-xl py-1 shadow-lg backdrop-blur-lg">
+        <div className="bg-lightSecondColor dark:bg-darkSecondColor relative flex w-full items-center justify-center rounded-xl py-1 shadow-lg">
           <input
             value={urlImage}
             onChange={(e) => setUrlImage(e.target.value)}
@@ -110,10 +110,7 @@ export default function Satori() {
 
         {/* HTML PREVIEW */}
 
-        <div
-          style={{ backdropFilter: "blur(20px)" }}
-          className="bg-lightSecondColor dark:bg-darkSecondColor flex h-full w-full flex-col items-end justify-start rounded-2xl p-3 shadow-lg backdrop-blur-lg max-md:h-[100vh] dark:border-none"
-        >
+        <div className="bg-lightSecondColor dark:bg-darkSecondColor flex h-full w-full flex-col items-end justify-start rounded-2xl p-3 shadow-lg max-md:h-[100vh] dark:border-none">
           <div className="mb-4 flex w-full items-center justify-end">
             <TagInfo name="preview </>" />
           </div>
@@ -130,7 +127,7 @@ export default function Satori() {
         {/* FOOTER */}
         <div
           style={{ backdropFilter: "blur(20px)" }}
-          className="bg-lightSecondColor dark:bg-darkSecondColor flex w-full items-center justify-between rounded-2xl p-5 shadow-lg backdrop-blur-lg transition-all dark:border-none"
+          className="bg-lightSecondColor dark:bg-darkSecondColor flex w-full items-center justify-between rounded-2xl p-5 shadow-lg transition-all dark:border-none"
         >
           <h1 className="text-lightPrimarColor select-none font-skyer text-xl font-bold dark:text-slate-50">
             Footer

@@ -3,6 +3,7 @@ import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { styleHtmlData } from "@/data/styleHtmlData";
 import { useEffect } from "react";
 import { useSocialMediaLinks } from "@/context/SocialMediaLinksContext";
+import { useTheme } from "next-themes";
 
 interface IHtmlPreviewProps {
   urlImage: string;
@@ -21,6 +22,7 @@ export const HtmlPreview = ({
     useTranslateArea();
 
   const { x, ig, site, threads } = useSocialMediaLinks();
+  const { resolvedTheme } = useTheme();
 
   const { styleHtml, setStyleHtml } = useStyleHtml();
   useEffect(() => {
@@ -58,7 +60,15 @@ export const HtmlPreview = ({
 }
 ::-webkit-scrollbar-corner {
   display: none;
-}`;
+}
+
+html{
+background-color: ${resolvedTheme === "dark" ? "#171717" : "#f8f9fa"}!important
+
+}
+
+
+`;
 
   const mainHtml = `
   <!DOCTYPE html>
@@ -266,7 +276,7 @@ export const HtmlPreview = ({
   return (
     <iframe
       srcDoc={mainHtml}
-      className="box-border h-full w-full rounded-xl border-none "
+      className="box-border h-full w-full rounded-xl border-none"
       sandbox="allow-scripts allow-same-origin"
       title="HTML Preview"
     />

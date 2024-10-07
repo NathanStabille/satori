@@ -86,8 +86,7 @@ export const BodyTranslate = () => {
         </div>
       </div>
       <div
-        style={{ backdropFilter: "blur(20px)" }}
-        className={`relative mb-4 h-full w-full ${isDisable ? "bg-gray-900" : "dark:bg-darkSecondColor bg-lightSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md backdrop-blur-md transition-all dark:border-none`}
+        className={`relative mb-4 h-full w-full ${isDisable ? "bg-gray-900" : "dark:bg-darkSecondColor bg-lightSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
       >
         <CodeMirror
           className={`overflow-auto rounded-t-lg bg-transparent p-2 transition-all`}
