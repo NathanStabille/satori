@@ -10,7 +10,7 @@ import {
   ClipboardDocumentListIcon,
   LanguageIcon,
 } from "@heroicons/react/24/outline";
-import { PencilSquareIcon } from "@heroicons/react/24/solid";
+import { PencilSquareIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import CodeMirror from "@uiw/react-codemirror";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
@@ -25,6 +25,7 @@ export const BodyTranslate = () => {
   const { bodyAreaValue, setBodyAreaValue } = useTranslateArea();
   const { wasCopied, handleCopy } = useCopyToClipboard(bodyAreaValue);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const onChange = useCallback(
     (value: string) => {
@@ -35,18 +36,22 @@ export const BodyTranslate = () => {
 
   const handleTranslate = async (html: string, targetLang: string) => {
     setIsLoading(true);
-    const translated = await translateHtml(html, targetLang);
+    setErrorMessage(null);
+    const result = await translateHtml(html, targetLang);
 
-    if (translated) {
+    if ("error" in result) {
       setIsLoading(false);
-      setBodyAreaValue(translated);
+      setErrorMessage(result.error);
+    } else {
+      setIsLoading(false);
+      setBodyAreaValue(result.translatedText);
     }
   };
 
   return (
     <>
       <div
-        className={`rounded-xxl relative flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "dark:bg-darkSecondColor bg-lightSecondColor"} p-3`}
+        className={`rounded-xxl relative flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} p-3`}
       >
         <OptionSwitch
           option={selectedLanguage}
@@ -86,7 +91,7 @@ export const BodyTranslate = () => {
         </div>
       </div>
       <div
-        className={`relative mb-4 h-full w-full ${isDisable ? "bg-gray-900" : "dark:bg-darkSecondColor bg-lightSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
+        className={`relative mb-4 h-full w-full ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
       >
         {!isLoading && (
           <CodeMirror
@@ -99,6 +104,28 @@ export const BodyTranslate = () => {
             height={`100%`}
           />
         )}
+
+        {/* error component */}
+
+        {errorMessage && (
+          <div className="fixed top-0 z-50 flex h-screen w-screen items-center justify-center">
+            <div className="relative rounded-2xl bg-red-400 p-16 text-center font-jetBrains text-xl font-medium text-white shadow-md">
+              {errorMessage}
+              <h1 className="font-baiJamjuree text-base text-black">
+                Contate o administrador
+              </h1>
+
+              <Button
+                className="absolute right-0 top-0 m-2"
+                label=""
+                onClick={() => setErrorMessage(null)}
+                iconBefore={<XMarkIcon width={33} className="text-white" />}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* error component */}
 
         {/* loading component */}
 

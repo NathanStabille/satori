@@ -81,8 +81,8 @@ export default function Satori() {
       {/* HTML PREVIEW CONNTAINER */}
       <div className="flex h-full w-[45%] flex-col items-center justify-center gap-4">
         {/* MAIN BAR */}
-        <div className="bg-lightSecondColor dark:bg-darkSecondColor flex h-[100px] w-full items-center justify-between rounded-2xl p-5 shadow-lg dark:border-none">
-          <h1 className="text-lightPrimarColor select-none font-skyer text-4xl dark:text-slate-50">
+        <div className="flex h-[100px] w-full items-center justify-between rounded-2xl bg-lightSecondColor p-5 shadow-lg dark:border-none dark:bg-darkSecondColor">
+          <h1 className="select-none font-skyer text-4xl text-lightPrimarColor dark:text-slate-50">
             satori
           </h1>
 
@@ -97,12 +97,12 @@ export default function Satori() {
         {/* MAIN BAR */}
 
         {/* URL INPUT */}
-        <div className="bg-lightSecondColor dark:bg-darkSecondColor relative flex w-full items-center justify-center rounded-xl py-1 shadow-lg">
+        <div className="relative flex w-full items-center justify-center rounded-xl bg-lightSecondColor py-1 shadow-lg dark:bg-darkSecondColor">
           <input
             value={urlImage}
             onChange={(e) => setUrlImage(e.target.value)}
             type="url"
-            className="text-lightPrimarColor focus:outline-lightPrimarColor dark:text-darkPrimaryColor dark:focus:outline-darkPrimaryColor h-full flex-1 rounded-xl bg-transparent p-3 pr-44 font-baiJamjuree text-lg font-medium focus:outline"
+            className="h-full flex-1 rounded-xl bg-transparent p-3 pr-44 font-baiJamjuree text-lg font-medium text-lightPrimarColor focus:outline focus:outline-lightPrimarColor dark:text-darkPrimaryColor dark:focus:outline-darkPrimaryColor"
           />
           <TagInfo name="header image </>" className="absolute right-1 mx-2" />
         </div>
@@ -110,7 +110,7 @@ export default function Satori() {
 
         {/* HTML PREVIEW */}
 
-        <div className="bg-lightSecondColor dark:bg-darkSecondColor flex h-full w-full flex-col items-end justify-start rounded-2xl p-3 shadow-lg max-md:h-[100vh] dark:border-none">
+        <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-lightSecondColor p-3 shadow-lg dark:border-none dark:bg-darkSecondColor max-md:h-[100vh]">
           <div className="mb-4 flex w-full items-center justify-end">
             <TagInfo name="preview </>" />
           </div>
@@ -127,9 +127,9 @@ export default function Satori() {
         {/* FOOTER */}
         <div
           style={{ backdropFilter: "blur(20px)" }}
-          className="bg-lightSecondColor dark:bg-darkSecondColor flex w-full items-center justify-between rounded-2xl p-5 shadow-lg transition-all dark:border-none"
+          className="flex w-full items-center justify-between rounded-2xl bg-lightSecondColor p-5 shadow-lg transition-all dark:border-none dark:bg-darkSecondColor"
         >
-          <h1 className="text-lightPrimarColor select-none font-skyer text-xl font-bold dark:text-slate-50">
+          <h1 className="select-none font-skyer text-xl font-bold text-lightPrimarColor dark:text-slate-50">
             Footer
           </h1>
 
@@ -154,7 +154,7 @@ export default function Satori() {
 
         <button
           onClick={() => handleCopy()}
-          className="bg-lightPrimarColor dark:bg-darkPrimaryColor flex w-full items-center justify-center rounded-2xl border-none py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-600 hover:text-slate-50 active:bg-indigo-700 dark:hover:bg-red-600 dark:active:bg-red-700"
+          className="flex w-full items-center justify-center rounded-2xl border-none bg-lightPrimarColor py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-600 hover:text-slate-50 active:bg-indigo-700 dark:bg-darkPrimaryColor dark:hover:bg-red-600 dark:active:bg-red-700"
         >
           {wasCopied ? "copied" : "copy html"}
           {wasCopied && (

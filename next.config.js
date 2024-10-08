@@ -7,5 +7,5 @@ module.exports = {
     domains: ["crmcontent.betconstruct.com"],
   },
 
-  
+  output: "standalone",
 };
