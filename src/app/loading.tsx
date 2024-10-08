@@ -5,7 +5,7 @@ export default function Loading() {
         className={`size-44 bg-[url('/images/logo-light.svg')] bg-cover bg-no-repeat dark:bg-[url('/images/logo-dark.svg')]`}
       ></div>
       <h1 className="text-darkBgColor dark:text-lightSecondColor font-skyer text-7xl font-semibold uppercase">
-        welcome to satori
+       satori
       </h1>
 
       <div className="h-24 w-24 animate-spin rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 p-3 dark:from-yellow-500 dark:to-red-500">
