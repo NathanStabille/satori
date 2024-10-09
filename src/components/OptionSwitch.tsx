@@ -27,7 +27,7 @@ export const OptionSwitch = ({
           {...rest}
           key={index}
           onClick={() => setOption(item.id)}
-          className={`dark:hover:bg-darkPrimaryColor hover:bg-lightPrimarColor relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:text-slate-50 dark:active:bg-red-600 ${
+          className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all dark:hover:text-slate-50  hover:bg-lightPrimarColor hover:text-slate-50 dark:hover:bg-darkPrimaryColor dark:active:bg-red-600 ${
             option === item.id
               ? "text-slate-50"
               : "text-lightPrimarColor dark:text-darkPrimaryColor"
@@ -37,7 +37,7 @@ export const OptionSwitch = ({
             {option === item.id && (
               <motion.div
                 key={`bubble-${index}`}
-                className="bg-lightPrimarColor dark:bg-darkPrimaryColor absolute inset-0 z-0 rounded"
+                className="absolute inset-0 z-0 rounded bg-lightPrimarColor dark:bg-darkPrimaryColor"
                 variants={bubbleVariants}
                 initial="initial"
                 animate="animate"
