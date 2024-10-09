@@ -509,7 +509,7 @@ export const footerAdvisor = {
               <tr>
                 <td>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                    class="text-body-secundary"><b>Atención:</b>: +18 Juega con conciencia y responsabilidad. Apostar es diversión, no inversión. | SIGAP: 044/2024 | Ordenanza: 1475/24.</p>
+                    class="text-body-secundary"><b>Atención:</b> +18 Juega con conciencia y responsabilidad. Apostar es diversión, no inversión. | SIGAP: 044/2024 | Ordenanza: 1475/24.</p>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary">Estás recibiendo este correo electrónico porque creaste una cuenta en
                     PlayPix.</p>
