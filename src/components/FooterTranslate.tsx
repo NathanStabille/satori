@@ -36,7 +36,7 @@ export const FooterTranslate = ({
   footerPattern,
   setFooterPattern,
 }: IFooterTranslateProps) => {
-  const { footerAreaValue, setFooterAreaValue, setFooterAdv } =
+  const { footerAreaValue, setFooterAreaValue, setFooterAdv, footerAdv } =
     useTranslateArea();
   const { wasCopied, handleCopy } = useCopyToClipboard(footerAreaValue);
   const [isDisable, setIsDisable] = useState(false);
@@ -62,15 +62,25 @@ export const FooterTranslate = ({
     switch (selectedLanguage) {
       case "pt":
         setFooterAdv(footerAdvisor.pt);
+        if (stylePattern === "dupoc") {
+          setFooterAdv(footerAdvisor.pt.replaceAll("PlayPIX", "Dupoc"));
+        }
+
         break;
       case "en":
         setFooterAdv(footerAdvisor.en);
+        if (stylePattern === "dupoc") {
+          setFooterAdv(footerAdvisor.en.replaceAll("PlayPIX", "Dupoc"));
+        }
         break;
       case "es":
         setFooterAdv(footerAdvisor.es);
+        if (stylePattern === "dupoc") {
+          setFooterAdv(footerAdvisor.es.replaceAll("PlayPIX", "Dupoc"));
+        }
         break;
     }
-  }, [selectedLanguage, setFooterAdv]);
+  }, [selectedLanguage, setFooterAdv, stylePattern, footerAdv]);
 
   useEffect(() => {
     if (pattern !== "affiliate") {
@@ -191,7 +201,7 @@ export const FooterTranslate = ({
       </div>
       <div
         style={{ backdropFilter: "blur(20px)" }}
-        className={`relative h-[80%] w-full ${isDisable ? "bg-gray-900" : "dark:bg-darkSecondColor bg-lightSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
+        className={`relative h-[80%] w-full ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
       >
         <CodeMirror
           className={`overflow-auto bg-transparent transition-all`}
