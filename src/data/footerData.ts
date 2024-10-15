@@ -11,7 +11,7 @@ export const footerMainData = {
                     <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body">Até mais,<br> <b>Equipe PlayPIX</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.</p>
+                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse e-mail.</p>
                   </td>
                 </tr>
               </table>
@@ -72,7 +72,7 @@ export const footerMainData = {
                     <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body">Até mais,<br> <b>Equipe PlayPIX</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.</p>
+                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse e-mail.</p>
                   </td>
                 </tr>
               </table>
@@ -246,7 +246,7 @@ export const footerMainData = {
                     <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.</p>
+                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse e-mail.</p>
                   </td>
                 </tr>
               </table>
@@ -305,7 +305,7 @@ export const footerMainData = {
                     <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.</p>
+                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse e-mail.</p>
                   </td>
                 </tr>
               </table>
