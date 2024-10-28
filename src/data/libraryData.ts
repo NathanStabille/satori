@@ -7,7 +7,6 @@ export interface ILibraryDataType {
 }
 
 export const libraryImageData: ILibraryDataType[] = [
-  
   {
     type: "divider",
     url: "https://crmcontent.betconstruct.com/24080914095410102187501150022211300000000000000089176.png",
@@ -22,28 +21,301 @@ export const libraryImageData: ILibraryDataType[] = [
   },
   {
     type: "icon",
-    url: "https://crmcontent.betconstruct.com/24082913313613002187501150023061900000000000000089176.png",
+    url: "https://crmcontent.betconstruct.com/24082915072959202187501150023061900000000000000089176.png",
     pattern: "playpix",
     color: "#5198FB",
   },
   {
     type: "icon",
-    url: "https://crmcontent.betconstruct.com/24082913331738502187501150023061900000000000000089176.png",
+    url: "https://crmcontent.betconstruct.com/24082915080307302187501150023061900000000000000089176.png",
     pattern: "playpix",
     color: "#5198FB",
   },
   {
     type: "icon",
-    url: "https://crmcontent.betconstruct.com/24082913313613002187501150023061900000000000000089176.png",
+    url: "https://crmcontent.betconstruct.com/24082914353044002187501150023061900000000000000089176.png",
     pattern: "playpix",
     color: "#5198FB",
   },
- 
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24083021392379202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24083021394250002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091219215366302187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091219225852902187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091219232988902187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091219240873002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24090516454981002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "divider",
+    url: "https://crmcontent.betconstruct.com/24091115171787002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "divider",
+    url: "https://crmcontent.betconstruct.com/24091115311891102187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091913533844102187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091913551667402187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091913554091002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091913561004602187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091914094712902187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091914091831802187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091914081597802187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091215384518102187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091215392022802187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091215395097102187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091314140257302187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091818484267002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092715482612002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717465307102187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717474663402187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24090917212215702187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24090917215595802187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24090917274071202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092515074229102187566920023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091317245394002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091317451338802187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091319531275002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24091319540693802187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24090402171512002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24090402173882502187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24092717472894202187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
 ];
 
-
 export const libraryHtmlData: ILibraryDataType[] = [
-
   {
     type: "html",
     html: `<tr>
@@ -68,7 +340,7 @@ export const libraryHtmlData: ILibraryDataType[] = [
     pattern: "playpix",
     color: "#5198FB",
   },
-]
+];
 
 export const iframeConfig = `
 
