@@ -6,7 +6,44 @@ export interface ILibraryDataType {
   color: string;
 }
 
-export const libraryData: ILibraryDataType[] = [
+export const libraryImageData: ILibraryDataType[] = [
+  
+  {
+    type: "divider",
+    url: "https://crmcontent.betconstruct.com/24080914095410102187501150022211300000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "divider",
+    url: "https://crmcontent.betconstruct.com/24080914103200002187501150022211300000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24082913313613002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24082913331738502187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24082913313613002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+ 
+];
+
+
+export const libraryHtmlData: ILibraryDataType[] = [
+
   {
     type: "html",
     html: `<tr>
@@ -31,100 +68,7 @@ export const libraryData: ILibraryDataType[] = [
     pattern: "playpix",
     color: "#5198FB",
   },
-  {
-    type: "html",
-    html: `<tr>
-            <td>
-              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto 40px auto;"
-                class="margin-containers">
-                <tr>
-                  <td>
-                    <table cellpadding="0" cellspacing="0"
-                      style="width: 87%;margin: 0 auto 30px auto; padding: 30px; border: 1px solid #5198FB; border-radius: 32px 12px;"
-                      class="margin-containers">
-                      <tr>
-                        <td style="width: 10%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24082913313613002187501150023061900000000000000089176.png"
-                            style="display: block;" alt="icon-proximos-passos" class="icon-proximos-passos" />
-                        </td>
-                        <td style="padding-left: 20px;">
-                          <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block;"
-                            class="text-body">Para garantir que você tenha tudo o que precisa, oferecemos um gerente
-                            dedicado em horário comercial, pronto para apoiar você em cada passo.</p>
-                        </td>
-                      </tr>
-                    </table>
-                    <table cellpadding="0" cellspacing="0"
-                      style="width: 87%;margin: 0 auto 30px auto; padding: 30px; border: 1px solid #5198FB; border-radius: 32px 12px;"
-                      class="margin-containers">
-                      <tr>
-                        <td style="width: 10%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24082913323231102187501150023061900000000000000089176.png"
-                            style="display: block;" alt="icon-proximos-passos" class="icon-proximos-passos" />
-                        </td>
-                        <td style="padding-left: 20px;">
-                          <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block;"
-                            class="text-body">Acesso a ferramentas incríveis como nossa sala de sinais, conta demo, material de divulgação e muito mais para engajar e conquistar seus clientes.</p>
-                        </td>
-                      </tr>
-                    </table>
-                    <table cellpadding="0" cellspacing="0"
-                      style="width: 87%;margin: 0 auto 30px auto; padding: 30px; border: 1px solid #5198FB; border-radius: 32px 12px;"
-                      class="margin-containers">
-                      <tr>
-                        <td style="width: 10%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24082913331738502187501150023061900000000000000089176.png"
-                            style="display: block;" alt="icon-proximos-passos" class="icon-proximos-passos" />
-                        </td>
-                        <td style="padding-left: 20px;">
-                          <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block;"
-                            class="text-body">Acesso ao nosso aplicativo de sinais, que é super avançado e oferece uma visão detalhada de todos os dados de desempenho para otimizar suas estratégias.</p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>`,
-    pattern: "playpix",
-    color: "#5198FB",
-  },
-  {
-    type: "image",
-    url: "https://crmcontent.betconstruct.com/24080914095410102187501150022211300000000000000089176.png",
-    pattern: "playpix",
-    color: "#5198FB",
-  },
-  {
-    type: "image",
-    url: "https://crmcontent.betconstruct.com/24080914103200002187501150022211300000000000000089176.png",
-    pattern: "playpix",
-    color: "#5198FB",
-  },
-  {
-    type: "image",
-    url: "https://crmcontent.betconstruct.com/24082913313613002187501150023061900000000000000089176.png",
-    pattern: "playpix",
-    color: "#5198FB",
-  },
-  {
-    type: "image",
-    url: "https://crmcontent.betconstruct.com/24082913331738502187501150023061900000000000000089176.png",
-    pattern: "playpix",
-    color: "#5198FB",
-  },
-  {
-    type: "image",
-    url: "https://crmcontent.betconstruct.com/24082913313613002187501150023061900000000000000089176.png",
-    pattern: "playpix",
-    color: "#5198FB",
-  },
- 
-];
+]
 
 export const iframeConfig = `
 
