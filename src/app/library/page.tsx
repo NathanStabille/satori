@@ -33,7 +33,7 @@ export default function Library() {
 
         <ThemeSwitcher />
       </div>
-      <h1 className="mb-5 pt-10 font-skyer text-5xl font-medium text-[#8079FB] dark:text-[#EE3473]">
+      <h1 className="mb-5 pt-10 font-skyer text-5xl font-medium text-[#8079FB] dark:text-darkPrimaryColor">
         satori library
       </h1>
       <div className="grid h-full w-full grid-cols-3 justify-items-center gap-5 overflow-auto rounded-3xl bg-transparent p-5 transition-all">

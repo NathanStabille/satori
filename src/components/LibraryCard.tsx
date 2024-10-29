@@ -15,7 +15,7 @@ export const LibraryCard = ({
   const [imageSize, setImageSize] = useState({ width: 0, heigth: 0 });
 
   return (
-    <div className="before:via-lightThemeColor relative flex h-[300px] w-[300px] items-center justify-center overflow-hidden rounded-2xl bg-transparent p-[2px] shadow-md transition-all duration-200 before:absolute before:h-[900px] before:w-full before:animate-rotation before:bg-gradient-to-r before:from-transparent before:to-transparent before:opacity-0 before:content-[''] hover:scale-110 hover:before:opacity-100 dark:before:via-[#ea00ff]">
+    <div className="before:via-lightThemeColor relative flex h-[300px] w-[300px] items-center justify-center overflow-hidden rounded-2xl bg-transparent p-[2px] shadow-md transition-all duration-200 before:absolute before:h-[900px] before:w-full before:animate-rotation before:bg-gradient-to-r before:from-transparent before:to-transparent before:opacity-0 before:content-[''] hover:scale-110 hover:before:opacity-100 dark:before:via-[#5198FB]">
       <div className="relative z-10 flex h-full w-full flex-col items-center justify-between rounded-xl bg-slate-100 p-4 dark:bg-gray-900">
         <div className="flex w-full cursor-pointer items-center justify-between">
           <TagInfo
@@ -49,12 +49,12 @@ export const LibraryCard = ({
 
         <div className={`flex w-full select-none items-center justify-between`}>
           <div className="text-lightThemeColor dark:text-darkThemeColor flex items-center justify-center gap-2 font-jetBrains">
-            <span className="bg-lightThemeColor dark:bg-darkThemeColor rounded-lg px-2 text-slate-100">
+            <span className="bg-lightThemeColor dark:bg-darkThemeColor rounded-lg px-2">
               {`${imageSize.width}`}
             </span>
             x
-            <span className="bg-lightThemeColor dark:bg-darkThemeColor rounded-lg px-2 text-slate-100">
-            {`${imageSize.heigth}`}
+            <span className="bg-lightThemeColor dark:bg-darkThemeColor rounded-lg px-2">
+              {`${imageSize.heigth}`}
             </span>
           </div>
 
