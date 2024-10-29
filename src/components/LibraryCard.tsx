@@ -20,7 +20,9 @@ export const LibraryCard = ({
     <div
       className={`before:via-lightThemeColor relative flex h-[300px] w-[300px] items-center justify-center overflow-hidden rounded-2xl bg-transparent p-[2px] transition-all duration-200 before:absolute before:h-[900px] before:w-full before:animate-rotation before:bg-gradient-to-r before:from-transparent before:to-transparent before:opacity-0 before:content-[''] hover:scale-110 hover:before:opacity-100 ${pattern === "playpix" ? "before:via-[#5198FB]" : "before:via-[#EF7929]"}`}
     >
-      <div className={`relative z-10 flex h-full w-full flex-col items-center justify-between rounded-xl bg-slate-100 p-4 ${pattern === 'playpix'? 'dark:bg-gray-900' : 'dark:bg-red-900'}`}>
+      <div
+        className={`relative z-10 flex h-full w-full flex-col items-center justify-between rounded-xl bg-slate-100 p-4 ${pattern === "playpix" ? "dark:bg-[#080D1C]" : "dark:bg-[#120C16]"}`}
+      >
         <div className="flex w-full cursor-pointer items-center justify-between">
           <TagInfo
             name={type}
