@@ -5,6 +5,7 @@ import { useState } from "react";
 import { ILibraryDataType } from "@/data/libraryData";
 import { PhotoIcon } from "@heroicons/react/24/solid";
 import { LinkIcon } from "@heroicons/react/24/outline";
+import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 
 export const LibraryCard = ({
   type,
@@ -13,10 +14,13 @@ export const LibraryCard = ({
   color,
 }: ILibraryDataType) => {
   const [imageSize, setImageSize] = useState({ width: 0, heigth: 0 });
+  const { wasCopied, handleCopy } = useCopyToClipboard(url || "");
 
   return (
-    <div className="before:via-lightThemeColor relative flex h-[300px] w-[300px] items-center justify-center overflow-hidden rounded-2xl bg-transparent p-[2px] shadow-md transition-all duration-200 before:absolute before:h-[900px] before:w-full before:animate-rotation before:bg-gradient-to-r before:from-transparent before:to-transparent before:opacity-0 before:content-[''] hover:scale-110 hover:before:opacity-100 dark:before:via-[#5198FB]">
-      <div className="relative z-10 flex h-full w-full flex-col items-center justify-between rounded-xl bg-slate-100 p-4 dark:bg-gray-900">
+    <div
+      className={`before:via-lightThemeColor relative flex h-[300px] w-[300px] items-center justify-center overflow-hidden rounded-2xl bg-transparent p-[2px] transition-all duration-200 before:absolute before:h-[900px] before:w-full before:animate-rotation before:bg-gradient-to-r before:from-transparent before:to-transparent before:opacity-0 before:content-[''] hover:scale-110 hover:before:opacity-100 ${pattern === "playpix" ? "before:via-[#5198FB]" : "before:via-[#EF7929]"}`}
+    >
+      <div className={`relative z-10 flex h-full w-full flex-col items-center justify-between rounded-xl bg-slate-100 p-4 ${pattern === 'playpix'? 'dark:bg-gray-900' : 'dark:bg-red-900'}`}>
         <div className="flex w-full cursor-pointer items-center justify-between">
           <TagInfo
             name={type}
@@ -58,7 +62,11 @@ export const LibraryCard = ({
             </span>
           </div>
 
-          <Button label="get link" iconAfter={<LinkIcon width="23px" />} />
+          <Button
+            label={wasCopied ? "copied" : "get link"}
+            iconAfter={<LinkIcon width="23px" />}
+            onClick={() => handleCopy()}
+          />
         </div>
       </div>
     </div>
