@@ -36,7 +36,7 @@ export default function Library() {
       <h1 className="mb-5 pt-10 font-skyer text-5xl font-medium text-[#8079FB] dark:text-darkPrimaryColor">
         satori library
       </h1>
-      <div className="grid h-full w-full grid-cols-3 justify-items-center gap-5 overflow-auto rounded-3xl bg-transparent p-5 transition-all">
+      <div className="grid h-full w-full justify-items-center gap-5 overflow-auto rounded-3xl bg-transparent p-5 transition-all md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 min-[2000px]:grid-cols-6 min-[3000px]:grid-cols-8">
         {libraryImageData.map((item, index) => (
           <LibraryCard
             key={index}
