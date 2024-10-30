@@ -6,10 +6,9 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { libraryImageData } from "@/data/libraryData";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export default function Library() {
-  const building = true;
+  // const building = true;
 
   // if (building) {
   //   redirect("/");
