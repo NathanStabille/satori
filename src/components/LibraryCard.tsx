@@ -38,12 +38,12 @@ export const LibraryCard = ({
 
         <div className="flex h-full w-full cursor-pointer items-center justify-center overflow-auto p-3">
           <Image
-            className=""
+            className="h-auto w-auto"
             width={type === "icon" ? 50 : 500}
             height={type === "icon" ? 50 : 500}
             quality={100}
             src={url || ""}
-            alt="image"
+            alt="icon"
             onLoad={(img) =>
               setImageSize({
                 width: img.currentTarget.naturalWidth,

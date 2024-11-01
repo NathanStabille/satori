@@ -123,6 +123,12 @@ export const libraryImageData: ILibraryDataType[] = [
   },
   {
     type: "icon",
+    url: "https://crmcontent.betconstruct.com/24103020201024002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
     url: "https://crmcontent.betconstruct.com/24091914091831802187501150023061900000000000000089176.png",
     pattern: "playpix",
     color: "#5198FB",
@@ -927,6 +933,12 @@ export const libraryImageData: ILibraryDataType[] = [
   },
   {
     type: "icon",
+    url: "https://crmcontent.betconstruct.com/24103021014867202187566920023061900000000000000089176.png",
+    pattern: "dupoc",
+    color: "#EF7929",
+  },
+  {
+    type: "icon",
     url: "https://crmcontent.betconstruct.com/24092316324811602187501150023061900000000000000089176.png",
     pattern: "dupoc",
     color: "#EF7929",
@@ -964,6 +976,18 @@ export const libraryImageData: ILibraryDataType[] = [
   {
     type: "icon",
     url: "https://crmcontent.betconstruct.com/24100420055637102187566920023061900000000000000089176.png",
+    pattern: "dupoc",
+    color: "#EF7929",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24103018065813602187566920023061900000000000000089176.png",
+    pattern: "dupoc",
+    color: "#EF7929",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24103018080550102187566920023061900000000000000089176.png",
     pattern: "dupoc",
     color: "#EF7929",
   },
