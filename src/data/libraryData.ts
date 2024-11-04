@@ -27,6 +27,12 @@ export const libraryImageData: ILibraryDataType[] = [
   },
   {
     type: "icon",
+    url: "https://crmcontent.betconstruct.com/24110116305215902187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
     url: "https://crmcontent.betconstruct.com/24082915080307302187501150023061900000000000000089176.png",
     pattern: "playpix",
     color: "#5198FB",
@@ -501,6 +507,24 @@ export const libraryImageData: ILibraryDataType[] = [
   },
   {
     type: "icon",
+    url: "https://crmcontent.betconstruct.com/24110415564896002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "divider",
+    url: "https://crmcontent.betconstruct.com/24110415490988702187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "divider",
+    url: "https://crmcontent.betconstruct.com/24110415493959002187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "icon",
     url: "https://crmcontent.betconstruct.com/24101119174564002187501150023061900000000000000089176.png",
     pattern: "playpix",
     color: "#5198FB",
@@ -556,6 +580,30 @@ export const libraryImageData: ILibraryDataType[] = [
   {
     type: "icon",
     url: "https://crmcontent.betconstruct.com/24082917311106502187501150023061900000000000000089176.png",
+    pattern: "dupoc",
+    color: "#EF7929",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24110417212492502187566920023061900000000000000089176.png",
+    pattern: "dupoc",
+    color: "#EF7929",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24110417220692102187566920023061900000000000000089176.png",
+    pattern: "dupoc",
+    color: "#EF7929",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24110417225569102187566920023061900000000000000089176.png",
+    pattern: "dupoc",
+    color: "#EF7929",
+  },
+  {
+    type: "icon",
+    url: "https://crmcontent.betconstruct.com/24110417261174702187566920023061900000000000000089176.png",
     pattern: "dupoc",
     color: "#EF7929",
   },

@@ -10,8 +10,13 @@ import { BodyTranslate } from "@/components/BodyTranslate";
 import { ThemeSwitcher } from "@/components/ThemeSwitcherButton";
 import { SocialMediaLinks } from "@/components/SocialMediaLinks";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
-import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
+import {
+  ClipboardDocumentCheckIcon,
+  Square3Stack3DIcon,
+} from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
+import { Button } from "@/components/Button";
+import Link from "next/link";
 
 const styleOptions: Options = [
   {
@@ -111,7 +116,13 @@ export default function Satori() {
         {/* HTML PREVIEW */}
 
         <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-lightSecondColor p-3 shadow-lg dark:border-none dark:bg-darkSecondColor max-md:h-[100vh]">
-          <div className="mb-4 flex w-full items-center justify-end">
+          <div className="mb-4 flex w-full items-center justify-between">
+            <Link href="/library">
+              <Button
+                label="library"
+                iconAfter={<Square3Stack3DIcon width={23} />}
+              />
+            </Link>
             <TagInfo name="preview </>" />
           </div>
           <HtmlPreview
