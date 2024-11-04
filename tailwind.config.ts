@@ -24,6 +24,8 @@ const config: Config = {
         lightPrimarColor: "#655dff",
         lightSecondColor: "#f8f9fa",
         lightBgColor: "#CDCED0",
+        playpixColor: "#5198FB",
+        dupocColor: "#EF7929",
       },
       keyframes: {
         colorsAnimated: {

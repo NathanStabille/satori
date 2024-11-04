@@ -18,8 +18,6 @@ export default function Library() {
   const [filterSelect, setFilterSelect] = useState("");
   const [libraryItems, setLibraryItems] = useState(libraryImageData);
 
-  console.log("render");
-
   const filterPattern = (pattern: string) => {
     setFilterSelect(pattern);
 
@@ -52,16 +50,18 @@ export default function Library() {
         satori library
       </h1>
       <div className="flex w-full items-center justify-center gap-5">
-        <Button
-          label="playpix"
-          className={`transition hover:bg-[#3271e6] hover:text-gray-50 active:bg-[#5198FB] dark:hover:bg-[#3271e6] dark:hover:text-gray-50 dark:active:bg-[#5198FB] ${filterSelect === "playpix" && "bg-[#5198FB] text-gray-50 dark:bg-[#5198FB] dark:text-gray-50"}`}
+        <button
+          className={`active:bg-playpixColor/60 hover:bg-playpixColor rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:text-gray-50 ${filterSelect === "playpix" ? "bg-playpixColor text-gray-50" : "bg-playpixColor/20 text-playpixColor"}`}
           onClick={() => filterPattern("playpix")}
-        />
-        <Button
-          label="dupoc"
-          className={`transition hover:bg-[#ff8432] hover:text-gray-50 active:bg-[#EF7929] dark:hover:bg-[#ff8432] dark:hover:text-gray-50 dark:active:bg-[#EF7929] ${filterSelect === "dupoc" && "bg-[#EF7929] text-gray-50 dark:bg-[#EF7929] dark:text-gray-50"}`}
+        >
+          playpix
+        </button>
+        <button
+          className={`active:bg-dupocColor/60 hover:bg-dupocColor rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:text-gray-50 ${filterSelect === "dupoc" ? "bg-dupocColor text-gray-50" : "bg-dupocColor/20 text-dupocColor"}`}
           onClick={() => filterPattern("dupoc")}
-        />
+        >
+          dupoc
+        </button>
       </div>
       <div className="grid h-full w-full justify-items-center gap-5 overflow-auto rounded-3xl bg-transparent p-5 transition-all md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 min-[2000px]:grid-cols-6 min-[3000px]:grid-cols-8">
         {libraryItems.map((item, index) => (
