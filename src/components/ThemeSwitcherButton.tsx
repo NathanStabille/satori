@@ -1,3 +1,4 @@
+'use client'
 import { useTheme } from "next-themes";
 import { Button } from "./Button";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
