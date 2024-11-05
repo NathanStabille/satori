@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} bg-lightBgColor dark:bg-darkBgColor h-screen w-screen antialiased transition-all`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} flex h-screen w-screen items-center justify-center bg-lightBgColor antialiased transition-all dark:bg-darkBgColor`}
       >
         <ThemeProvider attribute="class">
           <TranslateAreaProvider>
