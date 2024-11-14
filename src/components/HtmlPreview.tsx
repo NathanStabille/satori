@@ -243,8 +243,8 @@ background-color: ${resolvedTheme === "dark" ? "#171717" : "#f8f9fa"}!important
             <td>
               <table cellpadding="0" cellspacing="0" style="margin: 0 auto 40px auto;" class="margin-containers">
                 <tr>
-                  ${x}
                   ${ig}
+                  ${x}
                   ${threads}
                   ${site}
                 </tr>
