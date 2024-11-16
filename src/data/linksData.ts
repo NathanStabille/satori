@@ -6,7 +6,7 @@ export const linksData = {
                         style="display: block; margin: 0 auto;" class="icon-rede-social" alt="icone-rede-social" /></a>
                   </td>`,
     ig: `<td style="padding-right: 20px;">
-                    <a href="https://www.instagram.com/playpix.official"><img
+                    <a href="https://www.instagram.com/playpix_bet"><img
                         src="https://crmcontent.betconstruct.com/24061416361964002187501150022211300000000000000089176.png"
                         style="display: block; margin: 0 auto;" class="icon-rede-social" alt="icone-rede-social" /></a>
                   </td>`,
@@ -25,7 +25,7 @@ export const linksData = {
                         style="display: block; margin: 0 auto;" class="icon-rede-social" alt="icone-rede-social" /></a>
                   </td>`,
     ig: `<td style="padding-right: 20px;">
-                    <a href="https://www.instagram.com/dupocofficial"><img
+                    <a href="https://www.instagram.com/dupoc.pro"><img
                         src="https://crmcontent.betconstruct.com/24061916442897502187566920022211300000000000000089176.png"
                         style="display: block; margin: 0 auto;" class="icon-rede-social" alt="icone-rede-social" /></a>
                   </td>`,
