@@ -12,7 +12,7 @@ const config: Config = {
       fontFamily: {
         japanese: ["var(--font-japanese)"],
         skyer: ["var(--font-skyer)"],
-        baiJamjuree: ["Bai Jamjuree"],
+        baiJamjuree: ["var(--font-baiJamjuree)"],
         jetBrains: ["JetBrains Mono"],
         avenirBold: ["var(--font-avenirBold)"],
       },

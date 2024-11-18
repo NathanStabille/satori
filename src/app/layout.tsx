@@ -10,6 +10,10 @@ const japaneseSans = localFont({
   src: "../../public/fonts/japanese3017.otf",
   variable: "--font-japanese",
 });
+const baiJamjuree = localFont({
+  src: "../../public/fonts/baiJamjureeRegular.ttf",
+  variable: "--baiJamjuree",
+});
 const skyerSans = localFont({
   src: "../../public/fonts/skyer.otf",
   variable: "--font-skyer",
@@ -32,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} flex h-screen w-screen items-center justify-center bg-lightBgColor antialiased transition-all dark:bg-darkBgColor`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} ${baiJamjuree.variable} flex h-screen w-screen items-center justify-center bg-lightBgColor antialiased transition-all dark:bg-darkBgColor`}
       >
         <ThemeProvider attribute="class">
           <TranslateAreaProvider>
