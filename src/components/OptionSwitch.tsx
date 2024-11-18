@@ -27,7 +27,7 @@ export const OptionSwitch = ({
           {...rest}
           key={index}
           onClick={() => setOption(item.id)}
-          className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all dark:hover:text-slate-50  hover:bg-lightPrimarColor hover:text-slate-50 dark:hover:bg-darkPrimaryColor dark:active:bg-red-600 ${
+          className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-medium transition-all dark:hover:text-slate-50  hover:bg-lightPrimarColor hover:text-slate-50 dark:hover:bg-darkPrimaryColor dark:active:bg-red-600 ${
             option === item.id
               ? "text-slate-50"
               : "text-lightPrimarColor dark:text-darkPrimaryColor"

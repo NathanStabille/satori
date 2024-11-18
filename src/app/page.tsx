@@ -107,7 +107,7 @@ export default function Satori() {
             value={urlImage}
             onChange={(e) => setUrlImage(e.target.value)}
             type="url"
-            className="h-full flex-1 rounded-xl bg-transparent p-3 pr-44 font-baiJamjuree text-lg font-medium text-lightPrimarColor focus:outline focus:outline-lightPrimarColor dark:text-darkPrimaryColor dark:focus:outline-darkPrimaryColor"
+            className="h-full flex-1 rounded-xl bg-transparent p-3 pr-44 font-baiJamjuree text-lg text-lightPrimarColor focus:outline focus:outline-lightPrimarColor dark:text-darkPrimaryColor dark:focus:outline-darkPrimaryColor"
           />
           <TagInfo name="header image </>" className="absolute right-1 mx-2" />
         </div>
