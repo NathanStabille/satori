@@ -3,6 +3,129 @@ export const footerMainData = {
     affiliate: {
       pt: `
         <!-- Info Footer  -->
+
+        <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
+                <tr>
+                  <td>
+                    <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
+                      class="text-body">Até mais,<br> <b>Equipe PlayPIX</b></p>
+                    <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
+                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto 40px auto;"
+                class="margin-containers">
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0"
+                      style="width: 48%; margin-left: 4%;  margin: 0 auto; float: left;" class="responsive-box">
+                      <tr>
+                        <td>
+                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                              src="https://crmcontent.betconstruct.com/24110811114331502187501150022211300000000000000089176.png"
+                              alt="icone ajuda" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="width: 48%; margin: 0 auto;"
+                      class="responsive-box">
+                      <tr>
+                        <td>
+                          <a
+                            href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
+                              src="https://crmcontent.betconstruct.com/24110811120586802187501150022211300000000000000089176.png"
+                              alt="icone ajuda" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="margin: 0 auto 40px auto; width: 100%;"
+                class="margin-containers">
+                <tr>
+                  <td colspan="4">
+                    <p
+                      style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
+                      Jogo Responsável</p>
+                    <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
+                      class="text-body-secundary">A PlayPIX incentiva o jogo seguro e com moderação.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811230684502187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Aposte com <br>consciência</p>
+                  </td>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811232598502187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Apostas não são<br> investimento</p>
+                  </td>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811234073502187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Defina limites <br>de tempo</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811235413902187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Não aposte sob<br> efeito de álcool</p>
+                  </td>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811241114502187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Procure ajuda, <br>se precisar</p>
+                  </td>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811242511102187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Estamos prontos para <br>tirar suas dúvidas</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
           <tr>
             <td>
               <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
@@ -65,165 +188,165 @@ export const footerMainData = {
           <!-- Info Footer  -->
 
           <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
+                <tr>
                   <td>
-                    <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
+                    <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
+                      class="text-body">Até mais,<br> <b>Equipe PlayPIX</b></p>
+                    <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
+                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto 40px auto;"
+                class="margin-containers">
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0"
+                      style="width: 48%; margin-left: 4%;  margin: 0 auto; float: left;" class="responsive-box">
                       <tr>
                         <td>
-                          <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                            class="text-body">Até mais,<br> <b>Equipe PlayPIX</b></p>
-                          <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                            class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
+                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                              src="https://crmcontent.betconstruct.com/24110811114331502187501150022211300000000000000089176.png"
+                              alt="icone ajuda" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="width: 48%; margin: 0 auto;"
+                      class="responsive-box">
+                      <tr>
+                        <td>
+                          <a
+                            href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
+                              src="https://crmcontent.betconstruct.com/24110811120586802187501150022211300000000000000089176.png"
+                              alt="icone ajuda" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="margin: 0 auto 40px auto; width: 100%;"
+                class="margin-containers">
+                <tr>
+                  <td colspan="4">
+                    <p
+                      style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
+                      Jogo Responsável</p>
+                    <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
+                      class="text-body-secundary">A PlayPIX incentiva o jogo seguro e com moderação.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811230684502187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Aposte com <br>consciência</p>
+                  </td>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811232598502187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Apostas não são<br> investimento</p>
+                  </td>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811234073502187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Defina limites <br>de tempo</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811235413902187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Não aposte sob<br> efeito de álcool</p>
+                  </td>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811241114502187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Procure ajuda, <br>se precisar</p>
+                  </td>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110811242511102187501150022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Estamos prontos para <br>tirar suas dúvidas</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0"
+                style="width: 100%; margin: 0 auto 40px auto; padding: 28px; background-color: #081C38; border-radius: 28px;"
+                class="margin-containers">
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0"
+                      style="width: 16%; margin-left: 1%;  margin: 0 auto; float: left; padding-top: 15px;"
+                      class="responsive-box">
+                      <tr>
+                        <td>
+                          <img
+                            src="https://crmcontent.betconstruct.com/24061320255190002187501150022211300000000000000089176.png"
+                            alt="icone ajuda" />
+                        </td>
+                      </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="width: 83%; margin: 0 auto; float: left;"
+                      class="responsive-box">
+                      <tr>
+                        <td>
+                          <p
+                            style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px;">
+                            Precisa de ajuda?</p>
+                          <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block;"
+                            class="text-body-secundary">Entre em contato com nosso suporte no chat ao vivo ou
+                            envie um e-mail para: <a href="mailto:suporte@playpix.com"
+                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@playpix.com</a>
                           </p>
                         </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
-
-                <tr>
-                  <td>
-                    <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto 40px auto;"
-                      class="margin-containers">
-                      <tr>
-                        <td>
-                          <table cellpadding="0" cellspacing="0"
-                            style="width: 48%; margin-left: 4%;  margin: 0 auto; float: left;" class="responsive-box">
-                            <tr>
-                              <td>
-                                <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
-                                    src="https://crmcontent.betconstruct.com/24110811114331502187501150022211300000000000000089176.png"
-                                    alt="icone ajuda" /></a>
-                              </td>
-                            </tr>
-                          </table>
-                          <table cellpadding="0" cellspacing="0" style="width: 48%; margin: 0 auto;"
-                            class="responsive-box">
-                            <tr>
-                              <td>
-                                <a
-                                  href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
-                                    src="https://crmcontent.betconstruct.com/24110811120586802187501150022211300000000000000089176.png"
-                                    alt="icone ajuda" /></a>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <table cellpadding="0" cellspacing="0" style="margin: 0 auto 40px auto; width: 100%;"
-                      class="margin-containers">
-                      <tr>
-                        <td colspan="4">
-                          <p
-                            style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
-                            Jogo Responsável</p>
-                          <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                            class="text-body-secundary">A PlayPIX incentiva o jogo seguro e com moderação.</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="width: 33.3%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110811230684502187501150022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Aposte com <br>consciência</p>
-                        </td>
-                        <td style="width: 33.3%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110811232598502187501150022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Apostas não são<br> investimento</p>
-                        </td>
-                        <td style="width: 33.3%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110811234073502187501150022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Defina limites <br>de tempo</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="width: 33.3%; padding-top: 30px;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110811235413902187501150022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Não aposte sob<br> efeito de álcool</p>
-                        </td>
-                        <td style="width: 33.3%; padding-top: 30px;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110811241114502187501150022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Procure ajuda, <br>se precisar</p>
-                        </td>
-                        <td style="width: 33.3%; padding-top: 30px;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110811242511102187501150022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 10px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Estamos prontos para <br>tirar suas dúvidas</p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <table cellpadding="0" cellspacing="0"
-                      style="width: 100%; margin: 0 auto 40px auto; padding: 28px; background-color: #081C38; border-radius: 28px;"
-                      class="margin-containers">
-                      <tr>
-                        <td>
-                          <table cellpadding="0" cellspacing="0"
-                            style="width: 16%; margin-left: 1%;  margin: 0 auto; float: left; padding-top: 15px;"
-                            class="responsive-box">
-                            <tr>
-                              <td>
-                                <img
-                                  src="https://crmcontent.betconstruct.com/24061320255190002187501150022211300000000000000089176.png"
-                                  alt="icone ajuda" />
-                              </td>
-                            </tr>
-                          </table>
-                          <table cellpadding="0" cellspacing="0" style="width: 83%; margin: 0 auto; float: left;"
-                            class="responsive-box">
-                            <tr>
-                              <td>
-                                <p
-                                  style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px;">
-                                  Precisa de ajuda?</p>
-                                <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block;"
-                                  class="text-body-secundary">Entre em contato com nosso suporte no chat ao vivo ou
-                                  envie um e-mail para: <a href="mailto:suporte@playpix.com"
-                                    style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@playpix.com</a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
+              </table>
+            </td>
+          </tr>
           `,
 
       en: `
@@ -255,8 +378,8 @@ export const footerMainData = {
                             <tr>
                               <td>
                                 <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
-                                    src="https://crmcontent.betconstruct.com/24110811114331502187501150022211300000000000000089176.png"
-                                    alt="icone ajuda" /></a>
+                                    src="https://crmcontent.betconstruct.com/24111916061807202187501150023061900000000000000089176.png"
+                                    alt="img" /></a>
                               </td>
                             </tr>
                           </table>
@@ -266,7 +389,7 @@ export const footerMainData = {
                               <td>
                                 <a
                                   href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
-                                    src="https://crmcontent.betconstruct.com/24110811120586802187501150022211300000000000000089176.png"
+                                    src="https://crmcontent.betconstruct.com/24111916063341202187501150023061900000000000000089176.png"
                                     alt="icone ajuda" /></a>
                               </td>
                             </tr>
@@ -420,7 +543,7 @@ export const footerMainData = {
                             <tr>
                               <td>
                                 <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
-                                    src="https://crmcontent.betconstruct.com/24110811114331502187501150022211300000000000000089176.png"
+                                    src="https://crmcontent.betconstruct.com/24111916074014402187501150023061900000000000000089176.png"
                                     alt="icone ajuda" /></a>
                               </td>
                             </tr>
@@ -431,7 +554,7 @@ export const footerMainData = {
                               <td>
                                 <a
                                   href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
-                                    src="https://crmcontent.betconstruct.com/24110811120586802187501150022211300000000000000089176.png"
+                                    src="https://crmcontent.betconstruct.com/24111916071456202187501150023061900000000000000089176.png"
                                     alt="icone ajuda" /></a>
                               </td>
                             </tr>
@@ -569,6 +692,127 @@ export const footerMainData = {
                     <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
+                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto 40px auto;"
+                class="margin-containers">
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0"
+                      style="width: 48%; margin-left: 4%;  margin: 0 auto; float: left;" class="responsive-box">
+                      <tr>
+                        <td>
+                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
+                              src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
+                              alt="icone ajuda" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="width: 48%; margin: 0 auto;"
+                      class="responsive-box">
+                      <tr>
+                        <td>
+                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
+                              src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
+                              alt="icone ajuda" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="margin: 0 auto 40px auto; width: 100%;"
+                class="margin-containers">
+                <tr>
+                  <td colspan="4">
+                    <p
+                      style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
+                      Jogo Responsável</p>
+                    <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
+                      class="text-body-secundary">A Dupoc incentiva o jogo seguro e com moderação.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812064636702187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Aposte com <br>consciência</p>
+                  </td>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812065066402187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Apostas não são<br> investimento</p>
+                  </td>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812065578202187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Defina limites <br>de tempo</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812070236702187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Não aposte sob<br> efeito de álcool</p>
+                  </td>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812070775602187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Procure ajuda, <br>se precisar</p>
+                  </td>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812071229302187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Estamos prontos para <br>tirar suas dúvidas</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
+                <tr>
+                  <td>
+                    <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
+                      class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
+                    <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse e-mail.</p>
                   </td>
                 </tr>
@@ -621,163 +865,163 @@ export const footerMainData = {
           <!-- Info Footer  -->
 
           <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
+                <tr>
                   <td>
-                    <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto;">
+                    <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
+                      class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
+                    <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
+                      class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto 40px auto;"
+                class="margin-containers">
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0"
+                      style="width: 48%; margin-left: 4%;  margin: 0 auto; float: left;" class="responsive-box">
                       <tr>
                         <td>
-                          <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                            class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
-                          <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                            class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
+                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
+                              src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
+                              alt="icone ajuda" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="width: 48%; margin: 0 auto;"
+                      class="responsive-box">
+                      <tr>
+                        <td>
+                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
+                              src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
+                              alt="icone ajuda" /></a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" style="margin: 0 auto 40px auto; width: 100%;"
+                class="margin-containers">
+                <tr>
+                  <td colspan="4">
+                    <p
+                      style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
+                      Jogo Responsável</p>
+                    <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
+                      class="text-body-secundary">A Dupoc incentiva o jogo seguro e com moderação.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812064636702187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Aposte com <br>consciência</p>
+                  </td>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812065066402187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Apostas não são<br> investimento</p>
+                  </td>
+                  <td style="width: 33.3%;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812065578202187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Defina limites <br>de tempo</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812070236702187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Não aposte sob<br> efeito de álcool</p>
+                  </td>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812070775602187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Procure ajuda, <br>se precisar</p>
+                  </td>
+                  <td style="width: 33.3%; padding-top: 30px;">
+                    <img
+                      src="https://crmcontent.betconstruct.com/24110812071229302187566920022211300000000000000089176.png"
+                      style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
+                      alt="icone-rede-social" />
+                    <p
+                      style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
+                      Estamos prontos para <br>tirar suas dúvidas</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0"
+                style="width: 100%; margin: 0 auto 40px auto; padding: 28px; background-color: #8B31FF; border-radius: 8px;"
+                class="margin-containers">
+                <tr>
+                  <td>
+                    <table cellpadding="0" cellspacing="0"
+                      style="width: 16%; margin-left: 1%;  margin: 0 auto; float: left; padding-top: 5px;"
+                      class="responsive-box">
+                      <tr>
+                        <td>
+                          <img
+                            src="https://crmcontent.betconstruct.com/24061916442083202187566920022211300000000000000089176.png"
+                            alt="icone ajuda" />
+                        </td>
+                      </tr>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" style="width: 83%; margin: 0 auto; float: left;"
+                      class="responsive-box">
+                      <tr>
+                        <td>
+                          <p
+                            style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px;">
+                            Precisa de ajuda?</p>
+                          <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block;"
+                            class="text-body-secundary">Entre em contato com nosso suporte no chat ao vivo ou
+                            envie um e-mail para: <a href="mailto:suporte@dupoc.com"
+                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@dupoc.com</a>
                           </p>
                         </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
-                <tr>
-                  <td>
-                    <table cellpadding="0" cellspacing="0" style="width: 100%; margin: 0 auto 40px auto;"
-                      class="margin-containers">
-                      <tr>
-                        <td>
-                          <table cellpadding="0" cellspacing="0"
-                            style="width: 48%; margin-left: 4%;  margin: 0 auto; float: left;" class="responsive-box">
-                            <tr>
-                              <td>
-                                <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
-                                    src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
-                                    alt="icone ajuda" /></a>
-                              </td>
-                            </tr>
-                          </table>
-                          <table cellpadding="0" cellspacing="0" style="width: 48%; margin: 0 auto;"
-                            class="responsive-box">
-                            <tr>
-                              <td>
-                                <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
-                                    src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
-                                    alt="icone ajuda" /></a>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <table cellpadding="0" cellspacing="0" style="margin: 0 auto 40px auto; width: 100%;"
-                      class="margin-containers">
-                      <tr>
-                        <td colspan="4">
-                          <p
-                            style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
-                            Jogo Responsável</p>
-                          <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                            class="text-body-secundary">A Dupoc incentiva o jogo seguro e com moderação.</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="width: 33.3%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110812064636702187566920022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Aposte com <br>consciência</p>
-                        </td>
-                        <td style="width: 33.3%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110812065066402187566920022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Apostas não são<br> investimento</p>
-                        </td>
-                        <td style="width: 33.3%;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110812065578202187566920022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Defina limites <br>de tempo</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td style="width: 33.3%; padding-top: 30px;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110812070236702187566920022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Não aposte sob<br> efeito de álcool</p>
-                        </td>
-                        <td style="width: 33.3%; padding-top: 30px;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110812070775602187566920022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Procure ajuda, <br>se precisar</p>
-                        </td>
-                        <td style="width: 33.3%; padding-top: 30px;">
-                          <img
-                            src="https://crmcontent.betconstruct.com/24110812071229302187566920022211300000000000000089176.png"
-                            style="display: block; margin: 0 auto 15px auto;" class="icon-rede-social"
-                            alt="icone-rede-social" />
-                          <p
-                            style="color: #FFF; font-size: 11px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; text-align: center; font-weight: bold;">
-                            Estamos prontos para <br>tirar suas dúvidas</p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <table cellpadding="0" cellspacing="0"
-                      style="width: 100%; margin: 0 auto 40px auto; padding: 28px; background-color: #8B31FF; border-radius: 8px;"
-                      class="margin-containers">
-                      <tr>
-                        <td>
-                          <table cellpadding="0" cellspacing="0"
-                            style="width: 16%; margin-left: 1%;  margin: 0 auto; float: left; padding-top: 5px;"
-                            class="responsive-box">
-                            <tr>
-                              <td>
-                                <img
-                                  src="https://crmcontent.betconstruct.com/24061916442083202187566920022211300000000000000089176.png"
-                                  alt="icone ajuda" />
-                              </td>
-                            </tr>
-                          </table>
-                          <table cellpadding="0" cellspacing="0" style="width: 83%; margin: 0 auto; float: left;"
-                            class="responsive-box">
-                            <tr>
-                              <td>
-                                <p
-                                  style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px;">
-                                  Precisa de ajuda?</p>
-                                <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block;"
-                                  class="text-body-secundary">Entre em contato com nosso suporte no chat ao vivo ou
-                                  envie um e-mail para: <a href="mailto:suporte@dupoc.com"
-                                    style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@dupoc.com</a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
+              </table>
+            </td>
+          </tr>
           `,
 
       en: `
@@ -809,7 +1053,7 @@ export const footerMainData = {
                             <tr>
                               <td>
                                 <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
-                                    src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
+                                    src="https://crmcontent.betconstruct.com/24111916120741902187566920023061900000000000000089176.png"
                                     alt="icone ajuda" /></a>
                               </td>
                             </tr>
@@ -819,7 +1063,7 @@ export const footerMainData = {
                             <tr>
                               <td>
                                 <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
-                                    src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
+                                    src="https://crmcontent.betconstruct.com/24111916123511702187566920023061900000000000000089176.png"
                                     alt="icone ajuda" /></a>
                               </td>
                             </tr>
@@ -972,7 +1216,7 @@ export const footerMainData = {
                             <tr>
                               <td>
                                 <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
-                                    src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
+                                    src="https://crmcontent.betconstruct.com/24111916125179802187566920023061900000000000000089176.png"
                                     alt="icone ajuda" /></a>
                               </td>
                             </tr>
@@ -982,7 +1226,7 @@ export const footerMainData = {
                             <tr>
                               <td>
                                 <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
-                                    src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
+                                    src="https://crmcontent.betconstruct.com/24111916131085502187566920023061900000000000000089176.png"
                                     alt="icone ajuda" /></a>
                               </td>
                             </tr>
