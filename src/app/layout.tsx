@@ -5,14 +5,15 @@ import { TranslateAreaProvider } from "@/context/TranslateAreaContext";
 import { StyleHtmlProvider } from "@/context/StyleHtmlContext";
 import { SocialMediaLinksProvider } from "@/context/SocialMediaLinksContext";
 import { ThemeProvider } from "next-themes";
+import { Bai_Jamjuree } from "next/font/google";
 
 const japaneseSans = localFont({
   src: "../../public/fonts/japanese3017.otf",
   variable: "--font-japanese",
 });
-const baiJamjuree = localFont({
-  src: "../../public/fonts/baiJamjureeRegular.ttf",
-  variable: "--baiJamjuree",
+const baiJamjuree = Bai_Jamjuree({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700"],
 });
 const skyerSans = localFont({
   src: "../../public/fonts/skyer.otf",
@@ -36,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body
-        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} ${baiJamjuree.variable} flex h-screen w-screen items-center justify-center bg-lightBgColor antialiased transition-all dark:bg-darkBgColor`}
+        className={`${japaneseSans.variable} ${skyerSans.variable} ${avenirBold.variable} ${baiJamjuree.className} flex h-screen w-screen items-center justify-center bg-lightBgColor antialiased transition-all dark:bg-darkBgColor`}
       >
         <ThemeProvider attribute="class">
           <TranslateAreaProvider>
