@@ -1,11 +1,13 @@
-import { getServerAuthSession } from "@/backend/authentication/auth"
+import { getServerAuthSession } from "@/backend/auth/authentication";
+import { SignOutButton } from "./SignOutButton";
 
 export const UserCard = async () => {
-
   const session = await getServerAuthSession();
 
-
   return (
-    <h1>{session?.user.name}</h1>
-  )
-}
+    <div>
+      <h1>{session?.user.name}</h1>
+      <SignOutButton />
+    </div>
+  );
+};

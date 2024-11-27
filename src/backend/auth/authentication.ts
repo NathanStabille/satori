@@ -5,7 +5,7 @@ import {
 } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import { LoginHandler } from "../user/LoginHandler";
-import { UserRepositoryMemory } from "../user/UserRepositoryMemory";
+import { UserRepositoryMemory } from "../user/UserRepositoryJSON";
 
 declare module "next-auth" {
   interface Session extends DefaultSession {
@@ -45,13 +45,13 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
 
-      authorize(credentials) {
+      async authorize(credentials) {
         try {
           if (!credentials?.email || !credentials.password) {
             return null;
           }
 
-          const useRepo = new UserRepositoryMemory();
+          const useRepo = new UserRepositoryJSON();
           const handler = new LoginHandler(userRepo);
 
           const user = handler.execute(credentials);

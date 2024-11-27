@@ -7,6 +7,7 @@ import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/solid";
 
 export const LoginForm = () => {
   const router = useRouter();
+  const [error, setError] = useState("");
 
   const onSubmit = async (values: FormEvent<HTMLFormElement>) => {
     values.preventDefault();
@@ -19,8 +20,12 @@ export const LoginForm = () => {
 
       if (res?.ok) {
         router.push("/");
-      } else throw new Error();
-    } catch {}
+      } else {
+        setError("Invalid email or password");
+      }
+    } catch {
+      setError("Something went wrong");
+    }
   };
 
   return (

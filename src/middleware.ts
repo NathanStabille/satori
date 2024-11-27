@@ -1,2 +1,2 @@
 export { default } from "next-auth/middleware";
-export const config = { macther: ["/"] };
+export const config = { macther: ["/library"] };
