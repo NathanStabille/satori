@@ -1,22 +1,26 @@
-import fs from "fs";
-import { User } from "./User";
-import { UserRepository } from "./UserRepository";
+import fs from "fs/promises";
 
-export class UserRepositoryJSON implements UserRepository {
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  password: string;
+}
+
+export class UserRepositoryJSON {
   private filePath = "./data/users.json";
 
-  findByEmail(email: string): User | null {
-    const users = JSON.parse(fs.readFileSync(this.filePath, "utf-8"));
-    const user = users.find((u: User) => u.email === email);
-
-    if (!user) return null;
-
-    return user;
+  async findByEmail(email: string): Promise<User | null> {
+    const users = await this.getUsers();
+    return users.find((user) => user.email === email) || null;
   }
 
-  addUser(user: User): void {
-    const users = JSON.parse(fs.readFileSync(this.filePath, "utf-8"));
-    users.push(user);
-    fs.writeFileSync(this.filePath, JSON.stringify(users, null, 2));
+  private async getUsers(): Promise<User[]> {
+    try {
+      const data = await fs.readFile(this.filePath, "utf-8");
+      return JSON.parse(data);
+    } catch {
+      return [];
+    }
   }
 }

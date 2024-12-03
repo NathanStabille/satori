@@ -36,7 +36,7 @@ export default function Library() {
       className="relative flex h-full w-full flex-col items-center justify-center gap-5 overflow-y-auto p-5"
     >
       <div className="fixed top-5 flex w-full items-center justify-between px-5">
-        <Link href="/">
+        <Link href="/satori">
           <Button
             iconBefore={<ArrowLeftIcon className="w-[23px]" />}
             label="Back to Satori"

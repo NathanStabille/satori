@@ -1,30 +1,36 @@
 "use client";
+import { FormEvent } from "react";
 import { signIn } from "next-auth/react";
-import { FormEvent, useState } from "react";
-import { useRouter } from "next/navigation";
 
 import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/solid";
+import { useRouter } from "next/navigation";
 
 export const LoginForm = () => {
   const router = useRouter();
-  const [error, setError] = useState("");
 
   const onSubmit = async (values: FormEvent<HTMLFormElement>) => {
     values.preventDefault();
 
+    const formData = new FormData(values.currentTarget);
+
+    const data = {
+      email: formData.get("email"),
+      password: formData.get("password"),
+    };
+
+    console.log(data)
+
     try {
-      const res = await signIn("credentials", {
+      const result = await signIn("credentials", {
         redirect: false,
-        ...values,
+        ...data,
       });
 
-      if (res?.ok) {
-        router.push("/");
-      } else {
-        setError("Invalid email or password");
-      }
-    } catch {
-      setError("Something went wrong");
+      if (result?.ok) {
+        router.push("/satori");
+      } else throw new Error();
+    } catch (error) {
+      console.log(error);
     }
   };
 

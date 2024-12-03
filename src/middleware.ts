@@ -1,2 +1,3 @@
 export { default } from "next-auth/middleware";
-export const config = { macther: ["/library"] };
+
+export const config = { matcher: ["/error"] };

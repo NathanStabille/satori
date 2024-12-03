@@ -705,7 +705,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
                               src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -715,7 +715,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
+                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
                               src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -885,7 +885,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
                               src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -895,7 +895,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
+                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
                               src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1048,7 +1048,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
                               src="https://crmcontent.betconstruct.com/24111916120741902187566920023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1058,7 +1058,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
+                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
                               src="https://crmcontent.betconstruct.com/24111916123511702187566920023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1211,7 +1211,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
                               src="https://crmcontent.betconstruct.com/24111916125179802187566920023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1221,7 +1221,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
+                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
                               src="https://crmcontent.betconstruct.com/24111916131085502187566920023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1360,6 +1360,9 @@ export const footerAdvisor = {
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary">Você está recebendo este e-mail por ter criado uma conta na PlayPIX.
                   </p>
+                  <img
+                      src=https://crmcontent.betconstruct.com/24120314151240302187501150023061900000000000000089176.png
+                      style="display: block; margin: 0 auto 40px auto;" alt="header-image" />
                 </td>
               </tr>
             </table>
@@ -1376,6 +1379,9 @@ export const footerAdvisor = {
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary">You are receiving this email because you created an account with PlayPIX.
                     </p>
+                    <img
+                      src=https://crmcontent.betconstruct.com/24120314151240302187501150023061900000000000000089176.png
+                      style="display: block; margin: 0 auto 40px auto;" alt="header-image" />
                 </td>
               </tr>
             </table>
@@ -1392,6 +1398,9 @@ export const footerAdvisor = {
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary">Estás recibiendo este correo electrónico porque creaste una cuenta en PlayPIX.
                     </p>
+                    <img
+                      src=https://crmcontent.betconstruct.com/24120314151240302187501150023061900000000000000089176.png
+                      style="display: block; margin: 0 auto 40px auto;" alt="header-image" />
                 </td>
               </tr>
             </table>
