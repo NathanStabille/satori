@@ -40,8 +40,8 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
-                              src="https://crmcontent.betconstruct.com/24110811120586802187501150022211300000000000000089176.png"
+                          <a href="https://www.playpix.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
+                              src="https://crmcontent.betconstruct.com/24120915013486702187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
                       </tr>
@@ -222,8 +222,8 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
-                              src="https://crmcontent.betconstruct.com/24110811120586802187501150022211300000000000000089176.png"
+                          <a href="https://www.playpix.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
+                              src="https://crmcontent.betconstruct.com/24120915013486702187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
                       </tr>
@@ -385,8 +385,8 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
-                              src="https://crmcontent.betconstruct.com/24111916063341202187501150023061900000000000000089176.png"
+                          <a href="https://www.playpix.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
+                              src="https://crmcontent.betconstruct.com/24120915062481502187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
                       </tr>
@@ -549,8 +549,8 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/422601/bol%C3%A3o-do-brasileir%C3%A3o"><img
-                              src="https://crmcontent.betconstruct.com/24111916071456202187501150023061900000000000000089176.png"
+                          <a href="https://www.playpix.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
+                              src="https://crmcontent.betconstruct.com/24120915060710902187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
                       </tr>
