@@ -513,6 +513,12 @@ export const libraryImageData: ILibraryDataType[] = [
   },
   {
     type: "divider",
+    url: "https://crmcontent.betconstruct.com/24122013283199402187501150023061900000000000000089176.png",
+    pattern: "playpix",
+    color: "#5198FB",
+  },
+  {
+    type: "divider",
     url: "https://crmcontent.betconstruct.com/24120515154162002187501150023061900000000000000089176.png",
     pattern: "playpix",
     color: "#5198FB",
