@@ -5,7 +5,7 @@
 Satori is an HTML translation tool that preserves tag structure and translates only the text content.
 Includes a live editor, multi-language support, real-time visual preview.
 
-Site: [pokedex.empthy.dev/](https://pokedex.empthy.dev/)
+Site: https://satori.empthy.dev/
 <br>
 <br>
 
