@@ -50,12 +50,6 @@ export const HeaderTranslate = ({ selectedLanguage }: HeaderTranslateProps) => {
       <div
         className={`rounded-xxl flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} p-3`}
       >
-        {/* <OptionSwitch
-          option={selectedLanguage}
-          setOption={setSelectedLanguage}
-          options={allOptions}
-        /> */}
-
         <div className="flex w-full items-center justify-between gap-3">
           <TagInfo name="header </>" />
           <div className="flex gap-4">
