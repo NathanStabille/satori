@@ -3,20 +3,20 @@ import {
   ClipboardDocumentListIcon,
   CheckIcon,
 } from "@heroicons/react/24/outline";
-import { OptionSwitch } from "./OptionSwitch";
 import CodeMirror from "@uiw/react-codemirror";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { useCallback, useEffect, useState } from "react";
-import "./CodeMirror.css";
-import { Options } from "@/types/optionsType";
+import "../CodeMirror.css";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { headerData } from "@/data/headerData";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
-import { TagInfo } from "./TagInfo";
-import { Button } from "./Button";
+import { TagInfo } from "../TagInfo";
+import { Button } from "../Button";
 
-const allOptions: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
+interface HeaderTranslateProps {
+  selectedLanguage: string;
+}
 
 const headerLanguageMap = {
   pt: headerData.pt,
@@ -24,9 +24,8 @@ const headerLanguageMap = {
   es: headerData.es,
 };
 
-export const HeaderTranslate = () => {
+export const HeaderTranslate = ({ selectedLanguage }: HeaderTranslateProps) => {
   const [isDisable, setIsDisable] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
 
   const { headerAreaValue, setHeaderAreaValue } = useTranslateArea();
   const { wasCopied, handleCopy } = useCopyToClipboard(headerAreaValue);
@@ -51,36 +50,37 @@ export const HeaderTranslate = () => {
       <div
         className={`rounded-xxl flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} p-3`}
       >
-        <OptionSwitch
+        {/* <OptionSwitch
           option={selectedLanguage}
           setOption={setSelectedLanguage}
           options={allOptions}
-        />
+        /> */}
 
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex w-full items-center justify-between gap-3">
           <TagInfo name="header </>" />
+          <div className="flex gap-4">
+            <Button
+              onClick={() => {
+                handleCopy();
+              }}
+              label={`${wasCopied ? "copied!" : "copy"}`}
+              iconAfter={
+                wasCopied ? (
+                  <CheckIcon className="w-[23px]" />
+                ) : (
+                  <ClipboardDocumentListIcon className="w-[23px]" />
+                )
+              }
+            />
 
-          <Button
-            onClick={() => {
-              handleCopy();
-            }}
-            label={`${wasCopied ? "copied!" : "copy"}`}
-            iconAfter={
-              wasCopied ? (
-                <CheckIcon className="w-[23px]" />
-              ) : (
-                <ClipboardDocumentListIcon className="w-[23px]" />
-              )
-            }
-          />
-
-          <Button
-            onClick={() => {
-              setIsDisable(!isDisable);
-            }}
-            label="edit"
-            iconAfter={<PencilSquareIcon className="w-[23px]" />}
-          />
+            <Button
+              onClick={() => {
+                setIsDisable(!isDisable);
+              }}
+              label="edit"
+              iconAfter={<PencilSquareIcon className="w-[23px]" />}
+            />
+          </div>
         </div>
       </div>
       <div

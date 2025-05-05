@@ -9,12 +9,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Library() {
-  // const building = true;
-
-  // if (building) {
-  //   redirect("/");
-  // }
-
   const [filterSelect, setFilterSelect] = useState("");
   const [libraryItems, setLibraryItems] = useState(libraryImageData);
 
@@ -36,7 +30,7 @@ export default function Library() {
       className="relative flex h-full w-full flex-col items-center justify-center gap-5 overflow-y-auto p-5"
     >
       <div className="fixed top-5 flex w-full items-center justify-between px-5">
-        <Link href="/satori">
+        <Link href="/">
           <Button
             iconBefore={<ArrowLeftIcon className="w-[23px]" />}
             label="Back to Satori"
@@ -51,13 +45,13 @@ export default function Library() {
       </h1>
       <div className="flex w-full items-center justify-center gap-5">
         <button
-          className={`active:bg-playpixColor/60 hover:bg-playpixColor rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:text-gray-50 ${filterSelect === "playpix" ? "bg-playpixColor text-gray-50" : "bg-playpixColor/20 text-playpixColor"}`}
+          className={`rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:bg-playpixColor hover:text-gray-50 active:bg-playpixColor/60 ${filterSelect === "playpix" ? "bg-playpixColor text-gray-50" : "bg-playpixColor/20 text-playpixColor"}`}
           onClick={() => filterPattern("playpix")}
         >
           playpix
         </button>
         <button
-          className={`active:bg-dupocColor/60 hover:bg-dupocColor rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:text-gray-50 ${filterSelect === "dupoc" ? "bg-dupocColor text-gray-50" : "bg-dupocColor/20 text-dupocColor"}`}
+          className={`rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:bg-dupocColor hover:text-gray-50 active:bg-dupocColor/60 ${filterSelect === "dupoc" ? "bg-dupocColor text-gray-50" : "bg-dupocColor/20 text-dupocColor"}`}
           onClick={() => filterPattern("dupoc")}
         >
           dupoc

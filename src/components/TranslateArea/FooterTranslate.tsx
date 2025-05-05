@@ -1,5 +1,5 @@
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
-import { OptionSwitch } from "./OptionSwitch";
+import { OptionSwitch } from "../OptionSwitch";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { useCallback, useEffect, useState } from "react";
 import { htmlLanguage } from "@codemirror/lang-html";
@@ -11,21 +11,21 @@ import {
 } from "@heroicons/react/24/outline";
 import { Options } from "@/types/optionsType";
 import CodeMirror from "@uiw/react-codemirror";
-import { TagInfo } from "./TagInfo";
-import { Button } from "./Button";
+import { TagInfo } from "../TagInfo";
+import { Button } from "../Button";
 import { PencilSquareIcon } from "@heroicons/react/24/solid";
 import { useSocialMediaLinks } from "@/context/SocialMediaLinksContext";
 import { linksData } from "@/data/linksData";
 
-const options: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
-
-interface IFooterTranslateProps {
+interface FooterTranslateProps {
   pattern: string;
   stylePattern: string;
   checkedItems: { [key: string]: boolean };
   footerOptions: Options;
   footerPattern: string;
   setFooterPattern: (value: string) => void;
+  selectedLanguage: string;
+  setSelectedLanguage: (e: string) => void;
 }
 
 export const FooterTranslate = ({
@@ -35,28 +35,25 @@ export const FooterTranslate = ({
   footerOptions,
   footerPattern,
   setFooterPattern,
-}: IFooterTranslateProps) => {
+  selectedLanguage,
+  setSelectedLanguage,
+}: FooterTranslateProps) => {
   const { footerAreaValue, setFooterAreaValue, setFooterAdv, footerAdv } =
     useTranslateArea();
   const { wasCopied, handleCopy } = useCopyToClipboard(footerAreaValue);
   const [isDisable, setIsDisable] = useState(false);
-  const [allOptions, setAllOptions] = useState(options);
-  const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
   const { setX, setIg, setSite, setThreads } = useSocialMediaLinks();
 
   useEffect(() => {
     if (pattern === "affiliate") {
-      setAllOptions([{ id: "pt" }]);
       setSelectedLanguage("pt");
       if (stylePattern === "playpix") {
         setFooterAreaValue(footerMainData.playpix.affiliate.pt);
       } else {
         setFooterAreaValue(footerMainData.dupoc.affiliate.pt);
       }
-    } else {
-      setAllOptions(options);
     }
-  }, [pattern, stylePattern, setFooterAreaValue]);
+  }, [pattern, stylePattern, setFooterAreaValue, setSelectedLanguage]);
 
   useEffect(() => {
     switch (selectedLanguage) {
@@ -163,12 +160,6 @@ export const FooterTranslate = ({
       <div
         className={`rounded-xxl flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} p-3`}
       >
-        <OptionSwitch
-          option={selectedLanguage}
-          setOption={setSelectedLanguage}
-          options={allOptions}
-        />
-
         <OptionSwitch
           options={footerOptions}
           option={footerPattern}

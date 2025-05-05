@@ -1,31 +1,32 @@
 import { useCallback, useState } from "react";
-import { OptionSwitch } from "./OptionSwitch";
-import { TagInfo } from "./TagInfo";
+import { TagInfo } from "../TagInfo";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
-import { Options } from "@/types/optionsType";
-import { Button } from "./Button";
+import { Button } from "../Button";
 import {
   CheckIcon,
   ClipboardDocumentListIcon,
-  LanguageIcon,
 } from "@heroicons/react/24/outline";
 import { PencilSquareIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import CodeMirror from "@uiw/react-codemirror";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
-import { translateHtml } from "@/utils/translateHtml";
 
-const allOptions: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
+interface BodyTranslateProps {
+  onTranslateError: (error: string) => void;
+  isLoading: boolean;
+  errorMessage: string;
+}
 
-export const BodyTranslate = () => {
+export const BodyTranslate = ({
+  onTranslateError,
+  errorMessage,
+  isLoading,
+}: BodyTranslateProps) => {
   const [isDisable, setIsDisable] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
 
   const { bodyAreaValue, setBodyAreaValue } = useTranslateArea();
   const { wasCopied, handleCopy } = useCopyToClipboard(bodyAreaValue);
-  const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const onChange = useCallback(
     (value: string) => {
@@ -34,60 +35,37 @@ export const BodyTranslate = () => {
     [setBodyAreaValue],
   );
 
-  const handleTranslate = async (html: string, targetLang: string) => {
-    setIsLoading(true);
-    setErrorMessage(null);
-    const result = await translateHtml(html, targetLang);
-
-    if ("error" in result) {
-      setIsLoading(false);
-      setErrorMessage(result.error);
-    } else {
-      setIsLoading(false);
-      setBodyAreaValue(result.translatedText);
-    }
-  };
-
   return (
     <>
       <div
         className={`rounded-xxl relative flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} p-3`}
       >
-        <OptionSwitch
-          option={selectedLanguage}
-          setOption={setSelectedLanguage}
-          options={allOptions}
-        />
-
-        <Button
-          label="Translate"
-          iconAfter={<LanguageIcon className="w-[20px]" />}
-          onClick={() => handleTranslate(bodyAreaValue, selectedLanguage)}
-        />
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex w-full items-center justify-between gap-3">
           <TagInfo name="body </>" />
 
-          <Button
-            onClick={() => {
-              handleCopy();
-            }}
-            label={`${wasCopied ? "copied!" : "copy"}`}
-            iconAfter={
-              wasCopied ? (
-                <CheckIcon className="w-[23px]" />
-              ) : (
-                <ClipboardDocumentListIcon className="w-[23px]" />
-              )
-            }
-          />
+          <div className="flex items-center gap-4">
+            <Button
+              onClick={() => {
+                handleCopy();
+              }}
+              label={`${wasCopied ? "copied!" : "copy"}`}
+              iconAfter={
+                wasCopied ? (
+                  <CheckIcon className="w-[23px]" />
+                ) : (
+                  <ClipboardDocumentListIcon className="w-[23px]" />
+                )
+              }
+            />
 
-          <Button
-            onClick={() => {
-              setIsDisable(!isDisable);
-            }}
-            label="edit"
-            iconAfter={<PencilSquareIcon className="w-[23px]" />}
-          />
+            <Button
+              onClick={() => {
+                setIsDisable(!isDisable);
+              }}
+              label="edit"
+              iconAfter={<PencilSquareIcon className="w-[23px]" />}
+            />
+          </div>
         </div>
       </div>
       <div
@@ -118,7 +96,7 @@ export const BodyTranslate = () => {
               <Button
                 className="absolute right-0 top-0 m-2"
                 label=""
-                onClick={() => setErrorMessage(null)}
+                onClick={() => onTranslateError("")}
                 iconBefore={<XMarkIcon width={33} className="text-white" />}
               />
             </div>
