@@ -1,5 +1,5 @@
 export const footerMainData = {
-  playpix: {
+  zynex: {
     affiliate: {
       pt: `
         <!-- Info Footer  -->
@@ -10,7 +10,7 @@ export const footerMainData = {
                 <tr>
                   <td>
                     <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body">Até mais,<br> <b>Equipe PlayPIX</b></p>
+                      class="text-body">Até mais,<br> <b>Equipe Zynex</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
                     </p>
@@ -30,7 +30,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                          <a href="https://www.zynex.com/pb/promotions/all/356082/torneio-drops---wins"><img
                               src="https://crmcontent.betconstruct.com/24110811114331502187501150022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -40,7 +40,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
+                          <a href="https://www.zynex.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
                               src="https://crmcontent.betconstruct.com/24120915013486702187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -61,7 +61,7 @@ export const footerMainData = {
                       style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
                       Jogo Responsável</p>
                     <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                      class="text-body-secundary">A PlayPIX incentiva o jogo seguro e com moderação.</p>
+                      class="text-body-secundary">A Zynex incentiva o jogo seguro e com moderação.</p>
                   </td>
                 </tr>
                 <tr>
@@ -131,7 +131,7 @@ export const footerMainData = {
                 <tr>
                   <td>
                     <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body">Até mais,<br> <b>Equipe PlayPIX</b></p>
+                      class="text-body">Até mais,<br> <b>Equipe Zynex</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse e-mail.</p>
                   </td>
@@ -166,9 +166,9 @@ export const footerMainData = {
                             Precisa de ajuda?</p>
                           <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block;"
                             class="text-body-secundary">Entre em contato com nosso suporte <a
-                              href="afiliados@playpix.com"
-                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">afiliados@playpix.com</a>
-                            ou através do telegram <a href="https://t.me/central_playpix"
+                              href="afiliados@zynex.com"
+                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">afiliados@zynex.com</a>
+                            ou através do telegram <a href="https://t.me/central_zynex"
                               style="color: #FFFFFF !important;">clicando aqui.</a></p>
                         </td>
                       </tr>
@@ -192,7 +192,7 @@ export const footerMainData = {
                 <tr>
                   <td>
                     <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body">Até mais,<br> <b>Equipe PlayPIX</b></p>
+                      class="text-body">Até mais,<br> <b>Equipe Zynex</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
                     </p>
@@ -212,7 +212,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                          <a href="https://www.zynex.com/pb/promotions/all/356082/torneio-drops---wins"><img
                               src="https://crmcontent.betconstruct.com/24110811114331502187501150022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -222,7 +222,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
+                          <a href="https://www.zynex.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
                               src="https://crmcontent.betconstruct.com/24120915013486702187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -243,7 +243,7 @@ export const footerMainData = {
                       style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
                       Jogo Responsável</p>
                     <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                      class="text-body-secundary">A PlayPIX incentiva o jogo seguro e com moderação.</p>
+                      class="text-body-secundary">A zynex incentiva o jogo seguro e com moderação.</p>
                   </td>
                 </tr>
                 <tr>
@@ -334,8 +334,8 @@ export const footerMainData = {
                             Precisa de ajuda?</p>
                           <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block;"
                             class="text-body-secundary">Entre em contato com nosso suporte no chat ao vivo ou
-                            envie um e-mail para: <a href="mailto:suporte@playpix.com"
-                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@playpix.com</a>
+                            envie um e-mail para: <a href="mailto:suporte@zynex.com"
+                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@zynex.com</a>
                           </p>
                         </td>
                       </tr>
@@ -355,7 +355,7 @@ export const footerMainData = {
                       <tr>
                         <td>
                           <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                            class="text-body">See you soon,<br> <b>PlayPIX Team</b></p>
+                            class="text-body">See you soon,<br> <b>zynex Team</b></p>
                           <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                             class="text-body-secundary">This email was generated automatically, do not respond to this
                             email.</p>
@@ -375,7 +375,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                          <a href="https://www.zynex.com/pb/promotions/all/356082/torneio-drops---wins"><img
                               src="https://crmcontent.betconstruct.com/24111916061807202187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -385,7 +385,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
+                          <a href="https://www.zynex.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
                               src="https://crmcontent.betconstruct.com/24120915062481502187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -406,7 +406,7 @@ export const footerMainData = {
                             style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
                             Responsible Gaming</p>
                           <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                            class="text-body-secundary">PlayPIX encourages safe and moderate gaming</p>
+                            class="text-body-secundary">zynex encourages safe and moderate gaming</p>
                         </td>
                       </tr>
                       <tr>
@@ -497,8 +497,8 @@ export const footerMainData = {
                                   Need help?</p>
                                 <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block;"
                                   class="text-body-secundary">Contact our support via live chat or send an email to: <a
-                                    href="mailto:suporte@playpix.com"
-                                    style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@playpix.com</a>
+                                    href="mailto:suporte@zynex.com"
+                                    style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@zynex.com</a>
                                 </p>
                               </td>
                             </tr>
@@ -519,7 +519,7 @@ export const footerMainData = {
                       <tr>
                         <td>
                           <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                            class="text-body">Hasta luego,<br> <b>Equipo PlayPIX</b></p>
+                            class="text-body">Hasta luego,<br> <b>Equipo zynex</b></p>
                           <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                             class="text-body-secundary">Este correo electrónico se generó automáticamente, no responda a
                             este correo electrónico.</p>
@@ -539,7 +539,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/356082/torneio-drops---wins"><img
+                          <a href="https://www.zynex.com/pb/promotions/all/356082/torneio-drops---wins"><img
                               src="https://crmcontent.betconstruct.com/24111916074014402187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -549,7 +549,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.playpix.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
+                          <a href="https://www.zynex.com/pb/promotions/all/136622/at%C3%A9-25--de-cashback-no-aviator-todos-os-dias!"><img
                               src="https://crmcontent.betconstruct.com/24120915060710902187501150023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -570,7 +570,7 @@ export const footerMainData = {
                             style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
                             Juego Responsable</p>
                           <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                            class="text-body-secundary">PlayPIX fomenta un juego seguro y moderado.</p>
+                            class="text-body-secundary">zynex fomenta un juego seguro y moderado.</p>
                         </td>
                       </tr>
                       <tr>
@@ -661,8 +661,8 @@ export const footerMainData = {
                                   ¿Necesita ayuda?</p>
                                 <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal; display: block;"
                                   class="text-body-secundary">Póngase en contacto con nuestro soporte a través del chat
-                                  en vivo o envíe un correo electrónico a: <a href="mailto:suporte@playpix.com"
-                                    style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@playpix.com</a>
+                                  en vivo o envíe un correo electrónico a: <a href="mailto:suporte@zynex.com"
+                                    style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@zynex.com</a>
                                 </p>
                               </td>
                             </tr>
@@ -675,7 +675,7 @@ export const footerMainData = {
           `,
     },
   },
-  dupoc: {
+  orvya: {
     affiliate: {
       pt: `
           <!-- Info Footer  -->
@@ -686,7 +686,7 @@ export const footerMainData = {
                 <tr>
                   <td>
                     <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
+                      class="text-body">Até mais,<br> <b>Equipe orvya</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
                     </p>
@@ -705,7 +705,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
+                          <a href="https://www.orvya.com/pb/promotions/all/356103"><img
                               src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -715,7 +715,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
+                          <a href="https://www.orvya.com/pb/promotions/all/521302"><img
                               src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -736,7 +736,7 @@ export const footerMainData = {
                       style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
                       Jogo Responsável</p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                      class="text-body-secundary">A Dupoc incentiva o jogo seguro e com moderação.</p>
+                      class="text-body-secundary">A orvya incentiva o jogo seguro e com moderação.</p>
                   </td>
                 </tr>
                 <tr>
@@ -807,7 +807,7 @@ export const footerMainData = {
                 <tr>
                   <td>
                     <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
+                      class="text-body">Até mais,<br> <b>Equipe orvya</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse e-mail.</p>
                   </td>
@@ -842,8 +842,8 @@ export const footerMainData = {
                             Precisa de ajuda?</p>
                           <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block;"
                             class="text-body-secundary">Entre em contato com nosso suporte no chat ao vivo ou envie um
-                            e-mail para: <a href="mailto:afiliados@dupoc.com"
-                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">afiliados@dupoc.com</a>
+                            e-mail para: <a href="mailto:afiliados@orvya.com"
+                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">afiliados@orvya.com</a>
                           </p>
                         </td>
                       </tr>
@@ -866,7 +866,7 @@ export const footerMainData = {
                 <tr>
                   <td>
                     <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                      class="text-body">Até mais,<br> <b>Equipe Dupoc</b></p>
+                      class="text-body">Até mais,<br> <b>Equipe orvya</b></p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                       class="text-body-secundary">Este e-mail foi gerado automaticamente, não responda esse email.
                     </p>
@@ -885,7 +885,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
+                          <a href="https://www.orvya.com/pb/promotions/all/356103"><img
                               src="https://crmcontent.betconstruct.com/24110812055108802187566920022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -895,7 +895,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
+                          <a href="https://www.orvya.com/pb/promotions/all/521302"><img
                               src="https://crmcontent.betconstruct.com/24110812061124002187566920022211300000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -916,7 +916,7 @@ export const footerMainData = {
                       style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
                       Jogo Responsável</p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                      class="text-body-secundary">A Dupoc incentiva o jogo seguro e com moderação.</p>
+                      class="text-body-secundary">A orvya incentiva o jogo seguro e com moderação.</p>
                   </td>
                 </tr>
                 <tr>
@@ -1007,8 +1007,8 @@ export const footerMainData = {
                             Precisa de ajuda?</p>
                           <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block;"
                             class="text-body-secundary">Entre em contato com nosso suporte no chat ao vivo ou
-                            envie um e-mail para: <a href="mailto:suporte@dupoc.com"
-                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@dupoc.com</a>
+                            envie um e-mail para: <a href="mailto:suporte@orvya.com"
+                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@orvya.com</a>
                           </p>
                         </td>
                       </tr>
@@ -1029,7 +1029,7 @@ export const footerMainData = {
                       <tr>
                         <td>
                           <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                            class="text-body">Best regards,<br> <b>Dupoc Team</b></p>
+                            class="text-body">Best regards,<br> <b>orvya Team</b></p>
                           <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                             class="text-body-secundary">This email was automatically generated, please do not reply to
                             it.</p>
@@ -1048,7 +1048,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
+                          <a href="https://www.orvya.com/pb/promotions/all/356103"><img
                               src="https://crmcontent.betconstruct.com/24111916120741902187566920023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1058,7 +1058,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
+                          <a href="https://www.orvya.com/pb/promotions/all/521302"><img
                               src="https://crmcontent.betconstruct.com/24111916123511702187566920023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1079,7 +1079,7 @@ export const footerMainData = {
                             style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
                             Responsible Gaming</p>
                           <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                            class="text-body-secundary">Dupoc encourages safe and moderate gaming.</p>
+                            class="text-body-secundary">orvya encourages safe and moderate gaming.</p>
                         </td>
                       </tr>
                       <tr>
@@ -1170,8 +1170,8 @@ export const footerMainData = {
                                   Need help?</p>
                                 <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block;"
                                   class="text-body-secundary">Contact our support team via live chat or send an email
-                                  to: <a href="mailto:suporte@dupoc.com"
-                                    style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@dupoc.com</a>
+                                  to: <a href="mailto:suporte@orvya.com"
+                                    style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@orvya.com</a>
                                 </p>
                               </td>
                             </tr>
@@ -1192,7 +1192,7 @@ export const footerMainData = {
                   <tr>
                     <td>
                       <p style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                        class="text-body">Saludos,<br> <b>Equipo Dupoc</b></p>
+                        class="text-body">Saludos,<br> <b>Equipo orvya</b></p>
                       <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                         class="text-body-secundary">Este correo electrónico fue generado automáticamente, por favor
                         no responda a este correo.</p>
@@ -1211,7 +1211,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.dupoc.com/pb/promotions/all/356103"><img
+                          <a href="https://www.orvya.com/pb/promotions/all/356103"><img
                               src="https://crmcontent.betconstruct.com/24111916125179802187566920023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1221,7 +1221,7 @@ export const footerMainData = {
                       class="responsive-box">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="https://www.dupoc.com/pb/promotions/all/521302"><img
+                          <a href="https://www.orvya.com/pb/promotions/all/521302"><img
                               src="https://crmcontent.betconstruct.com/24111916131085502187566920023061900000000000000089176.png"
                               alt="icone ajuda" /></a>
                         </td>
@@ -1242,7 +1242,7 @@ export const footerMainData = {
                       style="color: #FFF; font-size: 16px; font-family: Gabarito; font-style: normal;font-weight: bold; display: block; margin-bottom: 10px; text-align: center; text-transform: uppercase;">
                       Juego Responsable</p>
                     <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block; padding-bottom: 30px; text-align: center;"
-                      class="text-body-secundary">Dupoc fomenta un juego seguro y moderado.</p>
+                      class="text-body-secundary">orvya fomenta un juego seguro y moderado.</p>
                   </td>
                 </tr>
                 <tr>
@@ -1333,8 +1333,8 @@ export const footerMainData = {
                             ¿Necesitas ayuda?</p>
                           <p style="color: #FFF; font-size: 14px; font-family: Gabarito; font-style: normal;font-weight: normal; display: block;"
                             class="text-body-secundary">Ponte en contacto con nuestro equipo de soporte a través
-                            del chat en vivo o envía un correo a: <a href="mailto:suporte@dupoc.com"
-                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@dupoc.com</a>
+                            del chat en vivo o envía un correo a: <a href="mailto:suporte@orvya.com"
+                              style="font-weight: bold !important; color: #FFF !important; text-decoration: none !important;">suporte@orvya.com</a>
                           </p>
                         </td>
                       </tr>
@@ -1358,7 +1358,7 @@ export const footerAdvisor = {
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary"><b>Atenção:</b> +18 Jogue com consciência e responsabilidade. Aposta é diversão, não investimento. | SIGAP: 044/2024 | Portaria: 1475/24.</p>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                    class="text-body-secundary">Você está recebendo este e-mail por ter criado uma conta na PlayPIX.
+                    class="text-body-secundary">Você está recebendo este e-mail por ter criado uma conta na zynex.
                   </p>
                   <img
                       src=https://crmcontent.betconstruct.com/24120314151240302187501150023061900000000000000089176.png
@@ -1377,7 +1377,7 @@ export const footerAdvisor = {
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary"><b>Attention:</b> +18 Play with awareness and responsibility. Betting is fun, not an investment. | SIGAP: 044/2024 | Ordinance: 1475/24.</p>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                    class="text-body-secundary">You are receiving this email because you created an account with PlayPIX.
+                    class="text-body-secundary">You are receiving this email because you created an account with zynex.
                     </p>
                     <img
                       src=https://crmcontent.betconstruct.com/24120314151240302187501150023061900000000000000089176.png
@@ -1396,7 +1396,7 @@ export const footerAdvisor = {
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
                     class="text-body-secundary"><b>Atención:</b> +18 Juega con conciencia y responsabilidad. Apostar es diversión, no inversión. | SIGAP: 044/2024 | Ordenanza: 1475/24.</p>
                   <p style="color: #FFF; font-size: 14px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin: 0 0 40px 0; text-align: center;"
-                    class="text-body-secundary">Estás recibiendo este correo electrónico porque creaste una cuenta en PlayPIX.
+                    class="text-body-secundary">Estás recibiendo este correo electrónico porque creaste una cuenta en zynex.
                     </p>
                     <img
                       src=https://crmcontent.betconstruct.com/24120314151240302187501150023061900000000000000089176.png

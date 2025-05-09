@@ -23,9 +23,9 @@ import { LanguageIcon } from "@heroicons/react/24/solid";
 
 const styleOptions: Options = [
   {
-    id: "playpix",
+    id: "zynex",
   },
-  { id: "dupoc" },
+  { id: "orvya" },
 ];
 
 const footerOptions: Options = [
@@ -55,7 +55,7 @@ export default function Satori() {
   const [selectStyle, setSelectStyle] = useState(styleOptions[0].id);
   const [footerPattern, setFooterPattern] = useState(footerOptions[0].id);
   const [urlImage, setUrlImage] = useState(
-    "https://crmcontent.betconstruct.com/24092616491379102187501150023061900000000000000089176.png",
+    "https://firebasestorage.googleapis.com/v0/b/reactgallery-17631.appspot.com/o/images%2FGroup%2015719.png?alt=media&token=beb0b119-e381-4134-80eb-74ea19b845a2",
   );
   const [copyHtml, setCopyHtml] = useState("");
   const { wasCopied, handleCopy } = useCopyToClipboard(copyHtml);

@@ -45,16 +45,16 @@ export default function Library() {
       </h1>
       <div className="flex w-full items-center justify-center gap-5">
         <button
-          className={`rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:bg-playpixColor hover:text-gray-50 active:bg-playpixColor/60 ${filterSelect === "playpix" ? "bg-playpixColor text-gray-50" : "bg-playpixColor/20 text-playpixColor"}`}
-          onClick={() => filterPattern("playpix")}
+          className={`rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:bg-zynexColor hover:text-gray-50 active:bg-zynexColor/60 ${filterSelect === "zynex" ? "bg-zynexColor text-gray-50" : "bg-zynexColor/20 text-zynexColor"}`}
+          onClick={() => filterPattern("zynex")}
         >
-          playpix
+          zynex
         </button>
         <button
-          className={`rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:bg-dupocColor hover:text-gray-50 active:bg-dupocColor/60 ${filterSelect === "dupoc" ? "bg-dupocColor text-gray-50" : "bg-dupocColor/20 text-dupocColor"}`}
-          onClick={() => filterPattern("dupoc")}
+          className={`rounded-lg p-2 px-4 font-baiJamjuree font-medium transition hover:bg-orvyaColor hover:text-gray-50 active:bg-orvyaColor/60 ${filterSelect === "orvya" ? "bg-orvyaColor text-gray-50" : "bg-orvyaColor/20 text-orvyaColor"}`}
+          onClick={() => filterPattern("orvya")}
         >
-          dupoc
+          orvya
         </button>
       </div>
       <div className="grid h-full w-full justify-items-center gap-5 overflow-auto rounded-3xl bg-transparent p-5 transition-all md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 min-[2000px]:grid-cols-6 min-[3000px]:grid-cols-8">

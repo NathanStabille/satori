@@ -24,7 +24,7 @@ const StyleHtmlContext = createContext<IStyleHtmlContextType>({
 });
 
 export const StyleHtmlProvider = ({ children }: IStyleHtmlProviderProps) => {
-  const [styleHtml, setStyleHtml] = useState(styleHtmlData.playpix);
+  const [styleHtml, setStyleHtml] = useState(styleHtmlData.zynex);
 
   return (
     <StyleHtmlContext.Provider value={{ styleHtml, setStyleHtml }}>

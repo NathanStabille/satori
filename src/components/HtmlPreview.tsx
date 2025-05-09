@@ -26,10 +26,10 @@ export const HtmlPreview = ({
 
   const { styleHtml, setStyleHtml } = useStyleHtml();
   useEffect(() => {
-    if (selectStyle === "playpix") {
-      setStyleHtml(styleHtmlData.playpix);
+    if (selectStyle === "zynex") {
+      setStyleHtml(styleHtmlData.zynex);
     } else {
-      setStyleHtml(styleHtmlData.dupoc);
+      setStyleHtml(styleHtmlData.orvya);
     }
   });
 

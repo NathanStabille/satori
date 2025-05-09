@@ -34,7 +34,7 @@ export const TranslateAreaProvider = ({
   const [headerAreaValue, setHeaderAreaValue] = useState(headerData.pt);
   const [bodyAreaValue, setBodyAreaValue] = useState(bodyData.deafult);
   const [footerAreaValue, setFooterAreaValue] = useState(
-    footerMainData.playpix.player.pt,
+    footerMainData.zynex.player.pt,
   );
   const [footerAdv, setFooterAdv] = useState(footerAdvisor.pt);
 

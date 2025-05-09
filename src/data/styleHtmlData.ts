@@ -1,5 +1,5 @@
 export const styleHtmlData = {
-  playpix: {
+  zynex: {
     bg_color: "#080D1C",
 
     fontFamily: "Montserrat",
@@ -10,7 +10,7 @@ export const styleHtmlData = {
     rel="stylesheet">`,
   },
 
-  dupoc: {
+  orvya: {
     bg_color: "#120C16",
 
     fontFamily: "Gabarito",

@@ -33,10 +33,10 @@ const SocialMediaLinksContext = createContext<ISocialMediaLinksType>({
 export const SocialMediaLinksProvider = ({
   children,
 }: ISocialMediaLinksProps) => {
-  const [x, setX] = useState(linksData.playpix.x);
-  const [ig, setIg] = useState(linksData.playpix.ig);
-  const [site, setSite] = useState(linksData.playpix.site);
-  const [threads, setThreads] = useState(linksData.dupoc.thr);
+  const [x, setX] = useState(linksData.zynex.x);
+  const [ig, setIg] = useState(linksData.zynex.ig);
+  const [site, setSite] = useState(linksData.zynex.site);
+  const [threads, setThreads] = useState(linksData.orvya.thr);
 
   return (
     <SocialMediaLinksContext.Provider

@@ -13,7 +13,7 @@ export const bodyData = {
                   <td>
                     <h1
                       style="color: #FFF; font-size: 28px; font-family: Montserrat; font-style: normal;font-weight: bold;  display: block; margin: 30px 0 40px 0; max-width: 520px; line-height: 40px;"
-                      class="title-body">Bem-vindo ao Programa de Afiliados da PlayPIX!</h1>
+                      class="title-body">Bem-vindo ao Programa de Afiliados da Zynex!</h1>
                   </td>
                 </tr>
               </table>
@@ -31,7 +31,7 @@ export const bodyData = {
                     <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block; margin-bottom: 18px;"
                       class="text-body"> <b>Olá, parceiro!</b></p>
                     <p style="color: #FFF; font-size: 16px; font-family: Montserrat; font-style: normal;font-weight: normal;  display: block;"
-                      class="text-body">Seja muito bem-vindo ao programa de afiliados da PlayPIX! Estamos felizes por
+                      class="text-body">Seja muito bem-vindo ao programa de afiliados da Zynex! Estamos felizes por
                       tê-lo conosco e mal podemos esperar para começar essa <strong>jornada de sucesso</strong> ao seu lado!</p>
                   </td>
                 </tr>

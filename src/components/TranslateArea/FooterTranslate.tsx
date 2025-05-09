@@ -47,10 +47,10 @@ export const FooterTranslate = ({
   useEffect(() => {
     if (pattern === "affiliate") {
       setSelectedLanguage("pt");
-      if (stylePattern === "playpix") {
-        setFooterAreaValue(footerMainData.playpix.affiliate.pt);
+      if (stylePattern === "zynex") {
+        setFooterAreaValue(footerMainData.zynex.affiliate.pt);
       } else {
-        setFooterAreaValue(footerMainData.dupoc.affiliate.pt);
+        setFooterAreaValue(footerMainData.orvya.affiliate.pt);
       }
     }
   }, [pattern, stylePattern, setFooterAreaValue, setSelectedLanguage]);
@@ -59,21 +59,21 @@ export const FooterTranslate = ({
     switch (selectedLanguage) {
       case "pt":
         setFooterAdv(footerAdvisor.pt);
-        if (stylePattern === "dupoc") {
-          setFooterAdv(footerAdvisor.pt.replaceAll("PlayPIX", "Dupoc"));
+        if (stylePattern === "orvya") {
+          setFooterAdv(footerAdvisor.pt.replaceAll("Zynex", "Orvya"));
         }
 
         break;
       case "en":
         setFooterAdv(footerAdvisor.en);
-        if (stylePattern === "dupoc") {
-          setFooterAdv(footerAdvisor.en.replaceAll("PlayPIX", "Dupoc"));
+        if (stylePattern === "orvya") {
+          setFooterAdv(footerAdvisor.en.replaceAll("Zynex", "Orvya"));
         }
         break;
       case "es":
         setFooterAdv(footerAdvisor.es);
-        if (stylePattern === "dupoc") {
-          setFooterAdv(footerAdvisor.es.replaceAll("PlayPIX", "Dupoc"));
+        if (stylePattern === "orvya") {
+          setFooterAdv(footerAdvisor.es.replaceAll("Zynex", "Orvya"));
         }
         break;
     }
@@ -81,28 +81,28 @@ export const FooterTranslate = ({
 
   useEffect(() => {
     if (pattern !== "affiliate") {
-      if (stylePattern === "playpix") {
+      if (stylePattern === "zynex") {
         switch (selectedLanguage) {
           case "pt":
-            setFooterAreaValue(footerMainData.playpix.player.pt);
+            setFooterAreaValue(footerMainData.zynex.player.pt);
             break;
           case "en":
-            setFooterAreaValue(footerMainData.playpix.player.en);
+            setFooterAreaValue(footerMainData.zynex.player.en);
             break;
           case "es":
-            setFooterAreaValue(footerMainData.playpix.player.es);
+            setFooterAreaValue(footerMainData.zynex.player.es);
             break;
         }
       } else {
         switch (selectedLanguage) {
           case "pt":
-            setFooterAreaValue(footerMainData.dupoc.player.pt);
+            setFooterAreaValue(footerMainData.orvya.player.pt);
             break;
           case "en":
-            setFooterAreaValue(footerMainData.dupoc.player.en);
+            setFooterAreaValue(footerMainData.orvya.player.en);
             break;
           case "es":
-            setFooterAreaValue(footerMainData.dupoc.player.es);
+            setFooterAreaValue(footerMainData.orvya.player.es);
             break;
         }
       }
@@ -111,37 +111,37 @@ export const FooterTranslate = ({
 
   useEffect(() => {
     if (checkedItems.x) {
-      if (stylePattern === "playpix") {
-        setX(linksData.playpix.x);
+      if (stylePattern === "zynex") {
+        setX(linksData.zynex.x);
       } else {
-        setX(linksData.dupoc.x);
+        setX(linksData.orvya.x);
       }
     } else {
       setX("");
     }
     if (checkedItems.instagram) {
-      if (stylePattern === "playpix") {
-        setIg(linksData.playpix.ig);
+      if (stylePattern === "zynex") {
+        setIg(linksData.zynex.ig);
       } else {
-        setIg(linksData.dupoc.ig);
+        setIg(linksData.orvya.ig);
       }
     } else {
       setIg("");
     }
     if (checkedItems.site) {
-      if (stylePattern === "playpix") {
-        setSite(linksData.playpix.site);
+      if (stylePattern === "zynex") {
+        setSite(linksData.zynex.site);
       } else {
-        setSite(linksData.dupoc.site);
+        setSite(linksData.orvya.site);
       }
     } else {
       setSite("");
     }
     if (checkedItems.threads) {
-      if (stylePattern === "playpix") {
+      if (stylePattern === "zynex") {
         setThreads("");
       } else {
-        setThreads(linksData.dupoc.thr);
+        setThreads(linksData.orvya.thr);
       }
     } else {
       setThreads("");
