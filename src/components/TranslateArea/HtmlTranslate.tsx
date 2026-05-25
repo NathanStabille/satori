@@ -1,16 +1,19 @@
 import { useCallback, useState } from "react";
 import { TagInfo } from "../TagInfo";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
-import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { Button } from "../Button";
-import {
-  CheckIcon,
-  ClipboardDocumentListIcon,
-} from "@heroicons/react/24/outline";
+import {} from "@heroicons/react/24/outline";
 import { PencilSquareIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import CodeMirror from "@uiw/react-codemirror";
 import { htmlLanguage } from "@codemirror/lang-html";
-import { tokyoNight } from "@uiw/codemirror-theme-tokyo-night";
+import { tokyoNightInit } from "@uiw/codemirror-theme-tokyo-night";
+
+const customTokyoNight = tokyoNightInit({
+  settings: {
+    background: "transparent",
+    gutterBackground: "transparent",
+  },
+});
 
 interface BodyTranslateProps {
   onTranslateError: (error: string) => void;
@@ -18,7 +21,7 @@ interface BodyTranslateProps {
   errorMessage: string;
 }
 
-export const BodyTranslate = ({
+export const HtmlTranslate = ({
   onTranslateError,
   errorMessage,
   isLoading,
@@ -26,7 +29,6 @@ export const BodyTranslate = ({
   const [isDisable, setIsDisable] = useState(false);
 
   const { bodyAreaValue, setBodyAreaValue } = useTranslateArea();
-  const { wasCopied, handleCopy } = useCopyToClipboard(bodyAreaValue);
 
   const onChange = useCallback(
     (value: string) => {
@@ -41,23 +43,9 @@ export const BodyTranslate = ({
         className={`rounded-xxl relative flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} p-3`}
       >
         <div className="flex w-full items-center justify-between gap-3">
-          <TagInfo name="body </>" />
+          <TagInfo name="html </>" />
 
           <div className="flex items-center gap-4">
-            <Button
-              onClick={() => {
-                handleCopy();
-              }}
-              label={`${wasCopied ? "copied!" : "copy"}`}
-              iconAfter={
-                wasCopied ? (
-                  <CheckIcon className="w-[23px]" />
-                ) : (
-                  <ClipboardDocumentListIcon className="w-[23px]" />
-                )
-              }
-            />
-
             <Button
               onClick={() => {
                 setIsDisable(!isDisable);
@@ -69,7 +57,7 @@ export const BodyTranslate = ({
         </div>
       </div>
       <div
-        className={`relative mb-4 h-full w-full ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
+        className={`relative h-full w-full ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
       >
         {!isLoading && (
           <CodeMirror
@@ -77,9 +65,8 @@ export const BodyTranslate = ({
             value={bodyAreaValue}
             extensions={[htmlLanguage]}
             onChange={onChange}
-            theme={tokyoNight}
+            theme={customTokyoNight}
             editable={isDisable}
-            height={`100%`}
           />
         )}
 

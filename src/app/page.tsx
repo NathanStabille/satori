@@ -4,7 +4,7 @@ import { OptionSwitch } from "@/components/OptionSwitch";
 import { Options } from "@/types/optionsType";
 import { useState } from "react";
 import { TagInfo } from "@/components/TagInfo";
-import { BodyTranslate } from "@/components/TranslateArea/BodyTranslate";
+import { HtmlTranslate } from "@/components/TranslateArea/HtmlTranslate";
 import { ThemeSwitcher } from "@/components/ThemeSwitcherButton";
 import { useCopyToClipboard } from "@/hooks/useCopyToClipboard";
 import { ClipboardDocumentCheckIcon } from "@heroicons/react/24/outline";
@@ -66,7 +66,7 @@ export default function Satori() {
           />
         </div>
 
-        <BodyTranslate
+        <HtmlTranslate
           errorMessage={errorMessage}
           isLoading={isLoading}
           onTranslateError={setErrorMessage}
