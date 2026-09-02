@@ -1,5 +1,5 @@
 export const bodyData = {
-  deafult: `<!DOCTYPE html>
+  default: `<!DOCTYPE html>
 <html lang="PT-BR">
 
 <head>

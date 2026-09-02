@@ -4,6 +4,7 @@ import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { Button } from "../Button";
 import {} from "@heroicons/react/24/outline";
 import {
+  ArrowPathIcon,
   LockClosedIcon,
   PencilSquareIcon,
   XMarkIcon,
@@ -32,7 +33,8 @@ export const HtmlTranslate = ({
 }: BodyTranslateProps) => {
   const [isDisable, setIsDisable] = useState(false);
 
-  const { bodyAreaValue, setBodyAreaValue } = useTranslateArea();
+  const { bodyAreaValue, setBodyAreaValue, resetBodyAreaValue } =
+    useTranslateArea();
 
   const onChange = useCallback(
     (value: string) => {
@@ -50,6 +52,11 @@ export const HtmlTranslate = ({
           <TagInfo name="html </>" />
 
           <div className="flex items-center gap-4">
+            <Button
+              label="restore"
+              onClick={resetBodyAreaValue}
+              iconAfter={<ArrowPathIcon className="w-[23px]" />}
+            />
             <Button
               onClick={() => {
                 setIsDisable(!isDisable);
