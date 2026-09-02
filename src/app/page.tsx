@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/Button";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { translateHtml } from "@/utils/translateHtml";
-import { LanguageIcon } from "@heroicons/react/24/solid";
+import { ArrowDownTrayIcon, LanguageIcon } from "@heroicons/react/24/solid";
 
 const allOptions: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
 
@@ -25,6 +25,17 @@ export default function Satori() {
   const { bodyAreaValue, setBodyAreaValue } = useTranslateArea();
 
   const { wasCopied, handleCopy } = useCopyToClipboard(bodyAreaValue);
+
+  const handleDownload = () => {
+    const file = new Blob([bodyAreaValue], { type: "text/html" });
+    const downloadUrl = URL.createObjectURL(file);
+    const link = document.createElement("a");
+
+    link.href = downloadUrl;
+    link.download = "translated-page.html";
+    link.click();
+    URL.revokeObjectURL(downloadUrl);
+  };
 
   const handleTranslate = async () => {
     setIsLoading(true);
@@ -83,21 +94,31 @@ export default function Satori() {
         <div className="flex h-full w-full flex-col items-end justify-start rounded-2xl bg-lightSecondColor p-3 shadow-lg dark:border-none dark:bg-darkSecondColor max-md:h-[100vh]">
           <div className="mb-4 flex w-full items-center justify-between">
             <ThemeSwitcher />
-            <TagInfo name="preview </>" />
+            <div className="flex items-center gap-3">
+              <Button
+                label="download html"
+                onClick={handleDownload}
+                iconAfter={<ArrowDownTrayIcon className="w-[22px]" />}
+                className="rounded-2xl px-5"
+              />
+              <TagInfo name="preview </>" />
+            </div>
           </div>
           <HtmlPreview htmlContent={bodyAreaValue} />
         </div>
         {/* HTML PREVIEW */}
 
-        <button
-          onClick={() => handleCopy()}
-          className="flex w-full items-center justify-center rounded-2xl border-none bg-lightPrimarColor py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-600 hover:text-slate-50 active:bg-indigo-700 dark:bg-darkPrimaryColor dark:hover:bg-red-600 dark:active:bg-red-700"
-        >
-          {wasCopied ? "copied" : "copy html"}
-          {wasCopied && (
-            <ClipboardDocumentCheckIcon width="50px" className="pl-3" />
-          )}
-        </button>
+        <div className="flex w-full gap-3">
+          <button
+            onClick={() => handleCopy()}
+            className="flex flex-1 items-center justify-center rounded-2xl border-none bg-lightPrimarColor py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-600 hover:text-slate-50 active:bg-indigo-700 dark:bg-darkPrimaryColor dark:hover:bg-red-600 dark:active:bg-red-700"
+          >
+            {wasCopied ? "copied" : "copy html"}
+            {wasCopied && (
+              <ClipboardDocumentCheckIcon width="50px" className="pl-3" />
+            )}
+          </button>
+        </div>
       </div>
       {/* HTML PREVIEW CONNTAINER */}
     </motion.div>
