@@ -3,7 +3,11 @@ import { TagInfo } from "../TagInfo";
 import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { Button } from "../Button";
 import {} from "@heroicons/react/24/outline";
-import { PencilSquareIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import {
+  LockClosedIcon,
+  PencilSquareIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/solid";
 import CodeMirror from "@uiw/react-codemirror";
 import { htmlLanguage } from "@codemirror/lang-html";
 import { tokyoNightInit } from "@uiw/codemirror-theme-tokyo-night";
@@ -50,8 +54,14 @@ export const HtmlTranslate = ({
               onClick={() => {
                 setIsDisable(!isDisable);
               }}
-              label="edit"
-              iconAfter={<PencilSquareIcon className="w-[23px]" />}
+              label={isDisable ? "edit" : "lock"}
+              iconAfter={
+                isDisable ? (
+                  <PencilSquareIcon className="w-[23px]" />
+                ) : (
+                  <LockClosedIcon className="w-[23px]" />
+                )
+              }
             />
           </div>
         </div>
@@ -66,19 +76,16 @@ export const HtmlTranslate = ({
             extensions={[htmlLanguage]}
             onChange={onChange}
             theme={customTokyoNight}
-            editable={isDisable}
+            editable={!isDisable}
           />
         )}
 
-        {/* error component */}
+        {/* error modal component */}
 
         {errorMessage && (
           <div className="fixed top-0 z-50 flex h-screen w-screen items-center justify-center">
             <div className="relative rounded-2xl bg-red-400 p-16 text-center font-jetBrains text-xl font-medium text-white shadow-md">
               {errorMessage}
-              <h1 className="font-baiJamjuree text-base text-black">
-                Contate o administrador
-              </h1>
 
               <Button
                 className="absolute right-0 top-0 m-2"
@@ -90,7 +97,7 @@ export const HtmlTranslate = ({
           </div>
         )}
 
-        {/* error component */}
+        {/* error modal component */}
 
         {/* loading component */}
 

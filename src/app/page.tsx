@@ -60,9 +60,11 @@ export default function Satori() {
             options={allOptions}
           />
           <Button
-            label="Translate"
+            label={isLoading ? "Translating..." : "Translate"}
             iconAfter={<LanguageIcon className="w-[20px]" />}
             onClick={handleTranslate}
+            disabled={isLoading}
+            aria-busy={isLoading}
           />
         </div>
 
