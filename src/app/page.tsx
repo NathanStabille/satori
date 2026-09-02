@@ -38,6 +38,11 @@ export default function Satori() {
   };
 
   const handleTranslate = async () => {
+    if (!bodyAreaValue.trim()) {
+      setErrorMessage("Insira um conteúdo HTML antes de traduzir");
+      return;
+    }
+
     setIsLoading(true);
     setErrorMessage("");
 
@@ -71,10 +76,12 @@ export default function Satori() {
             options={allOptions}
           />
           <Button
+
+          className={!bodyAreaValue.trim() ? "cursor-not-allowed opacity-50" : ""}
             label={isLoading ? "Translating..." : "Translate"}
             iconAfter={<LanguageIcon className="w-[20px]" />}
             onClick={handleTranslate}
-            disabled={isLoading}
+            disabled={isLoading || !bodyAreaValue.trim()}
             aria-busy={isLoading}
           />
         </div>

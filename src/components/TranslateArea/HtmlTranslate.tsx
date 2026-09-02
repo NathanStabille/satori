@@ -49,7 +49,12 @@ export const HtmlTranslate = ({
         className={`rounded-xxl relative flex w-full items-center justify-between rounded-t-3xl transition-all ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} p-3`}
       >
         <div className="flex w-full items-center justify-between gap-3">
-          <TagInfo name="html </>" />
+          <div className="flex items-center gap-3">
+            <TagInfo name="html </>" />
+            <span className="font-baiJamjuree text-sm text-lightPrimarColor/70 dark:text-slate-400">
+              {bodyAreaValue.length.toLocaleString("en-US")} characters
+            </span>
+          </div>
 
           <div className="flex items-center gap-4">
             <Button
