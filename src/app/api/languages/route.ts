@@ -20,7 +20,7 @@ export async function GET() {
       },
     );
 
-    console.log("response.data", response.data);
+    
     return NextResponse.json({ languages: response.data });
   } catch (error) {
     console.warn("Erro ao carregar idiomas do DeepL:", error);

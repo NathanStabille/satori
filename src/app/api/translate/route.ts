@@ -31,12 +31,18 @@ export async function POST(request: Request) {
     }
 
     const { htmlContent, target_lang } = body;
+    const targetLanguage = target_lang.trim().toUpperCase();
+    const sourceLanguageMatch = htmlContent.match(
+      /<html\b[^>]*\blang=["']?([a-z]{2,}(?:-[a-z]{2,})?)/i,
+    );
+    const sourceLanguage = sourceLanguageMatch?.[1].split("-")[0].toUpperCase();
 
     const response = await axios.post(
       "https://api-free.deepl.com/v2/translate",
       {
         text: [htmlContent],
-        target_lang: target_lang.toUpperCase(),
+        ...(sourceLanguage ? { source_lang: sourceLanguage } : {}),
+        target_lang: targetLanguage,
         tag_handling: "html",
       },
       {

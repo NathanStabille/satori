@@ -4,12 +4,18 @@ export const translateHtml = async (
   target_lang: string,
 ): Promise<{ translatedText: string } | { error: string }> => {
   try {
+    const targetLanguage = target_lang.trim().toUpperCase();
+
+    if (!htmlContent.trim() || !targetLanguage) {
+      return { error: "HTML e idioma de destino são obrigatórios" };
+    }
+
     const response = await fetch("/api/translate", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ htmlContent, target_lang }),
+      body: JSON.stringify({ htmlContent, target_lang: targetLanguage }),
     });
 
     const data = await response.json();
