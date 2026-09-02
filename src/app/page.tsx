@@ -120,7 +120,7 @@ export default function Satori() {
     >
       {/* CODE MIRROR CONTAINER */}
       <div className="mx-auto grid w-full max-w-[1500px] grid-cols-[minmax(0,1.1fr)_minmax(380px,0.9fr)] items-stretch gap-5 max-xl:grid-cols-[minmax(0,1fr)_minmax(340px,0.9fr)] max-lg:grid-cols-1">
-        <section className="flex h-[calc(100vh-4rem)] max-h-[900px] min-h-[560px] min-w-0 flex-col max-lg:h-[560px] max-lg:min-h-0 max-md:h-[520px]">
+        <section className="flex h-[calc(100vh-4rem)] min-h-[560px] min-w-0 flex-col max-lg:h-[560px] max-lg:min-h-0 max-md:h-[520px]">
           <div className="mb-4 flex w-full items-center justify-between gap-3 rounded-2xl bg-lightSecondColor p-4 shadow-md dark:bg-darkSecondColor max-md:flex-wrap">
             <h1 className="select-none font-skyer text-4xl text-lightPrimarColor dark:text-slate-50 max-md:text-3xl">
               satori
@@ -154,7 +154,7 @@ export default function Satori() {
         {/* CODE MIRROR CONTAINER */}
 
         {/* HTML PREVIEW CONNTAINER */}
-        <section className="flex h-[calc(100vh-4rem)] max-h-[900px] min-h-[560px] min-w-0 flex-col gap-4 max-lg:h-[560px] max-lg:min-h-0 max-md:h-[520px]">
+        <section className="flex h-[calc(100vh-4rem)] min-h-[560px] min-w-0 flex-col gap-4 max-lg:h-[560px] max-lg:min-h-0 max-md:h-[520px]">
           {/* MAIN BAR */}
 
           <div className="flex min-h-0 w-full flex-1 flex-col items-end justify-start rounded-2xl bg-lightSecondColor p-3 shadow-lg dark:border-none dark:bg-darkSecondColor">
