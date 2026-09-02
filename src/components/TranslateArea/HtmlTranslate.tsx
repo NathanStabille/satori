@@ -79,7 +79,7 @@ export const HtmlTranslate = ({
         </div>
       </div>
       <div
-        className={`relative h-full w-full ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
+        className={`relative min-h-0 w-full flex-1 ${isDisable ? "bg-gray-900" : "bg-lightSecondColor dark:bg-darkSecondColor"} flex-col overflow-auto rounded-b-2xl p-1 pb-2 shadow-md transition-all dark:border-none`}
       >
         {!isLoading && (
           <CodeMirror
