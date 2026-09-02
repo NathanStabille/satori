@@ -29,7 +29,7 @@ export const OptionSwitch = ({
       {options.map((item, index) => (
         <button
           {...rest}
-          key={index}
+          key={item.id}
           onClick={() => setOption(item.id)}
           aria-pressed={option === item.id}
           type="button"
