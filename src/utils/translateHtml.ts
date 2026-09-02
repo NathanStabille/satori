@@ -12,11 +12,11 @@ export const translateHtml = async (
       body: JSON.stringify({ htmlContent, target_lang }),
     });
 
-    if (!response.ok) {
-      throw new Error("Erro ao traduzir o conteúdo");
-    }
-
     const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.error || "Erro ao traduzir o conteúdo");
+    }
     return { translatedText: data.translatedText };
   } catch (error: unknown) {
     console.error("Erro:", error);

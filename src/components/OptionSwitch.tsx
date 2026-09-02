@@ -20,13 +20,15 @@ export const OptionSwitch = ({
     exit: { opacity: 0, scale: 0.8 },
   };
 
+  console.log(option);
+
   return (
     <div className="flex select-none items-center justify-center gap-1 rounded-lg p-[5px]">
       {options.map((item, index) => (
         <button
           {...rest}
           key={index}
-          onClick={() => setOption(item.id)}
+          onClick={() => setOption(item.id.toUpperCase())}
           className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:bg-lightPrimarColor hover:text-slate-50 dark:hover:bg-darkPrimaryColor dark:hover:text-slate-50 dark:active:bg-red-600 ${
             option === item.id
               ? "text-slate-50"

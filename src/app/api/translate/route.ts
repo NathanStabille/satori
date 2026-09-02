@@ -5,7 +5,32 @@ const authKey = process.env.DEEPL_API_KEY;
 
 export async function POST(request: Request) {
   try {
-    const { htmlContent, target_lang } = await request.json();
+    if (!authKey) {
+      return NextResponse.json(
+        { error: "Serviço de tradução não configurado" },
+        { status: 500 },
+      );
+    }
+
+    const body: unknown = await request.json();
+
+    if (
+      typeof body !== "object" ||
+      body === null ||
+      !("htmlContent" in body) ||
+      !("target_lang" in body) ||
+      typeof body.htmlContent !== "string" ||
+      typeof body.target_lang !== "string" ||
+      !body.htmlContent.trim() ||
+      !body.target_lang.trim()
+    ) {
+      return NextResponse.json(
+        { error: "HTML e idioma de destino são obrigatórios" },
+        { status: 400 },
+      );
+    }
+
+    const { htmlContent, target_lang } = body;
 
     const response = await axios.post(
       "https://api-free.deepl.com/v2/translate",
