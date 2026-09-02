@@ -1,8 +1,7 @@
 import { Options } from "@/types/optionsType";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface IOptionsSwitchProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends React.SelectHTMLAttributes<HTMLSelectElement> {
   option: string;
   setOption: (string: string) => void;
   options: Options;
@@ -14,47 +13,21 @@ export const OptionSwitch = ({
   options,
   ...rest
 }: IOptionsSwitchProps) => {
-  const bubbleVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 0.8 },
-  };
-
   return (
-    <div
-      className="flex select-none items-center justify-center gap-1 rounded-lg p-[5px]"
-      role="group"
-      aria-label="Target language"
-    >
-      {options.map((item, index) => (
-        <button
-          {...rest}
-          key={item.id}
-          onClick={() => setOption(item.id)}
-          aria-pressed={option === item.id}
-          type="button"
-          className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:bg-lightPrimarColor hover:text-slate-50 dark:hover:bg-darkPrimaryColor dark:hover:text-slate-50 dark:active:bg-red-600 ${
-            option === item.id
-              ? "text-slate-50"
-              : "text-lightPrimarColor dark:text-darkPrimaryColor"
-          }`}
-        >
-          <AnimatePresence>
-            {option === item.id && (
-              <motion.div
-                key={`bubble-${index}`}
-                className="absolute inset-0 z-0 rounded bg-lightPrimarColor dark:bg-darkPrimaryColor"
-                variants={bubbleVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-              />
-            )}
-          </AnimatePresence>
-          <span className="relative z-10">{item.id.toUpperCase()}</span>
-        </button>
-      ))}
-    </div>
+    <label className="flex items-center gap-2 font-baiJamjuree text-sm font-semibold text-lightPrimarColor dark:text-darkPrimaryColor">
+      <span className="sr-only">Target language</span>
+      <select
+        {...rest}
+        value={option}
+        onChange={(event) => setOption(event.target.value)}
+        className="cursor-pointer rounded-lg border border-lightPrimarColor/30 bg-lightPrimarColor/10 px-3 py-2 text-sm text-lightPrimarColor outline-none transition-colors hover:border-lightPrimarColor focus:border-lightPrimarColor dark:border-darkPrimaryColor/40 dark:bg-darkPrimaryColor/10 dark:text-darkPrimaryColor dark:hover:border-darkPrimaryColor dark:focus:border-darkPrimaryColor"
+      >
+        {options.map((item) => (
+          <option key={item.id} value={item.id}>
+            {item.name}
+          </option>
+        ))}
+      </select>
+    </label>
   );
 };

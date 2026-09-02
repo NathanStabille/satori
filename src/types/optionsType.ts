@@ -1,1 +1,6 @@
-export type Options = { id: string }[]
+export type LanguageOption = {
+  id: string;
+  name: string;
+};
+
+export type Options = LanguageOption[];

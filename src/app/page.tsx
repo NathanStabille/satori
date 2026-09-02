@@ -2,7 +2,7 @@
 import { HtmlPreview } from "@/components/HtmlPreview";
 import { OptionSwitch } from "@/components/OptionSwitch";
 import { Options } from "@/types/optionsType";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TagInfo } from "@/components/TagInfo";
 import { HtmlTranslate } from "@/components/TranslateArea/HtmlTranslate";
 import { ThemeSwitcher } from "@/components/ThemeSwitcherButton";
@@ -14,10 +14,22 @@ import { useTranslateArea } from "@/context/TranslateAreaContext";
 import { translateHtml } from "@/utils/translateHtml";
 import { ArrowDownTrayIcon, LanguageIcon } from "@heroicons/react/24/solid";
 
-const allOptions: Options = [{ id: "pt" }, { id: "en" }, { id: "es" }];
+const fallbackLanguages: Options = [
+  { id: "PT-BR", name: "Portuguese (Brazil)" },
+  { id: "EN-US", name: "English (American)" },
+  { id: "ES", name: "Spanish" },
+  { id: "DE", name: "German" },
+  { id: "FR", name: "French" },
+  { id: "IT", name: "Italian" },
+  { id: "JA", name: "Japanese" },
+];
 
 export default function Satori() {
-  const [selectedLanguage, setSelectedLanguage] = useState(allOptions[0].id);
+  const [languages, setLanguages] = useState<Options>(fallbackLanguages);
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    fallbackLanguages[0].id,
+  );
+  const [isLanguagesLoading, setIsLanguagesLoading] = useState(true);
 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
@@ -25,6 +37,48 @@ export default function Satori() {
   const { bodyAreaValue, setBodyAreaValue } = useTranslateArea();
 
   const { wasCopied, handleCopy } = useCopyToClipboard(bodyAreaValue);
+
+  useEffect(() => {
+    const loadLanguages = async () => {
+      try {
+        const response = await fetch("/api/languages");
+        const data: unknown = await response.json();
+
+        if (
+          response.ok &&
+          typeof data === "object" &&
+          data !== null &&
+          "languages" in data &&
+          Array.isArray(data.languages)
+        ) {
+          const availableLanguages = data.languages.filter(
+            (language): language is { language: string; name: string } =>
+              typeof language === "object" &&
+              language !== null &&
+              "language" in language &&
+              "name" in language &&
+              typeof language.language === "string" &&
+              typeof language.name === "string",
+          );
+
+          if (availableLanguages.length > 0) {
+            setLanguages(
+              availableLanguages.map(({ language, name }) => ({
+                id: language,
+                name,
+              })),
+            );
+          }
+        }
+      } catch (error) {
+        console.warn("Could not load DeepL languages:", error);
+      } finally {
+        setIsLanguagesLoading(false);
+      }
+    };
+
+    loadLanguages();
+  }, []);
 
   const handleDownload = () => {
     const file = new Blob([bodyAreaValue], { type: "text/html" });
@@ -75,7 +129,8 @@ export default function Satori() {
               <OptionSwitch
                 option={selectedLanguage}
                 setOption={setSelectedLanguage}
-                options={allOptions}
+                options={languages}
+                disabled={isLanguagesLoading || isLoading}
               />
             </div>
             <Button
