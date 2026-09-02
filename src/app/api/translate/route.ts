@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import axios from "axios";
 
 const authKey = process.env.DEEPL_API_KEY;
+const MAX_HTML_LENGTH = 100_000;
 
 export async function POST(request: Request) {
   try {
@@ -12,7 +13,16 @@ export async function POST(request: Request) {
       );
     }
 
-    const body: unknown = await request.json();
+    let body: unknown;
+
+    try {
+      body = await request.json();
+    } catch {
+      return NextResponse.json(
+        { error: "O corpo da requisição precisa ser um JSON válido" },
+        { status: 400 },
+      );
+    }
 
     if (
       typeof body !== "object" ||
@@ -30,8 +40,22 @@ export async function POST(request: Request) {
       );
     }
 
+    if (body.htmlContent.length > MAX_HTML_LENGTH) {
+      return NextResponse.json(
+        { error: "O HTML excede o limite de 100.000 caracteres" },
+        { status: 413 },
+      );
+    }
+
     const { htmlContent, target_lang } = body;
     const targetLanguage = target_lang.trim().toUpperCase();
+
+    if (!/^[A-Z]{2,3}(?:-[A-Z0-9]{2,8})?$/.test(targetLanguage)) {
+      return NextResponse.json(
+        { error: "Código de idioma de destino inválido" },
+        { status: 400 },
+      );
+    }
     const sourceLanguageMatch = htmlContent.match(
       /<html\b[^>]*\blang=["']?([a-z]{2,}(?:-[a-z]{2,})?)/i,
     );
@@ -53,13 +77,18 @@ export async function POST(request: Request) {
       },
     );
 
-    const result = response.data.translations[0].text;
+    const result = response.data?.translations?.[0]?.text;
+
+    if (typeof result !== "string") {
+      throw new Error("Resposta inválida do serviço de tradução");
+    }
+
     return NextResponse.json({ translatedText: result });
   } catch (error) {
     console.warn("Erro ao chamar API do DeepL:", error);
     return NextResponse.json(
-      { error: "Erro ao traduzir o conteúdo" },
-      { status: 500 },
+      { error: "O serviço de tradução não respondeu corretamente" },
+      { status: 502 },
     );
   }
 }
