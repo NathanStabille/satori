@@ -1,49 +1,107 @@
 # Satori
 
-## About
+Satori is a browser-based HTML translation tool that translates visible text while preserving the original document structure. It combines a syntax-highlighted editor, live preview and DeepL integration in a focused workflow.
 
-Satori is an HTML translation tool that preserves tag structure and translates only the text content.
-Includes a live editor, multi-language support, real-time visual preview.
+## Demo
 
-Site: https://satori.empthy.dev/
-<br>
-<br>
+Live application: [satori.empthy.dev](https://satori.empthy.dev/)
 
-
+![Satori interface](./public/github/screenshot.png)
 
 ## Features
 
-- Translates HTML content without modifying tag structure.
-- Built-in HTML editor with syntax highlighting (CodeMirror).
-- Manual editing of the translated content.
-- Real-time visual preview.
+- Translate HTML without sending the API key to the browser.
+- Preserve HTML tags, attributes and document structure with DeepL HTML handling.
+- Load target languages dynamically from DeepL, including regional variants.
+- Edit HTML with CodeMirror syntax highlighting.
+- Preview the current document in an isolated sandboxed iframe.
+- Restore the default example and persist work locally between sessions.
+- Copy or download the current HTML document.
+- Support light and dark themes.
+- Validate request payloads and reject invalid or oversized HTML on the server.
 
-<br>
-<div style= "display: flex">
-<img style="border: solid 1px; margin: 3px;" src="./public/github/screenshot.png">
-</div>
-<br>
-<br>
+## Architecture
 
-# Tech Stack
+The browser owns the editing experience and sends translation requests to the Next.js server. The server reads the DeepL credential from the environment, infers the source language from the HTML `lang` attribute when available, and forwards only the required request to DeepL.
 
-- Typescript
-- NextJs
-- Tailwind
-- Deepl API
-- Next Themes
-- Axios
+```text
+CodeMirror editor -> Next.js API route -> DeepL API
+	  |                  |
+	  v                  v
+  Local storage       Validated HTML
+	  |
+	  v
+  Sandboxed preview
+```
+
+## Tech stack
+
+- Next.js App Router
+- React and TypeScript
+- Tailwind CSS
 - CodeMirror
-- Hero Icons
+- DeepL API
+- Axios
+- next-themes
 - Framer Motion
+- Heroicons
 
-<br>
+## Getting started
 
-### Author
+### Requirements
+
+- Node.js 20 or newer
+- A DeepL API key
+
+### Installation
+
+```bash
+npm install
+cp .env.example .env
+```
+
+Add your key to `.env`:
+
+```env
+DEEPL_API_KEY=your_deepl_api_key
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Commands
+
+```bash
+npm run dev      # Start development server
+npm run lint     # Run ESLint
+npm run build    # Create production build
+npm run start    # Start production server
+```
+
+## API routes
+
+| Method | Route            | Purpose                           |
+| ------ | ---------------- | --------------------------------- |
+| `GET`  | `/api/languages` | Returns DeepL target languages    |
+| `POST` | `/api/translate` | Translates validated HTML content |
+
+The translation route accepts `htmlContent` and `target_lang`. It limits documents to 100,000 characters and returns meaningful HTTP statuses for invalid input, oversized content and upstream service failures.
+
+## Future improvements
+
+- Import HTML files with drag and drop.
+- Add translation history and side-by-side comparison.
+- Add automated unit and end-to-end tests.
+- Add CI checks for lint, build and API behavior.
+
+## Author
 
 Nathan Stabille
 
-https://www.linkedin.com/in/nathan-stabille
-
-https://empthy.dev
-# satori
+- [LinkedIn](https://www.linkedin.com/in/nathanstabille)
+- [Website](https://empthy.dev)
