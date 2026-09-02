@@ -15,8 +15,9 @@ const skyerSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "SATORI",
-  description: "Satori",
+  title: "Satori | HTML translation tool",
+  description:
+    "Translate HTML content while preserving its tag structure with a live preview.",
 };
 
 export default function RootLayout({

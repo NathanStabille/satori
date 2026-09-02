@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useTheme } from "next-themes";
 import { Button } from "./Button";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
@@ -13,6 +13,12 @@ export const ThemeSwitcher = ({ className }: IThemeSwitcherProps) => {
   return (
     <Button
       label=""
+      aria-label={
+        theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+      }
+      title={
+        theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+      }
       className={`flex rounded-[13px] bg-[#7f79fb42] transition-all dark:bg-[#ee34723d] ${className}`}
       onClick={() => setTheme(theme == "dark" ? "light" : "dark")}
       iconAfter={

@@ -76,8 +76,9 @@ export default function Satori() {
             options={allOptions}
           />
           <Button
-
-          className={!bodyAreaValue.trim() ? "cursor-not-allowed opacity-50" : ""}
+            className={
+              !bodyAreaValue.trim() ? "cursor-not-allowed opacity-50" : ""
+            }
             label={isLoading ? "Translating..." : "Translate"}
             iconAfter={<LanguageIcon className="w-[20px]" />}
             onClick={handleTranslate}
@@ -118,6 +119,8 @@ export default function Satori() {
         <div className="flex w-full gap-3">
           <button
             onClick={() => handleCopy()}
+            type="button"
+            aria-label="Copy HTML"
             className="flex flex-1 items-center justify-center rounded-2xl border-none bg-lightPrimarColor py-5 font-skyer text-3xl uppercase text-slate-50 shadow-lg outline-none transition-all hover:bg-indigo-600 hover:text-slate-50 active:bg-indigo-700 dark:bg-darkPrimaryColor dark:hover:bg-red-600 dark:active:bg-red-700"
           >
             {wasCopied ? "copied" : "copy html"}

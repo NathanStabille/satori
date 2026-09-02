@@ -21,12 +21,18 @@ export const OptionSwitch = ({
   };
 
   return (
-    <div className="flex select-none items-center justify-center gap-1 rounded-lg p-[5px]">
+    <div
+      className="flex select-none items-center justify-center gap-1 rounded-lg p-[5px]"
+      role="group"
+      aria-label="Target language"
+    >
       {options.map((item, index) => (
         <button
           {...rest}
           key={index}
           onClick={() => setOption(item.id)}
+          aria-pressed={option === item.id}
+          type="button"
           className={`relative cursor-pointer rounded px-2 font-baiJamjuree text-[16px] font-semibold transition-all hover:bg-lightPrimarColor hover:text-slate-50 dark:hover:bg-darkPrimaryColor dark:hover:text-slate-50 dark:active:bg-red-600 ${
             option === item.id
               ? "text-slate-50"
